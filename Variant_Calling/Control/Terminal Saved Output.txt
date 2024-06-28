@@ -1,0 +1,210 @@
+Last login: Thu Jun 20 14:44:37 on ttys001
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) MacBook-Air-di-Alberto-3:~ albertolupatin$ conda deactivate && conda activate HumanGenomics
+(HumanGenomics) MacBook-Air-di-Alberto-3:06-VariantCalling albertolupatin$ cd ../06-2
+(HumanGenomics) MacBook-Air-di-Alberto-3:06-2 albertolupatin$ bcftools mpileup -Ou -a DP -f /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta ../Control.sorted.bam | bcftools call -Ov -c -v > Control.BCF.vcf
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+[mpileup] 1 samples in 1 input files
+[mpileup] maximum number of reads per input file set to -d 250
+(HumanGenomics) MacBook-Air-di-Alberto-3:06-2 albertolupatin$ java -jar /Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar -T UnifiedGenotyper -R /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta -I ../Control.sorted.bam -o Control.GATK.vcf
+INFO  11:01:21,601 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  11:01:21,602 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  11:01:21,602 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  11:01:21,602 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  11:01:21,603 HelpFormatter - [Fri Jun 21 11:01:21 CEST 2024] Executing on Mac OS X 14.5 aarch64 
+INFO  11:01:21,603 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_412-b08 
+INFO  11:01:21,606 HelpFormatter - Program Args: -T UnifiedGenotyper -R /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta -I ../Control.sorted.bam -o Control.GATK.vcf 
+INFO  11:01:21,618 HelpFormatter - Executing as albertolupatin@MacBook-Air-di-Alberto-3.local on Mac OS X 14.5 aarch64; OpenJDK 64-Bit Server VM 1.8.0_412-b08. 
+INFO  11:01:21,618 HelpFormatter - Date/Time: 2024/06/21 11:01:21 
+INFO  11:01:21,618 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  11:01:21,618 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  11:01:21,629 NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.dylib 
+INFO  11:01:21,652 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  11:01:21,652 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  11:01:21,653 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  11:01:21,737 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  11:01:21,741 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARN  11:01:21,756 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+WARN  11:01:21,759 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+INFO  11:01:21,769 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.03 
+INFO  11:01:21,875 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  11:01:21,903 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  11:01:21,903 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  11:01:21,903 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  11:01:21,904 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  11:01:21,931 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  11:01:21,931 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  11:01:21,931 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  11:01:51,920 ProgressMeter -      1:49450557   4.8480256E7    30.0 s       0.0 s        1.6%    31.4 m      30.9 m 
+INFO  11:02:21,937 ProgressMeter -     1:102450293   1.02203392E8    60.0 s       0.0 s        3.3%    30.3 m      29.3 m 
+INFO  11:02:51,952 ProgressMeter -     1:171938297   1.71933696E8    90.0 s       0.0 s        5.5%    27.1 m      25.6 m 
+INFO  11:03:21,960 ProgressMeter -     1:237987801   2.379776E8   120.0 s       0.0 s        7.7%    26.1 m      24.1 m 
+INFO  11:03:51,977 ProgressMeter -      2:67636933   3.15982653E8     2.5 m       0.0 s       10.2%    24.5 m      22.0 m 
+INFO  11:04:21,992 ProgressMeter -     2:130535689   3.79618109E8     3.0 m       0.0 s       12.2%    24.5 m      21.5 m 
+INFO  11:04:52,046 ProgressMeter -     2:208987189   4.57851709E8     3.5 m       0.0 s       14.8%    23.7 m      20.2 m 
+INFO  11:05:22,055 ProgressMeter -      3:59038001   5.51432394E8     4.0 m       0.0 s       17.8%    22.5 m      18.5 m 
+INFO  11:05:52,067 ProgressMeter -     3:152756749   6.45181642E8     4.5 m       0.0 s       20.8%    21.6 m      17.1 m 
+INFO  11:06:22,089 ProgressMeter -      4:31727473   7.22142696E8     5.0 m       0.0 s       23.3%    21.5 m      16.5 m 
+INFO  11:06:52,104 ProgressMeter -     4:117835993   8.08240616E8     5.5 m       0.0 s       26.1%    21.1 m      15.6 m 
+INFO  11:07:22,117 ProgressMeter -      5:11142737   8.92751436E8     6.0 m       0.0 s       28.8%    20.8 m      14.8 m 
+INFO  11:07:52,136 ProgressMeter -      5:87692741   9.6903534E8     6.5 m       0.0 s       31.3%    20.8 m      14.3 m 
+INFO  11:08:22,149 ProgressMeter -     5:162134449   1.042959948E9     7.0 m       0.0 s       33.7%    20.8 m      13.8 m 
+INFO  11:08:52,163 ProgressMeter -      6:58125029   1.120574088E9     7.5 m       0.0 s       36.1%    20.8 m      13.3 m 
+INFO  11:09:22,178 ProgressMeter -      6:70911029   1.133271688E9     8.0 m       0.0 s       36.5%    21.9 m      13.9 m 
+INFO  11:09:52,202 ProgressMeter -     6:113472717   1.175575176E9     8.5 m       0.0 s       37.9%    22.4 m      13.9 m 
+INFO  11:10:22,235 ProgressMeter -      7:13609225   1.246125251E9     9.0 m       0.0 s       40.2%    22.4 m      13.4 m 
+INFO  11:10:52,253 ProgressMeter -      7:84668309   1.318231235E9     9.5 m       0.0 s       42.5%    22.4 m      12.9 m 
+INFO  11:11:22,268 ProgressMeter -       8:4351225   1.397071914E9    10.0 m       0.0 s       45.0%    22.2 m      12.2 m 
+INFO  11:11:52,290 ProgressMeter -      8:79015165   1.470963754E9    10.5 m       0.0 s       47.5%    22.1 m      11.6 m 
+INFO  11:12:22,308 ProgressMeter -      9:13589193   1.552479904E9    11.0 m       0.0 s       50.1%    22.0 m      11.0 m 
+INFO  11:12:52,321 ProgressMeter -      9:71944353   1.610888864E9    11.5 m       0.0 s       51.9%    22.1 m      10.6 m 
+INFO  11:13:22,337 ProgressMeter -     9:127814065   1.666479776E9    12.0 m       0.0 s       53.7%    22.3 m      10.3 m 
+INFO  11:13:52,347 ProgressMeter -     10:35935973   1.716139415E9    12.5 m       0.0 s       55.3%    22.6 m      10.1 m 
+INFO  11:14:22,352 ProgressMeter -     10:79414229   1.759704471E9    13.0 m       0.0 s       56.7%    22.9 m       9.9 m 
+INFO  11:14:52,378 ProgressMeter -    10:114813881   1.794569623E9    13.5 m       0.0 s       57.9%    23.3 m       9.8 m 
+INFO  11:15:22,393 ProgressMeter -      11:9358861   1.82516485E9    14.0 m       0.0 s       58.8%    23.8 m       9.8 m 
+INFO  11:15:52,412 ProgressMeter -     11:61621973   1.877069362E9    14.5 m       0.0 s       60.5%    24.0 m       9.5 m 
+INFO  11:16:22,426 ProgressMeter -     11:84969321   1.90077701E9    15.0 m       0.0 s       61.3%    24.5 m       9.5 m 
+INFO  11:16:52,440 ProgressMeter -     12:18952381   1.969674086E9    15.5 m       0.0 s       63.5%    24.4 m       8.9 m 
+INFO  11:17:22,460 ProgressMeter -     12:46095941   1.996953446E9    16.0 m       0.0 s       64.4%    24.9 m       8.9 m 
+INFO  11:17:52,470 ProgressMeter -     12:70472013   2.021250918E9    16.5 m       0.0 s       65.2%    25.3 m       8.8 m 
+INFO  11:18:22,490 ProgressMeter -    12:109573157   2.060425062E9    17.0 m       0.0 s       66.4%    25.6 m       8.6 m 
+INFO  11:18:52,503 ProgressMeter -    12:131977501   2.082396006E9    17.5 m       0.0 s       67.2%    26.1 m       8.6 m 
+INFO  11:19:22,521 ProgressMeter -     13:35047301   2.119582301E9    18.0 m       0.0 s       68.3%    26.3 m       8.3 m 
+INFO  11:19:52,549 ProgressMeter -     13:65915689   2.150416989E9    18.5 m       0.0 s       69.3%    26.7 m       8.2 m 
+INFO  11:20:22,563 ProgressMeter -     13:88630793   2.172224093E9    19.0 m       0.0 s       70.1%    27.1 m       8.1 m 
+INFO  11:20:52,576 ProgressMeter -    13:111845537   2.196243037E9    19.5 m       0.0 s       70.8%    27.5 m       8.0 m 
+INFO  11:21:22,595 ProgressMeter -     14:33591329   2.233392307E9    20.0 m       0.0 s       72.0%    27.8 m       7.8 m 
+INFO  11:21:52,609 ProgressMeter -     14:56981017   2.256854195E9    20.5 m       0.0 s       72.8%    28.2 m       7.7 m 
+INFO  11:22:22,626 ProgressMeter -     14:79146189   2.278694067E9    21.0 m       0.0 s       73.5%    28.6 m       7.6 m 
+INFO  11:22:52,644 ProgressMeter -    14:107036865   2.306776243E9    21.5 m       0.0 s       74.4%    28.9 m       7.4 m 
+INFO  11:23:22,666 ProgressMeter -     15:23571525   2.330813143E9    22.0 m       0.0 s       75.1%    29.3 m       7.3 m 
+INFO  11:23:52,678 ProgressMeter -     15:30665365   2.337940183E9    22.5 m       0.0 s       75.4%    29.9 m       7.4 m 
+INFO  11:24:22,690 ProgressMeter -     15:41308265   2.348589783E9    23.0 m       0.0 s       75.7%    30.4 m       7.4 m 
+INFO  11:24:52,823 ProgressMeter -     15:58292089   2.365563607E9    23.5 m       0.0 s       76.3%    30.8 m       7.3 m 
+INFO  11:25:22,835 ProgressMeter -     15:78209533   2.385486551E9    24.0 m       0.0 s       76.9%    31.2 m       7.2 m 
+INFO  11:25:52,851 ProgressMeter -     15:99275157   2.406556375E9    24.5 m       0.0 s       77.6%    31.6 m       7.1 m 
+INFO  11:26:22,871 ProgressMeter -     16:14038605   2.423841815E9    25.0 m       0.0 s       78.1%    32.0 m       7.0 m 
+INFO  11:26:52,882 ProgressMeter -     16:29446849   2.439259159E9    25.5 m       0.0 s       78.6%    32.4 m       6.9 m 
+INFO  11:27:22,913 ProgressMeter -     16:57830137   2.467636247E9    26.0 m       0.0 s       79.6%    32.7 m       6.7 m 
+INFO  11:27:52,932 ProgressMeter -     16:81973553   2.491786263E9    26.5 m       0.0 s       80.3%    33.0 m       6.5 m 
+INFO  11:28:22,945 ProgressMeter -      17:7947641   2.508118104E9    27.0 m       0.0 s       80.9%    33.4 m       6.4 m 
+INFO  11:28:52,957 ProgressMeter -     17:27091053   2.527254616E9    27.5 m       0.0 s       81.5%    33.8 m       6.3 m 
+INFO  11:29:22,974 ProgressMeter -     17:40973001   2.541131864E9    28.0 m       0.0 s       81.9%    34.2 m       6.2 m 
+INFO  11:29:52,995 ProgressMeter -     17:59729529   2.559842392E9    28.5 m       0.0 s       82.5%    34.6 m       6.0 m 
+INFO  11:30:23,017 ProgressMeter -     17:78351389   2.578520152E9    29.0 m       0.0 s       83.1%    34.9 m       5.9 m 
+INFO  11:30:53,052 ProgressMeter -     18:17588045   2.596784418E9    29.5 m       0.0 s       83.8%    35.2 m       5.7 m 
+INFO  11:31:23,069 ProgressMeter -     18:40662221   2.621999394E9    30.0 m       0.0 s       84.5%    35.5 m       5.5 m 
+INFO  11:31:53,079 ProgressMeter -     18:62377101   2.643626274E9    30.5 m       0.0 s       85.2%    35.8 m       5.3 m 
+INFO  11:32:23,095 ProgressMeter -     19:30526341   2.689918562E9    31.0 m       0.0 s       86.7%    35.8 m       4.7 m 
+INFO  11:32:53,112 ProgressMeter -     20:45914749   2.763989753E9    31.5 m       0.0 s       89.1%    35.4 m       3.8 m 
+INFO  11:33:23,130 ProgressMeter -     22:28142889   2.857696208E9    32.0 m       0.0 s       92.1%    34.7 m       2.7 m 
+INFO  11:33:53,145 ProgressMeter -      X:52836365   2.93380615E9    32.5 m       0.0 s       94.6%    34.4 m     111.0 s 
+INFO  11:34:23,165 ProgressMeter -     X:127450809   3.007386694E9    33.0 m       0.0 s       97.0%    34.0 m      61.0 s 
+INFO  11:34:51,774 ProgressMeter -            done   3.101804739E9    33.5 m       0.0 s      100.0%    33.5 m       0.0 s 
+INFO  11:34:51,775 ProgressMeter - Total runtime 2009.79 secs, 33.50 min, 0.56 hours 
+INFO  11:34:51,776 MicroScheduler - 72994 reads were filtered out during the traversal out of approximately 19814991 total reads (0.37%) 
+INFO  11:34:51,776 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  11:34:51,777 MicroScheduler -   -> 26090 reads (0.13% of total) failing BadMateFilter 
+INFO  11:34:51,777 MicroScheduler -   -> 0 reads (0.00% of total) failing DuplicateReadFilter 
+INFO  11:34:51,777 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  11:34:51,778 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  11:34:51,778 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  11:34:51,778 MicroScheduler -   -> 2519 reads (0.01% of total) failing NotPrimaryAlignmentFilter 
+INFO  11:34:51,778 MicroScheduler -   -> 44385 reads (0.22% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  11:01:21,931 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+(HumanGenomics) MacBook-Air-di-Alberto-3:06-2 albertolupatin$ nano Control.GATK.vcf.idx 
+(HumanGenomics) MacBook-Air-di-Alberto-3:06-2 albertolupatin$ vcftools --minQ 20 --max-meanDP 200 --min-meanDP 5 --remove-indels --vcf Control.BCF.vcf --out Control.BCF --recode --recode-INFO-all
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf Control.BCF.vcf
+	--recode-INFO-all
+	--max-meanDP 200
+	--min-meanDP 5
+	--minQ 20
+	--out Control.BCF
+	--recode
+	--remove-indels
+
+Warning: Expected at least 2 parts in INFO entry: ID=SGB,Number=1,Type=Float,Description="Segregation based metric, http://samtools.github.io/bcftools/rd-SegBias.pdf">
+Warning: Expected at least 2 parts in INFO entry: ID=PV4,Number=4,Type=Float,Description="P-values for strand bias, baseQ bias, mapQ bias and tail distance bias">
+Warning: Expected at least 2 parts in INFO entry: ID=PV4,Number=4,Type=Float,Description="P-values for strand bias, baseQ bias, mapQ bias and tail distance bias">
+Warning: Expected at least 2 parts in INFO entry: ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+Warning: Expected at least 2 parts in INFO entry: ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+After filtering, kept 1 out of 1 Individuals
+Outputting VCF file...
+After filtering, kept 35755 out of a possible 204193 Sites
+Run Time = 0.00 seconds
+(HumanGenomics) MacBook-Air-di-Alberto-3:06-2 albertolupatin$ vcftools --minQ 20 --max-meanDP 200 --min-meanDP 5 --remove-indels --vcf Control.GATK.vcf --out Control.GATK --recode --recode-INFO-all
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf Control.GATK.vcf
+	--recode-INFO-all
+	--max-meanDP 200
+	--min-meanDP 5
+	--minQ 20
+	--out Control.GATK
+	--recode
+	--remove-indels
+
+Warning: Expected at least 2 parts in FORMAT entry: ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+Warning: Expected at least 2 parts in INFO entry: ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=MLEAC,Number=A,Type=Integer,Description="Maximum likelihood expectation (MLE) for the allele counts (not necessarily the same as the AC), for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=MLEAC,Number=A,Type=Integer,Description="Maximum likelihood expectation (MLE) for the allele counts (not necessarily the same as the AC), for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=MLEAF,Number=A,Type=Float,Description="Maximum likelihood expectation (MLE) for the allele frequency (not necessarily the same as the AF), for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=MLEAF,Number=A,Type=Float,Description="Maximum likelihood expectation (MLE) for the allele frequency (not necessarily the same as the AF), for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=RPA,Number=.,Type=Integer,Description="Number of times tandem repeat unit is repeated, for each allele (including reference)">
+After filtering, kept 1 out of 1 Individuals
+Outputting VCF file...
+After filtering, kept 42997 out of a possible 149642 Sites
+Run Time = 1.00 seconds
+(HumanGenomics) MacBook-Air-di-Alberto-3:06-2 albertolupatin$ vcftools --vcf Control.BCF.recode.vcf --diff Control.GATK.recode.vcf --diff-site --not-chr GL000198.1
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf Control.BCF.recode.vcf
+	--not-chr GL000198.1
+	--diff Control.GATK.recode.vcf
+	--diff-site
+
+Warning: Expected at least 2 parts in INFO entry: ID=SGB,Number=1,Type=Float,Description="Segregation based metric, http://samtools.github.io/bcftools/rd-SegBias.pdf">
+Warning: Expected at least 2 parts in INFO entry: ID=PV4,Number=4,Type=Float,Description="P-values for strand bias, baseQ bias, mapQ bias and tail distance bias">
+Warning: Expected at least 2 parts in INFO entry: ID=PV4,Number=4,Type=Float,Description="P-values for strand bias, baseQ bias, mapQ bias and tail distance bias">
+Warning: Expected at least 2 parts in INFO entry: ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+Warning: Expected at least 2 parts in INFO entry: ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+After filtering, kept 1 out of 1 Individuals
+Warning: Expected at least 2 parts in FORMAT entry: ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+Warning: Expected at least 2 parts in INFO entry: ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=MLEAC,Number=A,Type=Integer,Description="Maximum likelihood expectation (MLE) for the allele counts (not necessarily the same as the AC), for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=MLEAC,Number=A,Type=Integer,Description="Maximum likelihood expectation (MLE) for the allele counts (not necessarily the same as the AC), for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=MLEAF,Number=A,Type=Float,Description="Maximum likelihood expectation (MLE) for the allele frequency (not necessarily the same as the AF), for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=MLEAF,Number=A,Type=Float,Description="Maximum likelihood expectation (MLE) for the allele frequency (not necessarily the same as the AF), for each ALT allele, in the same order as listed">
+Warning: Expected at least 2 parts in INFO entry: ID=RPA,Number=.,Type=Integer,Description="Number of times tandem repeat unit is repeated, for each allele (including reference)">
+Comparing sites in VCF files...
+Found 35032 sites common to both files.
+Found 723 sites only in main file.
+Found 7961 sites only in second file.
+Found 0 non-matching overlapping sites.
+After filtering, kept 35755 out of a possible 35755 Sites
+Run Time = 0.00 seconds
+(HumanGenomics) MacBook-Air-di-Alberto-3:06-2 albertolupatin$ 
