@@ -1,0 +1,18 @@
+
+VCFtools - 0.1.15
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf Tumor.VARSCAN.vcf
+	--recode-INFO-all
+	--max-meanDP 200
+	--min-meanDP 5
+	--out Tumor.VARSCAN
+	--recode
+	--remove-indels
+
+After filtering, kept 0 out of 0 Individuals
+Outputting VCF file...
+After filtering, kept 0 out of a possible 25969 Sites
+No data left for analysis!
+Run Time = 1.00 seconds
