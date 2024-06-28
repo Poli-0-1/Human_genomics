@@ -1,0 +1,17 @@
+
+VCFtools - 0.1.15
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf Tumor1.GATK.recode (1).vcf
+	--diff Tumor.VARSCAN.recode.vcf
+	--diff-site
+
+After filtering, kept 1 out of 1 Individuals
+Comparing sites in VCF files...
+Found 0 sites common to both files.
+Found 39713 sites only in main file.
+Found 0 sites only in second file.
+Found 0 non-matching overlapping sites.
+After filtering, kept 39713 out of a possible 39713 Sites
+Run Time = 0.00 seconds
