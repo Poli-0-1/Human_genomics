@@ -1,0 +1,2 @@
+sample.id	pop	type	contribution
+TCGA-A7-A4SE-Tumor	EUR	CLOSEST	EUR(25.09%)|EAS(25%)|AFR(24.96%)|SAS(24.95%)
