@@ -1,0 +1,528 @@
+Last login: Fri May 31 12:29:55 on ttys002
+con
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) AirdiAlberto3:~ albertolupatin$ conda deactivate && conda activate HumanGenomics
+(HumanGenomics) AirdiAlberto3:~ albertolupatin$ cd /Users/albertolupatin/Desktop/HumanGenomics/Project/Control/4_Duplication 
+(HumanGenomics) AirdiAlberto3:4_Duplication albertolupatin$ . ./Script.sh 
+INFO	2024-06-04 09:49:58	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I  ../Control.sorted.bam -O Control.sorted.dedup.bam -REMOVE_DUPLICATES true -TMP_DIR /tmp -METRICS_FILE Control.picard.log -ASSUME_SORTED true
+**********
+
+
+09:49:58.642 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+09:49:58.654 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/tmp/libgkl_compression7533640195685954084.dylib: dlopen(/private/tmp/libgkl_compression7533640195685954084.dylib, 0x0001): tried: '/private/tmp/libgkl_compression7533640195685954084.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/tmp/libgkl_compression7533640195685954084.dylib' (no such file), '/private/tmp/libgkl_compression7533640195685954084.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')))
+09:49:58.654 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+09:49:58.656 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/tmp/libgkl_compression6951801734837630100.dylib: dlopen(/private/tmp/libgkl_compression6951801734837630100.dylib, 0x0001): tried: '/private/tmp/libgkl_compression6951801734837630100.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/tmp/libgkl_compression6951801734837630100.dylib' (no such file), '/private/tmp/libgkl_compression6951801734837630100.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')))
+[Tue Jun 04 09:49:58 CEST 2024] MarkDuplicates INPUT=[../Control.sorted.bam] OUTPUT=Control.sorted.dedup.bam METRICS_FILE=Control.picard.log REMOVE_DUPLICATES=true ASSUME_SORTED=true TMP_DIR=[/tmp]    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false ADD_PG_TAG_TO_READS=true DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Tue Jun 04 09:49:58 CEST 2024] Executing as albertolupatin@AirdiAlberto3.Home on Mac OS X 14.5 aarch64; OpenJDK 64-Bit Server VM 1.8.0_412-b08; Deflater: Jdk; Inflater: Jdk; Provider GCS is not available; Picard version: 2.22.3
+INFO	2024-06-04 09:49:58	MarkDuplicates	Start of doWork freeMemory: 123961400; totalMemory: 128974848; maxMemory: 1908932608
+INFO	2024-06-04 09:49:58	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2024-06-04 09:49:58	MarkDuplicates	Will retain up to 6916422 data points before spilling to disk.
+09:55:12.570 WARN  IntelDeflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+INFO	2024-06-04 09:55:14	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:02s.  Time for last 1,000,000:    2s.  Last read position: 15:28,582,091
+INFO	2024-06-04 09:55:14	MarkDuplicates	Tracking 2881 as yet unmatched pairs. 525 records in RAM.
+INFO	2024-06-04 09:55:16	MarkDuplicates	Read     2,000,000 records.  Elapsed time: 00:00:04s.  Time for last 1,000,000:    1s.  Last read position: 15:39,874,424
+INFO	2024-06-04 09:55:16	MarkDuplicates	Tracking 3091 as yet unmatched pairs. 344 records in RAM.
+INFO	2024-06-04 09:55:19	MarkDuplicates	Read     3,000,000 records.  Elapsed time: 00:00:06s.  Time for last 1,000,000:    2s.  Last read position: 15:55,677,503
+INFO	2024-06-04 09:55:19	MarkDuplicates	Tracking 3579 as yet unmatched pairs. 388 records in RAM.
+INFO	2024-06-04 09:55:21	MarkDuplicates	Read     4,000,000 records.  Elapsed time: 00:00:08s.  Time for last 1,000,000:    2s.  Last read position: 15:75,577,997
+INFO	2024-06-04 09:55:21	MarkDuplicates	Tracking 4508 as yet unmatched pairs. 816 records in RAM.
+INFO	2024-06-04 09:55:22	MarkDuplicates	Read     5,000,000 records.  Elapsed time: 00:00:10s.  Time for last 1,000,000:    1s.  Last read position: 15:85,383,448
+INFO	2024-06-04 09:55:22	MarkDuplicates	Tracking 4275 as yet unmatched pairs. 223 records in RAM.
+INFO	2024-06-04 09:55:25	MarkDuplicates	Read     6,000,000 records.  Elapsed time: 00:00:12s.  Time for last 1,000,000:    2s.  Last read position: 16:1,889,191
+INFO	2024-06-04 09:55:25	MarkDuplicates	Tracking 4572 as yet unmatched pairs. 1419 records in RAM.
+WARNING	2024-06-04 09:55:29	SnappyLoader	Snappy native library failed to load.
+org.xerial.snappy.SnappyError: [FAILED_TO_LOAD_NATIVE_LIBRARY] no native library is found for os.name=Mac and os.arch=aarch64
+	at org.xerial.snappy.SnappyLoader.findNativeLibrary(SnappyLoader.java:342)
+	at org.xerial.snappy.SnappyLoader.loadNativeLibrary(SnappyLoader.java:176)
+	at org.xerial.snappy.SnappyLoader.loadSnappyApi(SnappyLoader.java:154)
+	at org.xerial.snappy.Snappy.<clinit>(Snappy.java:47)
+	at org.xerial.snappy.SnappyOutputStream.<init>(SnappyOutputStream.java:99)
+	at org.xerial.snappy.SnappyOutputStream.<init>(SnappyOutputStream.java:91)
+	at org.xerial.snappy.SnappyOutputStream.<init>(SnappyOutputStream.java:81)
+	at htsjdk.samtools.util.SnappyLoader.<init>(SnappyLoader.java:58)
+	at htsjdk.samtools.util.SnappyLoader.<init>(SnappyLoader.java:48)
+	at htsjdk.samtools.util.TempStreamFactory.getSnappyLoader(TempStreamFactory.java:42)
+	at htsjdk.samtools.util.TempStreamFactory.wrapTempOutputStream(TempStreamFactory.java:74)
+	at htsjdk.samtools.util.SortingCollection.spillToDisk(SortingCollection.java:251)
+	at htsjdk.samtools.util.SortingCollection.add(SortingCollection.java:182)
+	at picard.sam.markduplicates.MarkDuplicates.buildSortedReadEndLists(MarkDuplicates.java:553)
+	at picard.sam.markduplicates.MarkDuplicates.doWork(MarkDuplicates.java:257)
+	at picard.cmdline.CommandLineProgram.instanceMain(CommandLineProgram.java:305)
+	at picard.cmdline.PicardCommandLine.instanceMain(PicardCommandLine.java:103)
+	at picard.cmdline.PicardCommandLine.main(PicardCommandLine.java:113)
+INFO	2024-06-04 09:55:31	MarkDuplicates	Read     7,000,000 records.  Elapsed time: 00:00:18s.  Time for last 1,000,000:    5s.  Last read position: 16:15,612,363
+INFO	2024-06-04 09:55:31	MarkDuplicates	Tracking 4952 as yet unmatched pairs. 1524 records in RAM.
+INFO	2024-06-04 09:55:33	MarkDuplicates	Read     8,000,000 records.  Elapsed time: 00:00:20s.  Time for last 1,000,000:    1s.  Last read position: 16:23,504,639
+INFO	2024-06-04 09:55:33	MarkDuplicates	Tracking 5043 as yet unmatched pairs. 1374 records in RAM.
+INFO	2024-06-04 09:55:36	MarkDuplicates	Read     9,000,000 records.  Elapsed time: 00:00:23s.  Time for last 1,000,000:    3s.  Last read position: 16:32,771,206
+INFO	2024-06-04 09:55:36	MarkDuplicates	Tracking 5302 as yet unmatched pairs. 1394 records in RAM.
+INFO	2024-06-04 09:55:38	MarkDuplicates	Read    10,000,000 records.  Elapsed time: 00:00:25s.  Time for last 1,000,000:    1s.  Last read position: 16:67,263,611
+INFO	2024-06-04 09:55:38	MarkDuplicates	Tracking 4913 as yet unmatched pairs. 541 records in RAM.
+INFO	2024-06-04 09:55:40	MarkDuplicates	Read    11,000,000 records.  Elapsed time: 00:00:28s.  Time for last 1,000,000:    2s.  Last read position: 16:85,498,335
+INFO	2024-06-04 09:55:40	MarkDuplicates	Tracking 4839 as yet unmatched pairs. 97 records in RAM.
+INFO	2024-06-04 09:55:42	MarkDuplicates	Read    12,000,000 records.  Elapsed time: 00:00:30s.  Time for last 1,000,000:    1s.  Last read position: 17:7,365,772
+INFO	2024-06-04 09:55:42	MarkDuplicates	Tracking 4872 as yet unmatched pairs. 2299 records in RAM.
+INFO	2024-06-04 09:55:45	MarkDuplicates	Read    13,000,000 records.  Elapsed time: 00:00:33s.  Time for last 1,000,000:    3s.  Last read position: 17:19,107,139
+INFO	2024-06-04 09:55:45	MarkDuplicates	Tracking 4918 as yet unmatched pairs. 2241 records in RAM.
+INFO	2024-06-04 09:55:49	MarkDuplicates	Read    14,000,000 records.  Elapsed time: 00:00:37s.  Time for last 1,000,000:    3s.  Last read position: 17:34,523,924
+INFO	2024-06-04 09:55:49	MarkDuplicates	Tracking 4955 as yet unmatched pairs. 2116 records in RAM.
+INFO	2024-06-04 09:55:51	MarkDuplicates	Read    15,000,000 records.  Elapsed time: 00:00:39s.  Time for last 1,000,000:    2s.  Last read position: 17:40,840,467
+INFO	2024-06-04 09:55:51	MarkDuplicates	Tracking 4325 as yet unmatched pairs. 1405 records in RAM.
+INFO	2024-06-04 09:55:54	MarkDuplicates	Read    16,000,000 records.  Elapsed time: 00:00:41s.  Time for last 1,000,000:    2s.  Last read position: 17:56,399,817
+INFO	2024-06-04 09:55:54	MarkDuplicates	Tracking 4029 as yet unmatched pairs. 1014 records in RAM.
+INFO	2024-06-04 09:55:56	MarkDuplicates	Read    17,000,000 records.  Elapsed time: 00:00:43s.  Time for last 1,000,000:    1s.  Last read position: 17:73,389,512
+INFO	2024-06-04 09:55:56	MarkDuplicates	Tracking 3474 as yet unmatched pairs. 349 records in RAM.
+INFO	2024-06-04 09:55:58	MarkDuplicates	Read    18,000,000 records.  Elapsed time: 00:00:45s.  Time for last 1,000,000:    2s.  Last read position: 18:9,524,769
+INFO	2024-06-04 09:55:58	MarkDuplicates	Tracking 3054 as yet unmatched pairs. 1820 records in RAM.
+INFO	2024-06-04 09:56:00	MarkDuplicates	Read    19,000,000 records.  Elapsed time: 00:00:47s.  Time for last 1,000,000:    1s.  Last read position: 18:45,902,477
+INFO	2024-06-04 09:56:00	MarkDuplicates	Tracking 2058 as yet unmatched pairs. 689 records in RAM.
+INFO	2024-06-04 09:56:02	MarkDuplicates	Read 19714309 records. 0 pairs never matched.
+INFO	2024-06-04 09:56:04	MarkDuplicates	After buildSortedReadEndLists freeMemory: 1534130256; totalMemory: 1549795328; maxMemory: 1908932608
+INFO	2024-06-04 09:56:04	MarkDuplicates	Will retain up to 59654144 duplicate indices before spilling to disk.
+INFO	2024-06-04 09:56:04	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2024-06-04 09:56:08	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2024-06-04 09:56:10	MarkDuplicates	Sorting list of duplicate records.
+INFO	2024-06-04 09:56:11	MarkDuplicates	After generateDuplicateIndexes freeMemory: 1138572800; totalMemory: 1631584256; maxMemory: 1908932608
+INFO	2024-06-04 09:56:11	MarkDuplicates	Marking 2685458 records as duplicates.
+INFO	2024-06-04 09:56:11	MarkDuplicates	Found 904 optical duplicate clusters.
+09:56:11.092 WARN  IntelDeflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+INFO	2024-06-04 09:56:11	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+09:56:11.098 WARN  IntelDeflaterFactory - IntelDeflater is not supported, using Java.util.zip.Deflater
+INFO	2024-06-04 09:57:34	MarkDuplicates	Written    10,000,000 records.  Elapsed time: 00:01:23s.  Time for last 10,000,000:   83s.  Last read position: 17:3,568,038
+INFO	2024-06-04 09:58:34	MarkDuplicates	Writing complete. Closing input iterator.
+INFO	2024-06-04 09:58:34	MarkDuplicates	Duplicate Index cleanup.
+INFO	2024-06-04 09:58:34	MarkDuplicates	Getting Memory Stats.
+INFO	2024-06-04 09:58:34	MarkDuplicates	Before output close freeMemory: 1622243360; totalMemory: 1639448576; maxMemory: 1908932608
+INFO	2024-06-04 09:58:34	MarkDuplicates	Closed outputs. Getting more Memory Stats.
+INFO	2024-06-04 09:58:34	MarkDuplicates	After output close freeMemory: 1622458600; totalMemory: 1639448576; maxMemory: 1908932608
+[Tue Jun 04 09:58:34 CEST 2024] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 8.60 minutes.
+Runtime.totalMemory()=1639448576
+[bam_sort_core] merging from 8 files and 1 in-memory blocks...
+[bam_sort_core] merging from 8 files and 1 in-memory blocks...
+COMMAND: samtools markdup -sr Control.nsorted.fixed.sorted.bam Control.nsorted.fixed.sorted.dedup.bam
+READ: 19720171
+WRITTEN: 17034753
+EXCLUDED: 61980
+EXAMINED: 19658191
+PAIRED: 19613806
+SINGLE: 44385
+DUPLICATE PAIR: 2661640
+DUPLICATE SINGLE: 23778
+DUPLICATE PAIR OPTICAL: 0
+DUPLICATE SINGLE OPTICAL: 0
+DUPLICATE NON PRIMARY: 0
+DUPLICATE NON PRIMARY OPTICAL: 0
+DUPLICATE PRIMARY TOTAL: 2685418
+DUPLICATE TOTAL: 2685418
+ESTIMATED_LIBRARY_SIZE: 32785075
+
+17034713 + 0 in total (QC-passed reads + QC-failed reads)
+17022980 + 0 primary
+11733 + 0 secondary
+0 + 0 supplementary
+0 + 0 duplicates
+0 + 0 primary duplicates
+16984466 + 0 mapped (99.71% : N/A)
+16972733 + 0 primary mapped (99.70% : N/A)
+17022980 + 0 paired in sequencing
+8499686 + 0 read1
+8523294 + 0 read2
+16916352 + 0 properly paired (99.37% : N/A)
+16952126 + 0 with itself and mate mapped
+20607 + 0 singletons (0.12% : N/A)
+16158 + 0 with mate mapped to a different chr
+9515 + 0 with mate mapped to a different chr (mapQ>=5)
+17034753 + 0 in total (QC-passed reads + QC-failed reads)
+17023020 + 0 primary
+11733 + 0 secondary
+0 + 0 supplementary
+0 + 0 duplicates
+0 + 0 primary duplicates
+16984506 + 0 mapped (99.71% : N/A)
+16972773 + 0 primary mapped (99.70% : N/A)
+17023020 + 0 paired in sequencing
+8499706 + 0 read1
+8523314 + 0 read2
+16916352 + 0 properly paired (99.37% : N/A)
+16952166 + 0 with itself and mate mapped
+20607 + 0 singletons (0.12% : N/A)
+16164 + 0 with mate mapped to a different chr
+9520 + 0 with mate mapped to a different chr (mapQ>=5)
+INFO  10:20:50,430 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  10:20:50,431 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  10:20:50,431 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  10:20:50,431 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  10:20:50,431 HelpFormatter - [Tue Jun 04 10:20:50 CEST 2024] Executing on Mac OS X 14.5 aarch64 
+INFO  10:20:50,431 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_412-b08 
+INFO  10:20:50,434 HelpFormatter - Program Args: -T RealignerTargetCreator -R /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta -I ../Control.sorted.bam -o realigner.intervals 
+INFO  10:20:50,455 HelpFormatter - Executing as albertolupatin@AirdiAlberto3.Home on Mac OS X 14.5 aarch64; OpenJDK 64-Bit Server VM 1.8.0_412-b08. 
+INFO  10:20:50,456 HelpFormatter - Date/Time: 2024/06/04 10:20:50 
+INFO  10:20:50,456 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  10:20:50,456 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  10:20:50,460 NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.dylib 
+WARN  10:20:50,474 NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6243123488234360657.dylib: dlopen(/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6243123488234360657.dylib, 0x0001): tried: '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6243123488234360657.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6243123488234360657.dylib' (no such file), '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6243123488234360657.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))) 
+INFO  10:20:50,475 NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.dylib 
+WARN  10:20:50,477 NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3345161937289783034.dylib: dlopen(/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3345161937289783034.dylib, 0x0001): tried: '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3345161937289783034.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3345161937289783034.dylib' (no such file), '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3345161937289783034.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))) 
+INFO  10:20:50,477 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  10:20:50,478 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  10:20:50,478 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  10:27:50,393 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  10:27:50,398 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARN  10:27:50,409 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+WARN  10:27:50,412 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+INFO  10:27:50,422 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.02 
+INFO  10:27:51,486 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  10:27:51,515 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  10:27:51,515 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  10:27:51,515 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  10:27:51,516 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  10:28:21,528 ProgressMeter -     2:201293741   4.50528061E8    30.0 s       0.0 s       14.5%     3.4 m       2.9 m 
+INFO  10:28:51,543 ProgressMeter -      5:34528897   9.15934796E8    60.0 s       0.0 s       29.5%     3.4 m       2.4 m 
+INFO  10:29:21,560 ProgressMeter -     7:138872861   1.372347587E9    90.0 s       0.0 s       44.2%     3.4 m     113.0 s 
+INFO  10:29:51,575 ProgressMeter -     11:14221733   1.829801522E9   120.0 s       0.0 s       59.0%     3.4 m      83.0 s 
+INFO  10:30:21,589 ProgressMeter -     14:89730025   2.288590003E9     2.5 m       0.0 s       73.8%     3.4 m      53.0 s 
+INFO  10:30:51,604 ProgressMeter -     15:78214433   2.385486551E9     3.0 m       0.0 s       76.9%     3.9 m      54.0 s 
+INFO  10:31:21,618 ProgressMeter -     16:33500097   2.443306007E9     3.5 m       0.0 s       78.8%     4.4 m      56.0 s 
+INFO  10:31:51,633 ProgressMeter -     17:11943853   2.512099416E9     4.0 m       0.0 s       81.0%     4.9 m      56.0 s 
+INFO  10:32:21,648 ProgressMeter -     17:61838217   2.56200508E9     4.5 m       0.0 s       82.6%     5.4 m      56.0 s 
+INFO  10:32:51,666 ProgressMeter -     18:56221105   2.637580578E9     5.0 m       0.0 s       85.0%     5.9 m      52.0 s 
+INFO  10:33:21,684 ProgressMeter -      X:89892921   2.970408006E9     5.5 m       0.0 s       95.8%     5.7 m      14.0 s 
+INFO  10:33:31,505 ProgressMeter -            done   3.101804739E9     5.7 m       0.0 s      100.0%     5.7 m       0.0 s 
+INFO  10:33:31,505 ProgressMeter - Total runtime 340.01 secs, 5.67 min, 0.09 hours 
+INFO  10:33:31,505 MicroScheduler - 3565567 reads were filtered out during the traversal out of approximately 19814991 total reads (17.99%) 
+INFO  10:33:31,505 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  10:33:31,505 MicroScheduler -   -> 14752 reads (0.07% of total) failing BadMateFilter 
+INFO  10:33:31,505 MicroScheduler -   -> 0 reads (0.00% of total) failing DuplicateReadFilter 
+INFO  10:33:31,505 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  10:33:31,505 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  10:33:31,505 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  10:33:31,505 MicroScheduler -   -> 3549444 reads (17.91% of total) failing MappingQualityZeroFilter 
+INFO  10:33:31,506 MicroScheduler -   -> 1371 reads (0.01% of total) failing NotPrimaryAlignmentFilter 
+INFO  10:33:31,506 MicroScheduler -   -> 0 reads (0.00% of total) failing Platform454Filter 
+INFO  10:33:31,506 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+INFO  10:33:32,344 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  10:33:32,345 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  10:33:32,345 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  10:33:32,345 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  10:33:32,345 HelpFormatter - [Tue Jun 04 10:33:32 CEST 2024] Executing on Mac OS X 14.5 aarch64 
+INFO  10:33:32,345 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_412-b08 
+INFO  10:33:32,348 HelpFormatter - Program Args: -T IndelRealigner -R /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta -I ../Control.sorted.bam -targetIntervals realigner.intervals -o Control.sorted.realigned.bam 
+INFO  10:33:32,374 HelpFormatter - Executing as albertolupatin@AirdiAlberto3.Home on Mac OS X 14.5 aarch64; OpenJDK 64-Bit Server VM 1.8.0_412-b08. 
+INFO  10:33:32,375 HelpFormatter - Date/Time: 2024/06/04 10:33:32 
+INFO  10:33:32,375 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  10:33:32,375 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  10:33:32,406 NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.dylib 
+WARN  10:33:32,420 NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression8890833242338883570.dylib: dlopen(/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression8890833242338883570.dylib, 0x0001): tried: '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression8890833242338883570.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression8890833242338883570.dylib' (no such file), '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression8890833242338883570.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))) 
+INFO  10:33:32,420 NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.dylib 
+WARN  10:33:32,422 NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3452500348487724075.dylib: dlopen(/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3452500348487724075.dylib, 0x0001): tried: '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3452500348487724075.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3452500348487724075.dylib' (no such file), '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3452500348487724075.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))) 
+INFO  10:33:32,422 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  10:33:32,422 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  10:33:32,423 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  10:33:32,482 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  10:33:32,485 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARN  10:33:32,494 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+WARN  10:33:32,496 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+INFO  10:33:32,500 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.01 
+INFO  10:33:32,591 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  10:33:32,593 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  10:33:32,593 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  10:33:32,593 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  10:33:32,593 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  10:33:32,649 ReadShardBalancer$1 - Loading BAM index data 
+INFO  10:33:32,649 ReadShardBalancer$1 - Done loading BAM index data 
+WARN  10:33:32,810 IntelDeflaterFactory - IntelDeflater is not supported, using Java.util.zip.Deflater 
+INFO  10:34:02,608 ProgressMeter -     15:32908022   1688247.0    30.0 s      17.0 s       75.4%    39.0 s       9.0 s 
+INFO  10:34:32,924 ProgressMeter -     15:73570483   3688277.0    60.0 s      16.0 s       76.8%    78.0 s      18.0 s 
+INFO  10:35:02,944 ProgressMeter -      16:1391516   5893752.0    90.0 s      15.0 s       77.7%   115.0 s      25.0 s 
+INFO  10:35:33,475 ProgressMeter -     16:27495781   8093811.0   120.0 s      14.0 s       78.6%     2.5 m      32.0 s 
+INFO  10:36:04,149 ProgressMeter -     16:68943350   1.0093844E7     2.5 m      15.0 s       79.9%     3.1 m      37.0 s 
+INFO  10:36:34,203 ProgressMeter -      17:9631100   1.223476E7     3.0 m      14.0 s       80.9%     3.7 m      42.0 s 
+INFO  10:37:04,280 ProgressMeter -     17:36314165   1.4234817E7     3.5 m      14.0 s       81.8%     4.3 m      47.0 s 
+INFO  10:37:34,292 ProgressMeter -     17:60518077   1.623489E7     4.0 m      14.0 s       82.6%     4.9 m      50.0 s 
+INFO  10:38:04,308 ProgressMeter -     18:24629692   1.8438662E7     4.5 m      14.0 s       84.0%     5.4 m      51.0 s 
+INFO  10:38:19,716 ProgressMeter -            done   1.9720171E7     4.8 m      14.0 s      100.0%     4.8 m       0.0 s 
+INFO  10:38:19,717 ProgressMeter - Total runtime 287.14 secs, 4.79 min, 0.08 hours 
+INFO  10:38:19,721 MicroScheduler - 0 reads were filtered out during the traversal out of approximately 19720171 total reads (0.00%) 
+INFO  10:38:19,721 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  10:38:19,721 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+INFO  10:38:20,595 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  10:38:20,596 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  10:38:20,596 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  10:38:20,597 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  10:38:20,597 HelpFormatter - [Tue Jun 04 10:38:20 CEST 2024] Executing on Mac OS X 14.5 aarch64 
+INFO  10:38:20,597 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_412-b08 
+INFO  10:38:20,599 HelpFormatter - Program Args: -T BaseRecalibrator -R /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta -I Control.sorted.realigned.bam -knownSites /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/hapmap_3.3.b37.vcf -o recal.table 
+INFO  10:38:20,623 HelpFormatter - Executing as albertolupatin@AirdiAlberto3.Home on Mac OS X 14.5 aarch64; OpenJDK 64-Bit Server VM 1.8.0_412-b08. 
+INFO  10:38:20,623 HelpFormatter - Date/Time: 2024/06/04 10:38:20 
+INFO  10:38:20,623 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  10:38:20,623 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  10:38:52,827 NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.dylib 
+WARN  10:38:52,856 NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression2487906308231651362.dylib: dlopen(/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression2487906308231651362.dylib, 0x0001): tried: '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression2487906308231651362.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression2487906308231651362.dylib' (no such file), '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression2487906308231651362.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))) 
+INFO  10:38:52,858 NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.dylib 
+WARN  10:38:52,861 NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6036352937070218717.dylib: dlopen(/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6036352937070218717.dylib, 0x0001): tried: '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6036352937070218717.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6036352937070218717.dylib' (no such file), '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6036352937070218717.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))) 
+INFO  10:38:52,862 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  10:38:52,862 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  10:38:52,863 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  10:38:52,944 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  10:38:52,947 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARN  10:38:52,954 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+WARN  10:38:52,956 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+INFO  10:38:52,959 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.01 
+INFO  10:38:54,853 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  10:38:54,855 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  10:38:54,856 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  10:38:54,856 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  10:38:54,856 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  10:38:54,914 BaseRecalibrator - The covariates being used here:  
+INFO  10:38:54,915 BaseRecalibrator - 	ReadGroupCovariate 
+INFO  10:38:54,915 BaseRecalibrator - 	QualityScoreCovariate 
+INFO  10:38:54,915 BaseRecalibrator - 	ContextCovariate 
+INFO  10:38:54,915 ContextCovariate - 		Context sizes: base substitution model 2, indel substitution model 3 
+INFO  10:38:54,915 BaseRecalibrator - 	CycleCovariate 
+INFO  10:38:54,917 ReadShardBalancer$1 - Loading BAM index data 
+INFO  10:38:54,918 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  10:39:24,923 ProgressMeter -     15:29053318    525221.0    30.0 s      57.0 s       75.3%    39.0 s       9.0 s 
+INFO  10:39:54,941 ProgressMeter -     15:42105231   1125233.0    60.0 s      53.0 s       75.7%    79.0 s      19.0 s 
+INFO  10:40:25,111 ProgressMeter -     15:57017310   1925252.0    90.0 s      46.0 s       76.2%   118.0 s      28.0 s 
+INFO  10:40:55,201 ProgressMeter -     15:74420715   2725262.0   120.0 s      44.0 s       76.8%     2.6 m      36.0 s 
+INFO  10:41:25,215 ProgressMeter -     15:84947138   3425278.0     2.5 m      43.0 s       77.1%     3.2 m      44.0 s 
+INFO  10:41:55,562 ProgressMeter -    15:102318354   4025285.0     3.0 m      44.0 s       77.7%     3.9 m      51.0 s 
+INFO  10:42:25,758 ProgressMeter -      16:2549381   4536811.0     3.5 m      46.0 s       77.8%     4.5 m      60.0 s 
+INFO  10:42:56,246 ProgressMeter -     16:14989216   5136823.0     4.0 m      46.0 s       78.2%     5.1 m      67.0 s 
+INFO  10:43:26,408 ProgressMeter -     16:20975951   5536843.0     4.5 m      49.0 s       78.4%     5.8 m      74.0 s 
+INFO  10:43:56,902 ProgressMeter -     16:28507321   5936854.0     5.0 m      50.0 s       78.6%     6.4 m      82.0 s 
+INFO  10:44:26,925 ProgressMeter -     16:34740976   6436869.0     5.5 m      51.0 s       78.8%     7.0 m      89.0 s 
+INFO  10:44:56,974 ProgressMeter -     16:58346149   7036883.0     6.0 m      51.0 s       79.6%     7.6 m      92.0 s 
+INFO  10:45:27,000 ProgressMeter -     16:70578286   7636895.0     6.5 m      51.0 s       80.0%     8.2 m      98.0 s 
+INFO  10:45:57,051 ProgressMeter -     16:84213686   8136902.0     7.0 m      51.0 s       80.4%     8.7 m     102.0 s 
+INFO  10:46:27,364 ProgressMeter -      17:2930201   8669787.0     7.5 m      52.0 s       80.7%     9.3 m     108.0 s 
+INFO  10:46:57,489 ProgressMeter -      17:7401567   9169793.0     8.0 m      52.0 s       80.8%     9.9 m     114.0 s 
+INFO  10:47:27,540 ProgressMeter -     17:10436882   9569798.0     8.5 m      53.0 s       80.9%    10.5 m     120.0 s 
+INFO  10:47:57,575 ProgressMeter -     17:18668282   1.0069805E7     9.0 m      53.0 s       81.2%    11.1 m       2.1 m 
+INFO  10:48:27,588 ProgressMeter -     17:27453339   1.0469812E7     9.5 m      54.0 s       81.5%    11.7 m       2.2 m 
+INFO  10:48:57,600 ProgressMeter -     17:37882167   1.1269823E7    10.0 m      53.0 s       81.8%    12.3 m       2.2 m 
+INFO  10:49:27,649 ProgressMeter -     17:43315127   1.1969847E7    10.5 m      52.0 s       82.0%    12.8 m       2.3 m 
+INFO  10:49:57,663 ProgressMeter -     17:57253435   1.2669861E7    11.0 m      52.0 s       82.4%    13.4 m       2.3 m 
+INFO  10:50:27,677 ProgressMeter -     17:68237348   1.326987E7    11.5 m      52.0 s       82.8%    13.9 m       2.4 m 
+INFO  10:50:58,284 ProgressMeter -     17:78262324   1.3969879E7    12.1 m      51.0 s       83.1%    14.5 m       2.4 m 
+INFO  10:51:28,481 ProgressMeter -     18:11013176   1.4599806E7    12.6 m      51.0 s       83.6%    15.0 m       2.5 m 
+INFO  10:51:58,647 ProgressMeter -     18:32407656   1.5199814E7    13.1 m      51.0 s       84.3%    15.5 m       2.4 m 
+INFO  10:52:28,663 ProgressMeter -     18:56997376   1.569982E7    13.6 m      51.0 s       85.1%    15.9 m       2.4 m 
+INFO  10:52:47,426 BaseRecalibrator - Calculating quantized quality scores... 
+INFO  10:52:47,445 BaseRecalibrator - Writing recalibration report... 
+INFO  10:52:48,361 BaseRecalibrator - ...done! 
+INFO  10:52:48,361 BaseRecalibrator - BaseRecalibrator was able to recalibrate 16181972 reads 
+INFO  10:52:48,362 ProgressMeter -            done   1.6181972E7    13.9 m      51.0 s      100.0%    13.9 m       0.0 s 
+INFO  10:52:48,362 ProgressMeter - Total runtime 833.50 secs, 13.89 min, 0.23 hours 
+INFO  10:52:48,363 MicroScheduler - 3538199 reads were filtered out during the traversal out of approximately 19720171 total reads (17.94%) 
+INFO  10:52:48,363 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  10:52:48,363 MicroScheduler -   -> 0 reads (0.00% of total) failing DuplicateReadFilter 
+INFO  10:52:48,363 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  10:52:48,363 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  10:52:48,363 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  10:52:48,363 MicroScheduler -   -> 3532975 reads (17.92% of total) failing MappingQualityZeroFilter 
+INFO  10:52:48,371 MicroScheduler -   -> 5224 reads (0.03% of total) failing NotPrimaryAlignmentFilter 
+INFO  10:52:48,372 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+INFO  10:52:49,523 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  10:52:49,524 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  10:52:49,525 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  10:52:49,525 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  10:52:49,525 HelpFormatter - [Tue Jun 04 10:52:49 CEST 2024] Executing on Mac OS X 14.5 aarch64 
+INFO  10:52:49,525 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_412-b08 
+INFO  10:52:49,529 HelpFormatter - Program Args: -T PrintReads -R /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta -I Control.sorted.realigned.bam -BQSR recal.table -o Control.sorted.realigned.recalibrated.bam --emit_original_quals 
+INFO  10:52:49,566 HelpFormatter - Executing as albertolupatin@AirdiAlberto3.Home on Mac OS X 14.5 aarch64; OpenJDK 64-Bit Server VM 1.8.0_412-b08. 
+INFO  10:52:49,566 HelpFormatter - Date/Time: 2024/06/04 10:52:49 
+INFO  10:52:49,566 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  10:52:49,566 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  10:52:49,621 NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.dylib 
+WARN  10:52:49,640 NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3118385991208708459.dylib: dlopen(/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3118385991208708459.dylib, 0x0001): tried: '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3118385991208708459.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3118385991208708459.dylib' (no such file), '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3118385991208708459.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))) 
+INFO  10:52:49,642 NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.dylib 
+WARN  10:52:49,644 NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression8173615612977735151.dylib: dlopen(/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression8173615612977735151.dylib, 0x0001): tried: '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression8173615612977735151.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression8173615612977735151.dylib' (no such file), '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression8173615612977735151.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))) 
+INFO  10:52:49,645 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  10:52:49,645 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  10:52:49,646 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  10:52:49,927 ContextCovariate - 		Context sizes: base substitution model 2, indel substitution model 3 
+INFO  10:52:49,952 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  10:52:49,957 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARN  10:52:49,974 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+WARN  10:52:49,977 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+INFO  10:52:49,982 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.03 
+INFO  10:52:50,053 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  10:52:50,055 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  10:52:50,056 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  10:52:50,056 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  10:52:50,056 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  10:52:50,061 ReadShardBalancer$1 - Loading BAM index data 
+INFO  10:52:50,061 ReadShardBalancer$1 - Done loading BAM index data 
+WARN  10:52:50,291 IntelDeflaterFactory - IntelDeflater is not supported, using Java.util.zip.Deflater 
+INFO  10:53:20,082 ProgressMeter -     15:22741215    488228.0    30.0 s      61.0 s       75.1%    39.0 s       9.0 s 
+INFO  10:53:50,107 ProgressMeter -     15:28544552    988237.0    60.0 s      60.0 s       75.3%    79.0 s      19.0 s 
+INFO  10:54:20,127 ProgressMeter -     15:30900176   1488242.0    90.0 s      60.0 s       75.4%   119.0 s      29.0 s 
+INFO  10:54:50,146 ProgressMeter -     15:39159085   1988252.0   120.0 s      60.0 s       75.6%     2.6 m      38.0 s 
+INFO  10:55:20,169 ProgressMeter -     15:43970735   2488262.0     2.5 m      60.0 s       75.8%     3.3 m      47.0 s 
+INFO  10:55:50,194 ProgressMeter -     15:56297921   2988268.0     3.0 m      60.0 s       76.2%     3.9 m      56.0 s 
+INFO  10:56:20,297 ProgressMeter -     15:67713692   3488274.0     3.5 m      60.0 s       76.6%     4.6 m      64.0 s 
+INFO  10:56:50,319 ProgressMeter -     15:75310275   3888280.0     4.0 m      61.0 s       76.8%     5.2 m      72.0 s 
+INFO  10:57:20,723 ProgressMeter -     15:79056618   4288291.0     4.5 m      63.0 s       76.9%     5.8 m      80.0 s 
+INFO  10:57:51,373 ProgressMeter -     15:83146450   4688298.0     5.0 m      64.0 s       77.1%     6.5 m      89.0 s 
+INFO  10:58:21,390 ProgressMeter -     15:89744539   5188313.0     5.5 m      63.0 s       77.3%     7.1 m      97.0 s 
+INFO  10:58:51,774 ProgressMeter -    15:102320602   5588317.0     6.0 m      64.0 s       77.7%     7.7 m     103.0 s 
+INFO  10:59:21,892 ProgressMeter -      16:1867313   5993758.0     6.5 m      65.0 s       77.8%     8.4 m     111.0 s 
+INFO  10:59:52,026 ProgressMeter -      16:4463400   6393768.0     7.0 m      65.0 s       77.8%     9.0 m     119.0 s 
+INFO  11:00:22,048 ProgressMeter -     16:14841780   6693775.0     7.5 m      67.0 s       78.2%     9.6 m       2.1 m 
+INFO  11:00:52,191 ProgressMeter -     16:16388563   7093786.0     8.0 m      67.0 s       78.2%    10.3 m       2.2 m 
+INFO  11:01:22,196 ProgressMeter -     16:20373836   7493795.0     8.5 m      68.0 s       78.3%    10.9 m       2.4 m 
+INFO  11:01:52,213 ProgressMeter -     16:24981798   7993810.0     9.0 m      67.0 s       78.5%    11.5 m       2.5 m 
+INFO  11:02:22,240 ProgressMeter -     16:29555535   8493819.0     9.5 m      67.0 s       78.6%    12.1 m       2.6 m 
+INFO  11:02:52,283 ProgressMeter -     16:30901341   8693826.0    10.0 m      69.0 s       78.7%    12.8 m       2.7 m 
+INFO  11:03:22,308 ProgressMeter -     16:33120033   8993829.0    10.5 m      70.0 s       78.8%    13.4 m       2.8 m 
+INFO  11:03:52,328 ProgressMeter -     16:53532436   9493837.0    11.0 m      69.0 s       79.4%    13.9 m       2.9 m 
+INFO  11:04:22,348 ProgressMeter -     16:67760167   9993843.0    11.5 m      69.0 s       79.9%    14.4 m       2.9 m 
+INFO  11:04:52,365 ProgressMeter -     16:74499615   1.059385E7    12.0 m      68.0 s       80.1%    15.0 m       3.0 m 
+INFO  11:05:22,381 ProgressMeter -     16:89711247   1.1193861E7    12.5 m      67.0 s       80.6%    15.6 m       3.0 m 
+INFO  11:05:52,398 ProgressMeter -      17:5291278   1.173475E7    13.0 m      66.0 s       80.8%    16.1 m       3.1 m 
+INFO  11:06:22,411 ProgressMeter -     17:10543588   1.2334761E7    13.5 m      65.0 s       80.9%    16.7 m       3.2 m 
+INFO  11:06:52,427 ProgressMeter -     17:18574609   1.2834769E7    14.0 m      65.0 s       81.2%    17.3 m       3.2 m 
+INFO  11:07:22,445 ProgressMeter -     17:27434201   1.3434777E7    14.5 m      64.0 s       81.5%    17.8 m       3.3 m 
+INFO  11:07:52,460 ProgressMeter -     17:34587883   1.4034813E7    15.0 m      64.0 s       81.7%    18.4 m       3.4 m 
+INFO  11:08:22,480 ProgressMeter -     17:38659916   1.4634827E7    15.5 m      63.0 s       81.9%    19.0 m       3.4 m 
+INFO  11:08:52,495 ProgressMeter -     17:43012302   1.5234852E7    16.0 m      63.0 s       82.0%    19.6 m       3.5 m 
+INFO  11:09:22,789 ProgressMeter -     17:48913311   1.5734872E7    16.5 m      63.0 s       82.2%    20.1 m       3.6 m 
+INFO  11:09:52,802 ProgressMeter -     17:61561871   1.6334891E7    17.0 m      62.0 s       82.6%    20.6 m       3.6 m 
+INFO  11:10:22,819 ProgressMeter -     17:72929386   1.6934905E7    17.5 m      62.0 s       83.0%    21.1 m       3.6 m 
+INFO  11:10:52,835 ProgressMeter -     17:79207480   1.7434911E7    18.0 m      62.0 s       83.2%    21.7 m       3.7 m 
+INFO  11:11:22,853 ProgressMeter -     18:11854318   1.8038649E7    18.5 m      61.0 s       83.6%    22.2 m       3.6 m 
+INFO  11:11:52,869 ProgressMeter -     18:31673595   1.8638664E7    19.0 m      61.0 s       84.2%    22.6 m       3.6 m 
+INFO  11:12:22,885 ProgressMeter -     18:55598116   1.9138681E7    19.5 m      61.0 s       85.0%    23.0 m       3.4 m 
+INFO  11:12:49,282 Walker - [REDUCE RESULT] Traversal result is: org.broadinstitute.gatk.engine.io.stubs.SAMFileWriterStub@61be6051 
+INFO  11:12:49,289 ProgressMeter -            done   1.9720171E7    20.0 m      60.0 s      100.0%    20.0 m       0.0 s 
+INFO  11:12:49,289 ProgressMeter - Total runtime 1199.14 secs, 19.99 min, 0.33 hours 
+INFO  11:12:49,289 MicroScheduler - 0 reads were filtered out during the traversal out of approximately 19720171 total reads (0.00%) 
+INFO  11:12:49,289 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  11:12:49,289 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+INFO	2024-06-04 11:12:49	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -I Control.sorted.realigned.recalibrated.bam -O Control.sorted.realigned.recalibrated.dedup.bam -REMOVE_DUPLICATES true -TMP_DIR /tmp -METRICS_FILE Control.sorted.realigned.recalibrated.picard.log -ASSUME_SORTED true
+**********
+
+
+11:12:49.918 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+11:12:49.928 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/tmp/libgkl_compression5089462603785729090.dylib: dlopen(/private/tmp/libgkl_compression5089462603785729090.dylib, 0x0001): tried: '/private/tmp/libgkl_compression5089462603785729090.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/tmp/libgkl_compression5089462603785729090.dylib' (no such file), '/private/tmp/libgkl_compression5089462603785729090.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')))
+11:12:49.929 INFO  NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/picard.jar!/com/intel/gkl/native/libgkl_compression.dylib
+11:12:49.931 WARN  NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/tmp/libgkl_compression9186121400501068287.dylib: dlopen(/private/tmp/libgkl_compression9186121400501068287.dylib, 0x0001): tried: '/private/tmp/libgkl_compression9186121400501068287.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/tmp/libgkl_compression9186121400501068287.dylib' (no such file), '/private/tmp/libgkl_compression9186121400501068287.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')))
+[Tue Jun 04 11:12:49 CEST 2024] MarkDuplicates INPUT=[Control.sorted.realigned.recalibrated.bam] OUTPUT=Control.sorted.realigned.recalibrated.dedup.bam METRICS_FILE=Control.sorted.realigned.recalibrated.picard.log REMOVE_DUPLICATES=true ASSUME_SORTED=true TMP_DIR=[/tmp]    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false ADD_PG_TAG_TO_READS=true DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Tue Jun 04 11:12:49 CEST 2024] Executing as albertolupatin@AirdiAlberto3.Home on Mac OS X 14.5 aarch64; OpenJDK 64-Bit Server VM 1.8.0_412-b08; Deflater: Jdk; Inflater: Jdk; Provider GCS is not available; Picard version: 2.22.3
+INFO	2024-06-04 11:12:49	MarkDuplicates	Start of doWork freeMemory: 123960960; totalMemory: 128974848; maxMemory: 1908932608
+INFO	2024-06-04 11:12:49	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2024-06-04 11:12:49	MarkDuplicates	Will retain up to 6916422 data points before spilling to disk.
+11:12:49.965 WARN  IntelDeflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+INFO	2024-06-04 11:12:53	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:03s.  Time for last 1,000,000:    3s.  Last read position: 15:28,582,091
+INFO	2024-06-04 11:12:53	MarkDuplicates	Tracking 2881 as yet unmatched pairs. 525 records in RAM.
+INFO	2024-06-04 11:12:57	MarkDuplicates	Read     2,000,000 records.  Elapsed time: 00:00:07s.  Time for last 1,000,000:    4s.  Last read position: 15:39,874,424
+INFO	2024-06-04 11:12:57	MarkDuplicates	Tracking 3091 as yet unmatched pairs. 344 records in RAM.
+INFO	2024-06-04 11:13:01	MarkDuplicates	Read     3,000,000 records.  Elapsed time: 00:00:11s.  Time for last 1,000,000:    3s.  Last read position: 15:55,677,503
+INFO	2024-06-04 11:13:01	MarkDuplicates	Tracking 3579 as yet unmatched pairs. 388 records in RAM.
+INFO	2024-06-04 11:13:05	MarkDuplicates	Read     4,000,000 records.  Elapsed time: 00:00:15s.  Time for last 1,000,000:    3s.  Last read position: 15:75,577,997
+INFO	2024-06-04 11:13:05	MarkDuplicates	Tracking 4508 as yet unmatched pairs. 816 records in RAM.
+INFO	2024-06-04 11:13:08	MarkDuplicates	Read     5,000,000 records.  Elapsed time: 00:00:18s.  Time for last 1,000,000:    3s.  Last read position: 15:85,383,448
+INFO	2024-06-04 11:13:08	MarkDuplicates	Tracking 4275 as yet unmatched pairs. 223 records in RAM.
+INFO	2024-06-04 11:13:11	MarkDuplicates	Read     6,000,000 records.  Elapsed time: 00:00:21s.  Time for last 1,000,000:    2s.  Last read position: 16:1,889,191
+INFO	2024-06-04 11:13:11	MarkDuplicates	Tracking 4572 as yet unmatched pairs. 1419 records in RAM.
+WARNING	2024-06-04 11:13:15	SnappyLoader	Snappy native library failed to load.
+org.xerial.snappy.SnappyError: [FAILED_TO_LOAD_NATIVE_LIBRARY] no native library is found for os.name=Mac and os.arch=aarch64
+	at org.xerial.snappy.SnappyLoader.findNativeLibrary(SnappyLoader.java:342)
+	at org.xerial.snappy.SnappyLoader.loadNativeLibrary(SnappyLoader.java:176)
+	at org.xerial.snappy.SnappyLoader.loadSnappyApi(SnappyLoader.java:154)
+	at org.xerial.snappy.Snappy.<clinit>(Snappy.java:47)
+	at org.xerial.snappy.SnappyOutputStream.<init>(SnappyOutputStream.java:99)
+	at org.xerial.snappy.SnappyOutputStream.<init>(SnappyOutputStream.java:91)
+	at org.xerial.snappy.SnappyOutputStream.<init>(SnappyOutputStream.java:81)
+	at htsjdk.samtools.util.SnappyLoader.<init>(SnappyLoader.java:58)
+	at htsjdk.samtools.util.SnappyLoader.<init>(SnappyLoader.java:48)
+	at htsjdk.samtools.util.TempStreamFactory.getSnappyLoader(TempStreamFactory.java:42)
+	at htsjdk.samtools.util.TempStreamFactory.wrapTempOutputStream(TempStreamFactory.java:74)
+	at htsjdk.samtools.util.SortingCollection.spillToDisk(SortingCollection.java:251)
+	at htsjdk.samtools.util.SortingCollection.add(SortingCollection.java:182)
+	at picard.sam.markduplicates.MarkDuplicates.buildSortedReadEndLists(MarkDuplicates.java:553)
+	at picard.sam.markduplicates.MarkDuplicates.doWork(MarkDuplicates.java:257)
+	at picard.cmdline.CommandLineProgram.instanceMain(CommandLineProgram.java:305)
+	at picard.cmdline.PicardCommandLine.instanceMain(PicardCommandLine.java:103)
+	at picard.cmdline.PicardCommandLine.main(PicardCommandLine.java:113)
+INFO	2024-06-04 11:13:18	MarkDuplicates	Read     7,000,000 records.  Elapsed time: 00:00:28s.  Time for last 1,000,000:    6s.  Last read position: 16:15,612,363
+INFO	2024-06-04 11:13:18	MarkDuplicates	Tracking 4952 as yet unmatched pairs. 1524 records in RAM.
+INFO	2024-06-04 11:13:21	MarkDuplicates	Read     8,000,000 records.  Elapsed time: 00:00:31s.  Time for last 1,000,000:    2s.  Last read position: 16:23,504,639
+INFO	2024-06-04 11:13:21	MarkDuplicates	Tracking 5043 as yet unmatched pairs. 1374 records in RAM.
+INFO	2024-06-04 11:13:25	MarkDuplicates	Read     9,000,000 records.  Elapsed time: 00:00:35s.  Time for last 1,000,000:    4s.  Last read position: 16:32,771,206
+INFO	2024-06-04 11:13:25	MarkDuplicates	Tracking 5302 as yet unmatched pairs. 1394 records in RAM.
+INFO	2024-06-04 11:13:28	MarkDuplicates	Read    10,000,000 records.  Elapsed time: 00:00:38s.  Time for last 1,000,000:    2s.  Last read position: 16:67,263,611
+INFO	2024-06-04 11:13:28	MarkDuplicates	Tracking 4913 as yet unmatched pairs. 541 records in RAM.
+INFO	2024-06-04 11:13:31	MarkDuplicates	Read    11,000,000 records.  Elapsed time: 00:00:41s.  Time for last 1,000,000:    2s.  Last read position: 16:85,498,335
+INFO	2024-06-04 11:13:31	MarkDuplicates	Tracking 4839 as yet unmatched pairs. 97 records in RAM.
+INFO	2024-06-04 11:13:36	MarkDuplicates	Read    12,000,000 records.  Elapsed time: 00:00:46s.  Time for last 1,000,000:    4s.  Last read position: 17:7,365,772
+INFO	2024-06-04 11:13:36	MarkDuplicates	Tracking 4872 as yet unmatched pairs. 2299 records in RAM.
+INFO	2024-06-04 11:13:40	MarkDuplicates	Read    13,000,000 records.  Elapsed time: 00:00:50s.  Time for last 1,000,000:    3s.  Last read position: 17:19,107,139
+INFO	2024-06-04 11:13:40	MarkDuplicates	Tracking 4918 as yet unmatched pairs. 2241 records in RAM.
+INFO	2024-06-04 11:13:46	MarkDuplicates	Read    14,000,000 records.  Elapsed time: 00:00:56s.  Time for last 1,000,000:    6s.  Last read position: 17:34,523,924
+INFO	2024-06-04 11:13:46	MarkDuplicates	Tracking 4955 as yet unmatched pairs. 2116 records in RAM.
+INFO	2024-06-04 11:13:49	MarkDuplicates	Read    15,000,000 records.  Elapsed time: 00:00:59s.  Time for last 1,000,000:    2s.  Last read position: 17:40,840,467
+INFO	2024-06-04 11:13:49	MarkDuplicates	Tracking 4325 as yet unmatched pairs. 1405 records in RAM.
+INFO	2024-06-04 11:13:51	MarkDuplicates	Read    16,000,000 records.  Elapsed time: 00:01:01s.  Time for last 1,000,000:    2s.  Last read position: 17:56,399,817
+INFO	2024-06-04 11:13:51	MarkDuplicates	Tracking 4029 as yet unmatched pairs. 1014 records in RAM.
+INFO	2024-06-04 11:13:55	MarkDuplicates	Read    17,000,000 records.  Elapsed time: 00:01:05s.  Time for last 1,000,000:    3s.  Last read position: 17:73,389,512
+INFO	2024-06-04 11:13:55	MarkDuplicates	Tracking 3474 as yet unmatched pairs. 349 records in RAM.
+INFO	2024-06-04 11:13:57	MarkDuplicates	Read    18,000,000 records.  Elapsed time: 00:01:07s.  Time for last 1,000,000:    2s.  Last read position: 18:9,524,769
+INFO	2024-06-04 11:13:57	MarkDuplicates	Tracking 3054 as yet unmatched pairs. 1820 records in RAM.
+INFO	2024-06-04 11:14:00	MarkDuplicates	Read    19,000,000 records.  Elapsed time: 00:01:10s.  Time for last 1,000,000:    2s.  Last read position: 18:45,902,477
+INFO	2024-06-04 11:14:00	MarkDuplicates	Tracking 2058 as yet unmatched pairs. 689 records in RAM.
+INFO	2024-06-04 11:14:02	MarkDuplicates	Read 19714309 records. 0 pairs never matched.
+INFO	2024-06-04 11:14:04	MarkDuplicates	After buildSortedReadEndLists freeMemory: 1675698200; totalMemory: 1691353088; maxMemory: 1908932608
+INFO	2024-06-04 11:14:04	MarkDuplicates	Will retain up to 59654144 duplicate indices before spilling to disk.
+INFO	2024-06-04 11:14:04	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2024-06-04 11:14:08	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2024-06-04 11:14:11	MarkDuplicates	Sorting list of duplicate records.
+INFO	2024-06-04 11:14:11	MarkDuplicates	After generateDuplicateIndexes freeMemory: 1159257904; totalMemory: 1652031488; maxMemory: 1908932608
+INFO	2024-06-04 11:14:11	MarkDuplicates	Marking 2685481 records as duplicates.
+INFO	2024-06-04 11:14:11	MarkDuplicates	Found 904 optical duplicate clusters.
+11:14:11.389 WARN  IntelDeflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater
+INFO	2024-06-04 11:14:11	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+11:14:11.395 WARN  IntelDeflaterFactory - IntelDeflater is not supported, using Java.util.zip.Deflater
+INFO	2024-06-04 11:17:12	MarkDuplicates	Written    10,000,000 records.  Elapsed time: 00:03:00s.  Time for last 10,000,000:  180s.  Last read position: 17:3,568,065
+INFO	2024-06-04 11:19:22	MarkDuplicates	Writing complete. Closing input iterator.
+INFO	2024-06-04 11:19:22	MarkDuplicates	Duplicate Index cleanup.
+INFO	2024-06-04 11:19:22	MarkDuplicates	Getting Memory Stats.
+INFO	2024-06-04 11:19:22	MarkDuplicates	Before output close freeMemory: 1722006688; totalMemory: 1739587584; maxMemory: 1908932608
+INFO	2024-06-04 11:19:22	MarkDuplicates	Closed outputs. Getting more Memory Stats.
+INFO	2024-06-04 11:19:22	MarkDuplicates	After output close freeMemory: 1722291232; totalMemory: 1739587584; maxMemory: 1908932608
+[Tue Jun 04 11:19:22 CEST 2024] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 6.55 minutes.
+Runtime.totalMemory()=1739587584
+(HumanGenomics) AirdiAlberto3:4_Duplication albertolupatin$ 
