@@ -1,0 +1,108 @@
+(HumanGenomics) MacBook-Air-di-Alberto-3:2_Realignment albertolupatin$ . Script.sh 
+INFO  13:43:07,375 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  13:43:07,376 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  13:43:07,377 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  13:43:07,377 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  13:43:07,377 HelpFormatter - [Thu Jun 20 13:43:07 CEST 2024] Executing on Mac OS X 14.5 aarch64 
+INFO  13:43:07,377 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_412-b08 
+INFO  13:43:07,380 HelpFormatter - Program Args: -T RealignerTargetCreator -R /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta -I ../Control.sorted.bam -o realigner.intervals 
+INFO  13:43:07,394 HelpFormatter - Executing as albertolupatin@MacBook-Air-di-Alberto-3.local on Mac OS X 14.5 aarch64; OpenJDK 64-Bit Server VM 1.8.0_412-b08. 
+INFO  13:43:07,395 HelpFormatter - Date/Time: 2024/06/20 13:43:07 
+INFO  13:43:07,395 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  13:43:07,395 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  13:43:07,424 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  13:43:07,424 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  13:43:07,424 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  13:43:08,438 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  13:43:08,441 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARN  13:43:08,452 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+WARN  13:43:08,455 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+INFO  13:43:08,463 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.02 
+INFO  13:43:08,569 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  13:43:08,596 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  13:43:08,596 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  13:43:08,596 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  13:43:08,597 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  13:43:38,609 ProgressMeter -      2:80509025   3.29712445E8    30.0 s       0.0 s       10.6%     4.7 m       4.2 m 
+INFO  13:44:08,622 ProgressMeter -     3:149850781   6.41872074E8    60.0 s       0.0 s       20.7%     4.8 m       3.8 m 
+INFO  13:44:38,634 ProgressMeter -      5:79008513   9.60564812E8    90.0 s       0.0 s       31.0%     4.8 m       3.3 m 
+INFO  13:45:08,646 ProgressMeter -      7:37215593   1.270734019E9   120.0 s       0.0 s       41.0%     4.9 m       2.9 m 
+INFO  13:45:38,659 ProgressMeter -      9:43250841   1.582331552E9     2.5 m       0.0 s       51.0%     4.9 m       2.4 m 
+INFO  13:46:08,676 ProgressMeter -     11:40499257   1.856196146E9     3.0 m       0.0 s       59.8%     5.0 m     120.0 s 
+INFO  13:46:38,692 ProgressMeter -     13:89804937   2.174534237E9     3.5 m       0.0 s       70.1%     5.0 m      89.0 s 
+INFO  13:47:08,702 ProgressMeter -     15:41342449   2.348606167E9     4.0 m       0.0 s       75.7%     5.3 m      76.0 s 
+INFO  13:47:38,719 ProgressMeter -     15:89332617   2.396562135E9     4.5 m       0.0 s       77.3%     5.8 m      79.0 s 
+INFO  13:48:08,727 ProgressMeter -     16:30423105   2.440225815E9     5.0 m       0.0 s       78.7%     6.4 m      81.0 s 
+INFO  13:48:38,750 ProgressMeter -     16:85704221   2.495505431E9     5.5 m       0.0 s       80.5%     6.8 m      80.0 s 
+INFO  13:49:08,767 ProgressMeter -     17:36288173   2.536347736E9     6.0 m       0.0 s       81.8%     7.3 m      80.0 s 
+INFO  13:49:38,773 ProgressMeter -     17:79170689   2.579339352E9     6.5 m       0.0 s       83.2%     7.8 m      78.0 s 
+INFO  13:50:08,788 ProgressMeter -     18:67804393   2.649164066E9     7.0 m       0.0 s       85.4%     8.2 m      71.0 s 
+INFO  13:50:38,802 ProgressMeter -      X:24554441   2.905363526E9     7.5 m       0.0 s       93.7%     8.0 m      30.0 s 
+INFO  13:51:01,252 ProgressMeter -            done   3.101804739E9     7.9 m       0.0 s      100.0%     7.9 m       0.0 s 
+INFO  13:51:01,253 ProgressMeter - Total runtime 472.67 secs, 7.88 min, 0.13 hours 
+INFO  13:51:01,253 MicroScheduler - 3565567 reads were filtered out during the traversal out of approximately 19814991 total reads (17.99%) 
+INFO  13:51:01,253 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  13:51:01,253 MicroScheduler -   -> 14752 reads (0.07% of total) failing BadMateFilter 
+INFO  13:51:01,253 MicroScheduler -   -> 0 reads (0.00% of total) failing DuplicateReadFilter 
+INFO  13:51:01,254 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  13:51:01,254 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  13:51:01,254 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  13:51:01,254 MicroScheduler -   -> 3549444 reads (17.91% of total) failing MappingQualityZeroFilter 
+INFO  13:51:01,254 MicroScheduler -   -> 1371 reads (0.01% of total) failing NotPrimaryAlignmentFilter 
+INFO  13:51:01,254 MicroScheduler -   -> 0 reads (0.00% of total) failing Platform454Filter 
+INFO  13:51:01,254 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+INFO  13:51:02,297 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  13:51:02,298 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  13:51:02,299 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  13:51:02,299 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  13:51:02,299 HelpFormatter - [Thu Jun 20 13:51:02 CEST 2024] Executing on Mac OS X 14.5 aarch64 
+INFO  13:51:02,299 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_412-b08 
+INFO  13:51:02,302 HelpFormatter - Program Args: -T IndelRealigner -R /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta -I ../Control.sorted.bam -targetIntervals realigner.intervals -o Control.sorted.realigned.bam 
+INFO  13:51:02,318 HelpFormatter - Executing as albertolupatin@MacBook-Air-di-Alberto-3.local on Mac OS X 14.5 aarch64; OpenJDK 64-Bit Server VM 1.8.0_412-b08. 
+INFO  13:51:02,318 HelpFormatter - Date/Time: 2024/06/20 13:51:02 
+INFO  13:51:02,318 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  13:51:02,319 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  13:51:02,351 NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.dylib 
+INFO  13:51:02,372 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  13:51:02,372 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  13:51:02,372 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  13:51:02,467 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  13:51:02,471 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARN  13:51:02,506 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+WARN  13:51:02,508 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+INFO  13:51:02,514 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.04 
+INFO  13:51:02,585 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  13:51:02,587 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  13:51:02,587 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  13:51:02,587 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  13:51:02,588 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  13:51:02,645 ReadShardBalancer$1 - Loading BAM index data 
+INFO  13:51:02,646 ReadShardBalancer$1 - Done loading BAM index data 
+WARN  13:51:02,885 IntelDeflaterFactory - IntelDeflater is not supported, using Java.util.zip.Deflater 
+INFO  13:51:32,607 ProgressMeter -     15:29060820   1188239.0    30.0 s      25.0 s       75.3%    39.0 s       9.0 s 
+INFO  13:52:02,719 ProgressMeter -     15:52902227   2888267.0    60.0 s      20.0 s       76.1%    78.0 s      18.0 s 
+INFO  13:52:33,174 ProgressMeter -     15:82926679   4488294.0    90.0 s      20.0 s       77.1%   116.0 s      26.0 s 
+INFO  13:53:03,449 ProgressMeter -      16:3306562   6193766.0   120.0 s      19.0 s       77.8%     2.6 m      34.0 s 
+INFO  13:53:33,473 ProgressMeter -     16:22572421   7893809.0     2.5 m      19.0 s       78.4%     3.2 m      41.0 s 
+INFO  13:54:03,498 ProgressMeter -     16:53283941   9393835.0     3.0 m      19.0 s       79.4%     3.8 m      46.0 s 
+INFO  13:54:33,515 ProgressMeter -     16:84482131   1.0893853E7     3.5 m      19.0 s       80.4%     4.4 m      51.0 s 
+INFO  13:55:03,874 ProgressMeter -     17:15492436   1.2434762E7     4.0 m      19.0 s       81.1%     5.0 m      56.0 s 
+INFO  13:55:34,595 ProgressMeter -     17:33424181   1.3734783E7     4.5 m      19.0 s       81.7%     5.6 m      61.0 s 
+INFO  13:56:05,064 ProgressMeter -     17:43596475   1.5234852E7     5.0 m      19.0 s       82.0%     6.1 m      66.0 s 
+INFO  13:56:35,075 ProgressMeter -     17:71387668   1.6834904E7     5.5 m      19.0 s       82.9%     6.7 m      68.0 s 
+INFO  13:57:05,090 ProgressMeter -     18:13824054   1.813865E7     6.0 m      19.0 s       83.7%     7.2 m      70.0 s 
+INFO  13:57:35,112 ProgressMeter - GL000199.1:103352   1.9698407E7     6.5 m      19.0 s       99.9%     6.5 m       0.0 s 
+INFO  13:57:35,468 ProgressMeter -            done   1.9720171E7     6.5 m      19.0 s      100.0%     6.5 m       0.0 s 
+INFO  13:57:35,469 ProgressMeter - Total runtime 392.89 secs, 6.55 min, 0.11 hours 
+INFO  13:57:35,474 MicroScheduler - 0 reads were filtered out during the traversal out of approximately 19720171 total reads (0.00%) 
+INFO  13:57:35,474 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  13:57:35,475 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+(HumanGenomics) MacBook-Air-di-Alberto-3:2_Realignment albertolupatin$ samtools view -c Control.sorted.realigned.bam | less
+(HumanGenomics) MacBook-Air-di-Alberto-3:2_Realignment albertolupatin$ samtools view Control.sorted.realigned.bam | less
+(HumanGenomics) MacBook-Air-di-Alberto-3:2_Realignment albertolupatin$ 

@@ -1,0 +1,104 @@
+(HumanGenomics) MacBook-Air-di-Alberto-3:2_Realignment albertolupatin$ . Script.sh
+INFO  14:03:13,261 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  14:03:13,266 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  14:03:13,266 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  14:03:13,266 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  14:03:13,266 HelpFormatter - [Thu Jun 20 14:03:13 CEST 2024] Executing on Mac OS X 14.5 aarch64 
+INFO  14:03:13,266 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_412-b08 
+INFO  14:03:13,269 HelpFormatter - Program Args: -T RealignerTargetCreator -R /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta -I ../Tumor.sorted.bam -o realigner.intervals 
+INFO  14:03:13,277 HelpFormatter - Executing as albertolupatin@MacBook-Air-di-Alberto-3.local on Mac OS X 14.5 aarch64; OpenJDK 64-Bit Server VM 1.8.0_412-b08. 
+INFO  14:03:13,277 HelpFormatter - Date/Time: 2024/06/20 14:03:13 
+INFO  14:03:13,278 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  14:03:13,278 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  14:03:13,282 NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.dylib 
+WARN  14:03:13,298 NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3644587713613610846.dylib: dlopen(/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3644587713613610846.dylib, 0x0001): tried: '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3644587713613610846.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3644587713613610846.dylib' (no such file), '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression3644587713613610846.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))) 
+INFO  14:03:13,299 NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.dylib 
+WARN  14:03:13,300 NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression580210015372258905.dylib: dlopen(/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression580210015372258905.dylib, 0x0001): tried: '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression580210015372258905.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression580210015372258905.dylib' (no such file), '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression580210015372258905.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))) 
+INFO  14:03:13,301 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  14:03:13,302 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  14:03:13,302 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  14:03:13,435 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  14:03:13,440 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARN  14:08:47,749 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+WARN  14:08:47,752 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+INFO  14:08:47,757 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 334.32 
+INFO  14:08:49,274 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  14:08:49,315 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  14:08:49,315 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  14:08:49,315 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  14:08:49,315 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  14:09:19,334 ProgressMeter -     2:168965669   4.18038589E8    30.0 s       0.0 s       13.5%     3.7 m       3.2 m 
+INFO  14:09:49,341 ProgressMeter -      4:63558325   7.53731048E8    60.0 s       0.0 s       24.3%     4.1 m       3.1 m 
+INFO  14:10:19,360 ProgressMeter -      6:88628717   1.150589576E9    90.0 s       0.0 s       37.1%     4.0 m       2.5 m 
+INFO  14:10:49,382 ProgressMeter -      9:51352877   1.586083488E9   120.0 s       0.0 s       51.3%     3.9 m     114.0 s 
+INFO  14:11:19,402 ProgressMeter -     12:82411457   2.032981862E9     2.5 m       0.0 s       65.6%     3.8 m      78.0 s 
+INFO  14:11:49,420 ProgressMeter -     15:42982733   2.350260951E9     3.0 m       0.0 s       75.8%     4.0 m      57.0 s 
+INFO  14:12:19,435 ProgressMeter -      16:2516953   2.412323863E9     3.5 m       0.0 s       77.8%     4.5 m      60.0 s 
+INFO  14:12:49,442 ProgressMeter -     16:70346729   2.480137239E9     4.0 m       0.0 s       80.0%     5.0 m      60.0 s 
+INFO  14:13:19,460 ProgressMeter -     17:39253781   2.539411544E9     4.5 m       0.0 s       81.9%     5.5 m      59.0 s 
+INFO  14:13:49,477 ProgressMeter -     18:20838165   2.602191138E9     5.0 m       0.0 s       83.9%     6.0 m      57.0 s 
+INFO  14:14:19,491 ProgressMeter -     22:27038265   2.856696784E9     5.5 m       0.0 s       92.1%     6.0 m      28.0 s 
+INFO  14:14:36,888 ProgressMeter -            done   3.101804739E9     5.8 m       0.0 s      100.0%     5.8 m       0.0 s 
+INFO  14:14:36,889 ProgressMeter - Total runtime 347.58 secs, 5.79 min, 0.10 hours 
+INFO  14:14:36,889 MicroScheduler - 2689943 reads were filtered out during the traversal out of approximately 15109816 total reads (17.80%) 
+INFO  14:14:36,889 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  14:14:36,889 MicroScheduler -   -> 12516 reads (0.08% of total) failing BadMateFilter 
+INFO  14:14:36,890 MicroScheduler -   -> 0 reads (0.00% of total) failing DuplicateReadFilter 
+INFO  14:14:36,890 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  14:14:36,890 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  14:14:36,890 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  14:14:36,890 MicroScheduler -   -> 2676186 reads (17.71% of total) failing MappingQualityZeroFilter 
+INFO  14:14:36,890 MicroScheduler -   -> 1241 reads (0.01% of total) failing NotPrimaryAlignmentFilter 
+INFO  14:14:36,890 MicroScheduler -   -> 0 reads (0.00% of total) failing Platform454Filter 
+INFO  14:14:36,890 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+INFO  14:14:37,940 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  14:14:37,941 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  14:14:37,942 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  14:14:37,942 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  14:14:37,942 HelpFormatter - [Thu Jun 20 14:14:37 CEST 2024] Executing on Mac OS X 14.5 aarch64 
+INFO  14:14:37,942 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_412-b08 
+INFO  14:14:37,946 HelpFormatter - Program Args: -T IndelRealigner -R /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta -I ../Tumor.sorted.bam -targetIntervals realigner.intervals -o Tumor.sorted.realigned.bam 
+INFO  14:14:37,964 HelpFormatter - Executing as albertolupatin@MacBook-Air-di-Alberto-3.local on Mac OS X 14.5 aarch64; OpenJDK 64-Bit Server VM 1.8.0_412-b08. 
+INFO  14:14:37,965 HelpFormatter - Date/Time: 2024/06/20 14:14:37 
+INFO  14:14:37,965 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  14:14:37,965 HelpFormatter - ------------------------------------------------------------------------------------ 
+INFO  14:14:38,047 NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.dylib 
+WARN  14:14:38,063 NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6274642509765348767.dylib: dlopen(/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6274642509765348767.dylib, 0x0001): tried: '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6274642509765348767.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6274642509765348767.dylib' (no such file), '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression6274642509765348767.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))) 
+INFO  14:14:38,064 NativeLibraryLoader - Loading libgkl_compression.dylib from jar:file:/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.dylib 
+WARN  14:14:38,066 NativeLibraryLoader - Unable to load libgkl_compression.dylib from native/libgkl_compression.dylib (/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression5095879159112026875.dylib: dlopen(/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression5095879159112026875.dylib, 0x0001): tried: '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression5095879159112026875.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression5095879159112026875.dylib' (no such file), '/private/var/folders/f4/xwh3197d1jvczhlplp0t9p3h0000gn/T/libgkl_compression5095879159112026875.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))) 
+INFO  14:14:38,067 GenomeAnalysisEngine - Deflater: JdkDeflater 
+INFO  14:14:38,067 GenomeAnalysisEngine - Inflater: JdkInflater 
+INFO  14:14:38,067 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  14:14:38,153 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  14:14:38,156 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARN  14:14:38,165 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+WARN  14:14:38,166 IntelInflaterFactory - IntelInflater is not supported, using Java.util.zip.Inflater 
+INFO  14:14:38,174 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.02 
+INFO  14:14:38,251 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  14:14:38,253 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  14:14:38,253 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  14:14:38,253 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  14:14:38,254 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  14:14:38,320 ReadShardBalancer$1 - Loading BAM index data 
+INFO  14:14:38,321 ReadShardBalancer$1 - Done loading BAM index data 
+WARN  14:14:38,583 IntelDeflaterFactory - IntelDeflater is not supported, using Java.util.zip.Deflater 
+INFO  14:15:08,560 ProgressMeter -     15:49797284   1689854.0    30.0 s      17.0 s       76.0%    39.0 s       9.0 s 
+INFO  14:15:38,573 ProgressMeter -     15:90333800   3489907.0    60.0 s      17.0 s       77.3%    77.0 s      17.0 s 
+INFO  14:16:09,067 ProgressMeter -     16:16416283   5452204.0    90.0 s      16.0 s       78.2%   115.0 s      25.0 s 
+INFO  14:16:39,480 ProgressMeter -     16:32958232   7152248.0     2.0 m      16.0 s       78.8%     2.6 m      32.0 s 
+INFO  14:17:10,308 ProgressMeter -      17:2916839   8892860.0     2.5 m      17.0 s       80.7%     3.1 m      36.0 s 
+INFO  14:17:40,818 ProgressMeter -     17:33969021   1.0692886E7     3.0 m      17.0 s       81.7%     3.7 m      40.0 s 
+INFO  14:18:10,834 ProgressMeter -     17:62782811   1.2492915E7     3.5 m      17.0 s       82.6%     4.3 m      44.0 s 
+INFO  14:18:40,850 ProgressMeter -     18:21100280   1.4050167E7     4.0 m      17.0 s       83.9%     4.8 m      46.0 s 
+INFO  14:18:57,390 ProgressMeter -            done   1.5039503E7     4.3 m      17.0 s      100.0%     4.3 m       0.0 s 
+INFO  14:18:57,390 ProgressMeter - Total runtime 259.14 secs, 4.32 min, 0.07 hours 
+INFO  14:18:57,395 MicroScheduler - 0 reads were filtered out during the traversal out of approximately 15039503 total reads (0.00%) 
+INFO  14:18:57,395 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  14:18:57,395 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+(HumanGenomics) MacBook-Air-di-Alberto-3:2_Realignment albertolupatin$ 
