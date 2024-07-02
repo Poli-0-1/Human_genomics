@@ -1,1 +1,1 @@
-# Human_genomics file containing the project's steps and codes implemented
+# Human genomics project containing all the codes implemented
