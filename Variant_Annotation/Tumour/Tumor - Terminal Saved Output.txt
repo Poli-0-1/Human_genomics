@@ -1,0 +1,968 @@
+(HumanGenomics) AirdiAlberto3:7-VariantAnnotation albertolupatin$ cd /Users/albertolupatin/Desktop/HumanGenomics/Project/Tumor/7-VariantAnnotation
+(HumanGenomics) AirdiAlberto3:7-VariantAnnotation albertolupatin$ . Script.sh 
+00:00:00 SnpEff version SnpEff 5.2c (build 2024-04-09 12:24), by Pablo Cingolani
+00:00:00 Command: 'ann'
+00:00:00 Reading configuration file 'snpEff.config'. Genome: 'hg19kg'
+00:00:00 Looking for config file: '/Users/albertolupatin/Desktop/HumanGenomics/Project/Tumor/7-VariantAnnotation/snpEff.config'
+00:00:00 Reading config file: /Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/snpEff/snpEff.config
+00:00:00 Codon table 'Vertebrate_Mitochondrial' assigned to chromosome 'M'
+00:00:00 Codon table 'Vertebrate_Mitochondrial' assigned to chromosome 'MT'
+00:00:00 done
+00:00:00 Reading database for genome version 'hg19kg' from file '/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/snpEff/./data/hg19kg/snpEffectPredictor.bin' (this might take a while)
+00:00:08 done
+00:00:08 Loading Motifs and PWMs
+00:00:08 Building interval forest
+00:00:10 done.
+00:00:10 Genome stats :
+#-----------------------------------------------
+# Genome name                : 'Homo_sapiens (UCSC KnownGenes)'
+# Genome version             : 'hg19kg'
+# Genome ID                  : 'hg19kg[0]'
+# Has protein coding info    : true
+# Has Tr. Support Level info : true
+# Genes                      : 61349
+# Protein coding genes       : 48985
+#-----------------------------------------------
+# Transcripts                : 82960
+# Avg. transcripts per gene  : 1.35
+# TSL transcripts            : 0
+#-----------------------------------------------
+# Checked transcripts        : 
+#               AA sequences :      0 ( 0.00% )
+#              DNA sequences :      0 ( 0.00% )
+#-----------------------------------------------
+# Protein coding transcripts : 63691
+#              Length errors :      0 ( 0.00% )
+#  STOP codons in CDS errors :      7 ( 0.01% )
+#         START codon errors :     58 ( 0.09% )
+#        STOP codon warnings :   2767 ( 4.34% )
+#              UTR sequences :  62209 ( 74.99% )
+#               Total Errors :     65 ( 0.10% )
+#-----------------------------------------------
+# Cds                        : 591425
+# Exons                      : 742287
+# Exons with sequence        : 742287
+# Exons without sequence     : 0
+# Avg. exons per transcript  : 8.95
+#-----------------------------------------------
+# Number of chromosomes      : 94
+# Chromosomes                : Format 'chromo_name size codon_table'
+#		'1'	249250621	Standard
+#		'2'	243199373	Standard
+#		'3'	198022430	Standard
+#		'4'	191154276	Standard
+#		'5'	180915260	Standard
+#		'6'	171115067	Standard
+#		'7'	159138663	Standard
+#		'X'	155270560	Standard
+#		'8'	146364022	Standard
+#		'9'	141213431	Standard
+#		'10'	135534747	Standard
+#		'11'	135006516	Standard
+#		'12'	133851895	Standard
+#		'13'	115169878	Standard
+#		'14'	107349540	Standard
+#		'15'	102531392	Standard
+#		'16'	90354753	Standard
+#		'17'	81195210	Standard
+#		'18'	78077248	Standard
+#		'20'	63025520	Standard
+#		'Y'	59373566	Standard
+#		'19'	59128983	Standard
+#		'22'	51304566	Standard
+#		'21'	48129895	Standard
+#		'6_ssto_hap7'	4928567	Standard
+#		'6_mcf_hap5'	4833398	Standard
+#		'6_cox_hap2'	4795371	Standard
+#		'6_mann_hap4'	4683263	Standard
+#		'6_apd_hap1'	4622290	Standard
+#		'6_qbl_hap6'	4611984	Standard
+#		'6_dbb_hap3'	4610396	Standard
+#		'17_ctg5_hap1'	1680828	Standard
+#		'4_ctg9_hap1'	590426	Standard
+#		'1_gl000192_random'	547496	Standard
+#		'Un_gl000225'	211173	Standard
+#		'4_gl000194_random'	191469	Standard
+#		'4_gl000193_random'	189789	Standard
+#		'9_gl000200_random'	187035	Standard
+#		'Un_gl000222'	186861	Standard
+#		'Un_gl000212'	186858	Standard
+#		'7_gl000195_random'	182896	Standard
+#		'Un_gl000223'	180455	Standard
+#		'Un_gl000224'	179693	Standard
+#		'Un_gl000219'	179198	Standard
+#		'17_gl000205_random'	174588	Standard
+#		'Un_gl000215'	172545	Standard
+#		'Un_gl000216'	172294	Standard
+#		'Un_gl000217'	172149	Standard
+#		'9_gl000199_random'	169874	Standard
+#		'Un_gl000211'	166566	Standard
+#		'Un_gl000213'	164239	Standard
+#		'Un_gl000220'	161802	Standard
+#		'Un_gl000218'	161147	Standard
+#		'19_gl000209_random'	159169	Standard
+#		'Un_gl000221'	155397	Standard
+#		'Un_gl000214'	137718	Standard
+#		'Un_gl000228'	129120	Standard
+#		'Un_gl000227'	128374	Standard
+#		'1_gl000191_random'	106433	Standard
+#		'19_gl000208_random'	92689	Standard
+#		'9_gl000198_random'	90085	Standard
+#		'17_gl000204_random'	81310	Standard
+#		'Un_gl000233'	45941	Standard
+#		'Un_gl000237'	45867	Standard
+#		'Un_gl000230'	43691	Standard
+#		'Un_gl000242'	43523	Standard
+#		'Un_gl000243'	43341	Standard
+#		'Un_gl000241'	42152	Standard
+#		'Un_gl000236'	41934	Standard
+#		'Un_gl000240'	41933	Standard
+#		'17_gl000206_random'	41001	Standard
+#		'Un_gl000232'	40652	Standard
+#		'Un_gl000234'	40531	Standard
+#		'11_gl000202_random'	40103	Standard
+#		'Un_gl000238'	39939	Standard
+#		'Un_gl000244'	39929	Standard
+#		'Un_gl000248'	39786	Standard
+#		'8_gl000196_random'	38914	Standard
+#		'Un_gl000249'	38502	Standard
+#		'Un_gl000246'	38154	Standard
+#		'17_gl000203_random'	37498	Standard
+#		'8_gl000197_random'	37175	Standard
+#		'Un_gl000245'	36651	Standard
+#		'Un_gl000247'	36422	Standard
+#		'9_gl000201_random'	36148	Standard
+#		'Un_gl000235'	34474	Standard
+#		'Un_gl000239'	33824	Standard
+#		'21_gl000210_random'	27682	Standard
+#		'Un_gl000231'	27386	Standard
+#		'Un_gl000229'	19913	Standard
+#		'M'	16571	Vertebrate_Mitochondrial
+#		'Un_gl000226'	15008	Standard
+#		'18_gl000207_random'	4262	Standard
+#		'MT'	1	Vertebrate_Mitochondrial
+#-----------------------------------------------
+
+00:00:15 Predicting variants
+00:00:18 	10000 variants (3439 variants per second), 9900 VCF entries
+00:00:19 	20000 variants (5281 variants per second), 19863 VCF entries
+00:00:20 	30000 variants (6843 variants per second), 29824 VCF entries
+
+ERRORS: Some errors were detected
+Error type	Number of errors
+ERROR_CHROMOSOME_NOT_FOUND	225
+
+
+
+WARNINGS: Some warning were detected
+Warning type	Number of warnings
+WARNING_TRANSCRIPT_NO_START_CODON	6
+WARNING_TRANSCRIPT_NO_STOP_CODON	3585
+
+
+00:00:20 Creating summary file: Tumor.BCF.recode.ann.html
+00:00:20 Creating genes file: ./Tumor.BCF.recode.ann.genes.txt
+00:00:21 done.
+00:00:21 Logging
+00:00:22 Checking for updates...
+00:00:23 Done.
+00:00:00 SnpEff version SnpEff 5.2c (build 2024-04-09 12:24), by Pablo Cingolani
+00:00:00 Command: 'ann'
+00:00:00 Reading configuration file 'snpEff.config'. Genome: 'hg19kg'
+00:00:00 Looking for config file: '/Users/albertolupatin/Desktop/HumanGenomics/Project/Tumor/7-VariantAnnotation/snpEff.config'
+00:00:00 Reading config file: /Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/snpEff/snpEff.config
+00:00:00 Codon table 'Vertebrate_Mitochondrial' assigned to chromosome 'M'
+00:00:00 Codon table 'Vertebrate_Mitochondrial' assigned to chromosome 'MT'
+00:00:00 done
+00:00:00 Reading database for genome version 'hg19kg' from file '/Users/albertolupatin/Desktop/HumanGenomics/Labs/tools/snpEff/./data/hg19kg/snpEffectPredictor.bin' (this might take a while)
+00:00:07 done
+00:00:07 Loading Motifs and PWMs
+00:00:07 Building interval forest
+00:00:10 done.
+00:00:10 Genome stats :
+#-----------------------------------------------
+# Genome name                : 'Homo_sapiens (UCSC KnownGenes)'
+# Genome version             : 'hg19kg'
+# Genome ID                  : 'hg19kg[0]'
+# Has protein coding info    : true
+# Has Tr. Support Level info : true
+# Genes                      : 61349
+# Protein coding genes       : 48985
+#-----------------------------------------------
+# Transcripts                : 82960
+# Avg. transcripts per gene  : 1.35
+# TSL transcripts            : 0
+#-----------------------------------------------
+# Checked transcripts        : 
+#               AA sequences :      0 ( 0.00% )
+#              DNA sequences :      0 ( 0.00% )
+#-----------------------------------------------
+# Protein coding transcripts : 63691
+#              Length errors :      0 ( 0.00% )
+#  STOP codons in CDS errors :      7 ( 0.01% )
+#         START codon errors :     58 ( 0.09% )
+#        STOP codon warnings :   2767 ( 4.34% )
+#              UTR sequences :  62209 ( 74.99% )
+#               Total Errors :     65 ( 0.10% )
+#-----------------------------------------------
+# Cds                        : 591425
+# Exons                      : 742287
+# Exons with sequence        : 742287
+# Exons without sequence     : 0
+# Avg. exons per transcript  : 8.95
+#-----------------------------------------------
+# Number of chromosomes      : 94
+# Chromosomes                : Format 'chromo_name size codon_table'
+#		'1'	249250621	Standard
+#		'2'	243199373	Standard
+#		'3'	198022430	Standard
+#		'4'	191154276	Standard
+#		'5'	180915260	Standard
+#		'6'	171115067	Standard
+#		'7'	159138663	Standard
+#		'X'	155270560	Standard
+#		'8'	146364022	Standard
+#		'9'	141213431	Standard
+#		'10'	135534747	Standard
+#		'11'	135006516	Standard
+#		'12'	133851895	Standard
+#		'13'	115169878	Standard
+#		'14'	107349540	Standard
+#		'15'	102531392	Standard
+#		'16'	90354753	Standard
+#		'17'	81195210	Standard
+#		'18'	78077248	Standard
+#		'20'	63025520	Standard
+#		'Y'	59373566	Standard
+#		'19'	59128983	Standard
+#		'22'	51304566	Standard
+#		'21'	48129895	Standard
+#		'6_ssto_hap7'	4928567	Standard
+#		'6_mcf_hap5'	4833398	Standard
+#		'6_cox_hap2'	4795371	Standard
+#		'6_mann_hap4'	4683263	Standard
+#		'6_apd_hap1'	4622290	Standard
+#		'6_qbl_hap6'	4611984	Standard
+#		'6_dbb_hap3'	4610396	Standard
+#		'17_ctg5_hap1'	1680828	Standard
+#		'4_ctg9_hap1'	590426	Standard
+#		'1_gl000192_random'	547496	Standard
+#		'Un_gl000225'	211173	Standard
+#		'4_gl000194_random'	191469	Standard
+#		'4_gl000193_random'	189789	Standard
+#		'9_gl000200_random'	187035	Standard
+#		'Un_gl000222'	186861	Standard
+#		'Un_gl000212'	186858	Standard
+#		'7_gl000195_random'	182896	Standard
+#		'Un_gl000223'	180455	Standard
+#		'Un_gl000224'	179693	Standard
+#		'Un_gl000219'	179198	Standard
+#		'17_gl000205_random'	174588	Standard
+#		'Un_gl000215'	172545	Standard
+#		'Un_gl000216'	172294	Standard
+#		'Un_gl000217'	172149	Standard
+#		'9_gl000199_random'	169874	Standard
+#		'Un_gl000211'	166566	Standard
+#		'Un_gl000213'	164239	Standard
+#		'Un_gl000220'	161802	Standard
+#		'Un_gl000218'	161147	Standard
+#		'19_gl000209_random'	159169	Standard
+#		'Un_gl000221'	155397	Standard
+#		'Un_gl000214'	137718	Standard
+#		'Un_gl000228'	129120	Standard
+#		'Un_gl000227'	128374	Standard
+#		'1_gl000191_random'	106433	Standard
+#		'19_gl000208_random'	92689	Standard
+#		'9_gl000198_random'	90085	Standard
+#		'17_gl000204_random'	81310	Standard
+#		'Un_gl000233'	45941	Standard
+#		'Un_gl000237'	45867	Standard
+#		'Un_gl000230'	43691	Standard
+#		'Un_gl000242'	43523	Standard
+#		'Un_gl000243'	43341	Standard
+#		'Un_gl000241'	42152	Standard
+#		'Un_gl000236'	41934	Standard
+#		'Un_gl000240'	41933	Standard
+#		'17_gl000206_random'	41001	Standard
+#		'Un_gl000232'	40652	Standard
+#		'Un_gl000234'	40531	Standard
+#		'11_gl000202_random'	40103	Standard
+#		'Un_gl000238'	39939	Standard
+#		'Un_gl000244'	39929	Standard
+#		'Un_gl000248'	39786	Standard
+#		'8_gl000196_random'	38914	Standard
+#		'Un_gl000249'	38502	Standard
+#		'Un_gl000246'	38154	Standard
+#		'17_gl000203_random'	37498	Standard
+#		'8_gl000197_random'	37175	Standard
+#		'Un_gl000245'	36651	Standard
+#		'Un_gl000247'	36422	Standard
+#		'9_gl000201_random'	36148	Standard
+#		'Un_gl000235'	34474	Standard
+#		'Un_gl000239'	33824	Standard
+#		'21_gl000210_random'	27682	Standard
+#		'Un_gl000231'	27386	Standard
+#		'Un_gl000229'	19913	Standard
+#		'M'	16571	Vertebrate_Mitochondrial
+#		'Un_gl000226'	15008	Standard
+#		'18_gl000207_random'	4262	Standard
+#		'MT'	1	Vertebrate_Mitochondrial
+#-----------------------------------------------
+
+00:00:15 Predicting variants
+00:00:17 	10000 variants (3449 variants per second), 9988 VCF entries
+00:00:18 	20000 variants (5270 variants per second), 19979 VCF entries
+00:00:19 	30000 variants (6793 variants per second), 29977 VCF entries
+
+ERRORS: Some errors were detected
+Error type	Number of errors
+ERROR_CHROMOSOME_NOT_FOUND	289
+
+
+
+WARNINGS: Some warning were detected
+Warning type	Number of warnings
+WARNING_TRANSCRIPT_NO_START_CODON	8
+WARNING_TRANSCRIPT_NO_STOP_CODON	4500
+
+
+00:00:20 Creating summary file: Tumor.GATK.recode.ann.html
+00:00:20 Creating genes file: ./Tumor.GATK.recode.ann.genes.txt
+00:00:20 done.
+00:00:20 Logging
+00:00:21 Checking for updates...
+00:00:22 Done.
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##bcftoolsVersion=1.20+htslib-1.20
+##bcftoolsCommand=mpileup -Ou -a DP -f /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta ../Tumor.sorted.bam
+##reference=file:///Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta
+##contig=<ID=1,length=249250621>
+##contig=<ID=2,length=243199373>
+##contig=<ID=3,length=198022430>
+##contig=<ID=4,length=191154276>
+##contig=<ID=5,length=180915260>
+##contig=<ID=6,length=171115067>
+##contig=<ID=7,length=159138663>
+##contig=<ID=8,length=146364022>
+##contig=<ID=9,length=141213431>
+##contig=<ID=10,length=135534747>
+##contig=<ID=11,length=135006516>
+##contig=<ID=12,length=133851895>
+##contig=<ID=13,length=115169878>
+##contig=<ID=14,length=107349540>
+##contig=<ID=15,length=102531392>
+##contig=<ID=16,length=90354753>
+##contig=<ID=17,length=81195210>
+##contig=<ID=18,length=78077248>
+##contig=<ID=19,length=59128983>
+##contig=<ID=20,length=63025520>
+##contig=<ID=21,length=48129895>
+##contig=<ID=22,length=51304566>
+##contig=<ID=X,length=155270560>
+##contig=<ID=Y,length=59373566>
+##contig=<ID=MT,length=16569>
+##contig=<ID=GL000207.1,length=4262>
+##contig=<ID=GL000226.1,length=15008>
+##contig=<ID=GL000229.1,length=19913>
+##contig=<ID=GL000231.1,length=27386>
+##contig=<ID=GL000210.1,length=27682>
+##contig=<ID=GL000239.1,length=33824>
+##contig=<ID=GL000235.1,length=34474>
+##contig=<ID=GL000201.1,length=36148>
+##contig=<ID=GL000247.1,length=36422>
+##contig=<ID=GL000245.1,length=36651>
+##contig=<ID=GL000197.1,length=37175>
+##contig=<ID=GL000203.1,length=37498>
+##contig=<ID=GL000246.1,length=38154>
+##contig=<ID=GL000249.1,length=38502>
+##contig=<ID=GL000196.1,length=38914>
+##contig=<ID=GL000248.1,length=39786>
+##contig=<ID=GL000244.1,length=39929>
+##contig=<ID=GL000238.1,length=39939>
+##contig=<ID=GL000202.1,length=40103>
+##contig=<ID=GL000234.1,length=40531>
+##contig=<ID=GL000232.1,length=40652>
+##contig=<ID=GL000206.1,length=41001>
+##contig=<ID=GL000240.1,length=41933>
+##contig=<ID=GL000236.1,length=41934>
+##contig=<ID=GL000241.1,length=42152>
+##contig=<ID=GL000243.1,length=43341>
+##contig=<ID=GL000242.1,length=43523>
+##contig=<ID=GL000230.1,length=43691>
+##contig=<ID=GL000237.1,length=45867>
+##contig=<ID=GL000233.1,length=45941>
+##contig=<ID=GL000204.1,length=81310>
+##contig=<ID=GL000198.1,length=90085>
+##contig=<ID=GL000208.1,length=92689>
+##contig=<ID=GL000191.1,length=106433>
+##contig=<ID=GL000227.1,length=128374>
+##contig=<ID=GL000228.1,length=129120>
+##contig=<ID=GL000214.1,length=137718>
+##contig=<ID=GL000221.1,length=155397>
+##contig=<ID=GL000209.1,length=159169>
+##contig=<ID=GL000218.1,length=161147>
+##contig=<ID=GL000220.1,length=161802>
+##contig=<ID=GL000213.1,length=164239>
+##contig=<ID=GL000211.1,length=166566>
+##contig=<ID=GL000199.1,length=169874>
+##contig=<ID=GL000217.1,length=172149>
+##contig=<ID=GL000216.1,length=172294>
+##contig=<ID=GL000215.1,length=172545>
+##contig=<ID=GL000205.1,length=174588>
+##contig=<ID=GL000219.1,length=179198>
+##contig=<ID=GL000224.1,length=179693>
+##contig=<ID=GL000223.1,length=180455>
+##contig=<ID=GL000195.1,length=182896>
+##contig=<ID=GL000212.1,length=186858>
+##contig=<ID=GL000222.1,length=186861>
+##contig=<ID=GL000200.1,length=187035>
+##contig=<ID=GL000193.1,length=189789>
+##contig=<ID=GL000194.1,length=191469>
+##contig=<ID=GL000225.1,length=211173>
+##contig=<ID=GL000192.1,length=547496>
+##ALT=<ID=*,Description="Represents allele(s) other than observed.">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of raw reads supporting an indel">
+##INFO=<ID=IMF,Number=1,Type=Float,Description="Maximum fraction of raw reads supporting an indel">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw read depth">
+##INFO=<ID=VDB,Number=1,Type=Float,Description="Variant Distance Bias for filtering splice-site artefacts in RNA-seq data (bigger is better)",Version="3">
+##INFO=<ID=RPBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Read Position Bias (closer to 0 is better)">
+##INFO=<ID=MQBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Mapping Quality Bias (closer to 0 is better)">
+##INFO=<ID=BQBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Base Quality Bias (closer to 0 is better)">
+##INFO=<ID=MQSBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Mapping Quality vs Strand Bias (closer to 0 is better)">
+##INFO=<ID=SCBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Soft-Clip Length Bias (closer to 0 is better)">
+##INFO=<ID=SGB,Number=1,Type=Float,Description="Segregation based metric, http://samtools.github.io/bcftools/rd-SegBias.pdf">
+##INFO=<ID=MQ0F,Number=1,Type=Float,Description="Fraction of MQ0 reads (smaller is better)">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="List of Phred-scaled genotype likelihoods">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Number of high-quality bases">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=AF1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele frequency (assuming HWE)">
+##INFO=<ID=AF2,Number=1,Type=Float,Description="Max-likelihood estimate of the first and second group ALT allele frequency (assuming HWE)">
+##INFO=<ID=AC1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele count (no HWE assumption)">
+##INFO=<ID=MQ,Number=1,Type=Integer,Description="Root-mean-square mapping quality of covering reads">
+##INFO=<ID=FQ,Number=1,Type=Float,Description="Phred probability of all samples being the same">
+##INFO=<ID=PV4,Number=4,Type=Float,Description="P-values for strand bias, baseQ bias, mapQ bias and tail distance bias">
+##INFO=<ID=G3,Number=3,Type=Float,Description="ML estimate of genotype frequencies">
+##INFO=<ID=HWE,Number=1,Type=Float,Description="Chi^2 based HWE test P-value based on G3">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+##bcftools_callVersion=1.20+htslib-1.20
+##bcftools_callCommand=call -Ov -c -v; Date=Mon Jun 17 12:37:43 2024
+##SnpEffVersion="5.2c (build 2024-04-09 12:24), by Pablo Cingolani"
+##SnpEffCmd="SnpEff  hg19kg ../6-VariantCalling/Tumor.BCF.recode.vcf -s Tumor.BCF.recode.ann.html "
+##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: 'Allele | Annotation | Annotation_Impact | Gene_Name | Gene_ID | Feature_Type | Feature_ID | Transcript_BioType | Rank | HGVS.c | HGVS.p | cDNA.pos / cDNA.length | CDS.pos / CDS.length | AA.pos / AA.length | Distance | ERRORS / WARNINGS / INFO' ">
+##INFO=<ID=LOF,Number=.,Type=String,Description="Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##INFO=<ID=NMD,Number=.,Type=String,Description="Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##SnpSiftVersion="SnpSift 5.2c (build 2024-04-09 12:24), by Pablo Cingolani"
+##SnpSiftCmd="SnpSift Annotate /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/hapmap_3.3.b37.vcf Tumor.BCF.recode.ann.vcf"
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##SnpSiftCmd="SnpSift Annotate /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/clinvar_Pathogenic.vcf Tumor.BCF.recode.ann2.vcf"
+##INFO=<ID=DBVARID,Number=.,Type=String,Description="nsv accessions from dbVar for the variant">
+##INFO=<ID=ALLELEID,Number=1,Type=Integer,Description="the ClinVar Allele ID">
+##INFO=<ID=CLNSIG,Number=.,Type=String,Description="Clinical significance for this single variant">
+##INFO=<ID=CLNVCSO,Number=1,Type=String,Description="Sequence Ontology id for variant type">
+##INFO=<ID=CLNREVSTAT,Number=.,Type=String,Description="ClinVar review status for the Variation ID">
+##INFO=<ID=RS,Number=.,Type=String,Description="dbSNP ID (i.e. rs number)">
+##INFO=<ID=CLNDNINCL,Number=.,Type=String,Description="For included Variant : ClinVar's preferred disease name for the concept specified by disease identifiers in CLNDISDB">
+##INFO=<ID=ORIGIN,Number=.,Type=String,Description="Allele origin. One or more of the following values may be added: 0 - unknown; 1 - germline; 2 - somatic; 4 - inherited; 8 - paternal; 16 - maternal; 32 - de-novo; 64 - biparental; 128 - uniparental; 256 - not-tested; 512 - tested-inconclusive; 1073741824 - other">
+##INFO=<ID=MC,Number=.,Type=String,Description="comma separated list of molecular consequence in the form of Sequence Ontology ID|molecular_consequence">
+##INFO=<ID=CLNDN,Number=.,Type=String,Description="ClinVar's preferred disease name for the concept specified by disease identifiers in CLNDISDB">
+##INFO=<ID=CLNVC,Number=1,Type=String,Description="Variant type">
+##INFO=<ID=CLNVI,Number=.,Type=String,Description="the variant's clinical sources reported as tag-value pairs of database and variant identifier">
+##INFO=<ID=AF_EXAC,Number=1,Type=Float,Description="allele frequencies from ExAC">
+##INFO=<ID=AF_ESP,Number=1,Type=Float,Description="allele frequencies from GO-ESP">
+##INFO=<ID=CLNSIGINCL,Number=.,Type=String,Description="Clinical significance for a haplotype or genotype that includes this variant. Reported as pairs of VariationID:clinical significance.">
+##INFO=<ID=CLNDISDB,Number=.,Type=String,Description="Tag-value pairs of disease database name and identifier, e.g. OMIM:NNNNNN">
+##INFO=<ID=GENEINFO,Number=1,Type=String,Description="Gene(s) for the variant reported as gene symbol:gene id. The gene symbol and id are delimited by a colon (:) and each pair is delimited by a vertical bar (|)">
+##INFO=<ID=CLNDISDBINCL,Number=.,Type=String,Description="For included Variant: Tag-value pairs of disease database name and identifier, e.g. OMIM:NNNNNN">
+##INFO=<ID=AF_TGP,Number=1,Type=Float,Description="allele frequencies from TGP">
+##INFO=<ID=CLNSIGCONF,Number=.,Type=String,Description="Conflicting clinical significance for this single variant">
+##INFO=<ID=CLNHGVS,Number=.,Type=String,Description="Top-level (primary assembly, alt, or patch) HGVS expression.">
+##INFO=<ID=SSR,Number=1,Type=Integer,Description="Variant Suspect Reason Codes. One or more of the following values may be added: 0 - unspecified, 1 - Paralog, 2 - byEST, 4 - oldAlign, 8 - Para_EST, 16 - 1kg_failed, 1024 - other">
+##SnpSiftCmd="SnpSift Filter '(ANN[ANY].IMPACT = 'HIGH') & (DP > 20) & (exists ID)'"
+##FILTER=<ID=SnpSift,Description="SnpSift 5.2c (build 2024-04-09 12:24), by Pablo Cingolani, Expression used: (ANN[ANY].IMPACT = 'HIGH') & (DP > 20) & (exists ID)">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	TCGA-A7-A4SE-Tumor
+15	31369123	rs4779816	A	G	221.999	.	DP=49;VDB=0.873532;SGB=-0.693146;MQSBZ=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,25,19;MQ=60;FQ=-158.987;ANN=G|start_lost|HIGH|Q7Z4N2|Q7Z4N2|transcript|uc001zfm.3|protein_coding|2/27|c.2T>C|p.Met1?|135/5706|2/4812|1/1603||,G|start_lost|HIGH|H0YN37|H0YN37|transcript|uc001zfn.4|protein_coding|2/3|c.2T>C|p.Met1?|135/987|2/411|1/136||,G|missense_variant|MODERATE|F8W865|F8W865|transcript|uc021shz.1|protein_coding|3/28|c.68T>C|p.Met23Thr|221/5792|68/4878|23/1625||,G|missense_variant|MODERATE|D9IDV3|D9IDV3|transcript|uc021sia.1|protein_coding|2/27|c.119T>C|p.Met40Thr|433/6004|119/4929|40/1642||;LOF=(Q7Z4N2|Q7Z4N2|1|1.00),(H0YN37|H0YN37|1|1.00);AC=2511;AF=0.900;AN=2790	GT:PL:DP	1/1:255,132,0:44
+15	40856989	rs3803354	C	T	221.999	.	DP=59;VDB=0.413028;SGB=-0.693147;MQSBZ=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,26,27;MQ=60;FQ=-186.988;ANN=T|splice_donor_variant&intron_variant|HIGH|Q9BV29-3|Q9BV29-3|transcript|uc001zly.3|protein_coding|1/3|c.-19+1G>A||||||,T|splice_donor_variant&intron_variant|HIGH|Q9BV29|Q9BV29|transcript|uc001zmb.1|protein_coding|1/3|c.-13+1G>A||||||,T|5_prime_UTR_variant|MODIFIER|Q9BV29-2|Q9BV29-2|transcript|uc001zma.1|protein_coding|1/4|c.-10G>A|||||10|,T|upstream_gene_variant|MODIFIER|B4DDD1|B4DDD1|transcript|uc021sjh.1|protein_coding||c.-4548C>T|||||4542|,T|upstream_gene_variant|MODIFIER|Q8IZ73|Q8IZ73|transcript|uc001zmd.1|protein_coding||c.-4548C>T|||||4548|,T|intron_variant|MODIFIER|Q9BV29|Q9BV29|transcript|uc001zmc.1|protein_coding|1/3|c.-13+186G>A||||||,T|intron_variant|MODIFIER|Q9BV29-3|Q9BV29-3|transcript|uc010bbr.3|protein_coding|1/2|c.-19+186G>A||||||;LOF=(Q9BV29|Q9BV29|2|0.50),(Q9BV29-3|Q9BV29-3|2|0.50);AC=2367;AF=0.847;AN=2794	GT:PL:DP	1/1:255,160,0:53
+15	68497597	rs11071990	G	A	55.0072	.	DP=71;VDB=0.991;SGB=-0.662043;RPBZ=-0.963257;MQBZ=0;MQSBZ=0;BQBZ=-0.341872;SCBZ=-0.617816;MQ0F=0;AF1=0.5;AC1=1;DP4=20,28,5,4;MQ=60;FQ=58.0154;PV4=0.48517,0.252617,1,0.00751812;ANN=A|stop_gained|HIGH|Q96GE6|Q96GE6|transcript|uc002arb.3|protein_coding|1/5|c.118C>T|p.Arg40*|852/4635|118/591|40/196||,A|stop_gained|HIGH|F8W6Y4|F8W6Y4|transcript|uc002arc.3|protein_coding|1/4|c.118C>T|p.Arg40*|852/4494|118/450|40/149||,A|downstream_gene_variant|MODIFIER|Q9NWW5|Q9NWW5|transcript|uc002arf.3|protein_coding||c.*2881C>T|||||1733|,A|downstream_gene_variant|MODIFIER|E7ESV1|E7ESV1|transcript|uc010ujy.2|protein_coding||c.*2881C>T|||||1733|,A|downstream_gene_variant|MODIFIER|B4DDH6|B4DDH6|transcript|uc010ujz.2|protein_coding||c.*2881C>T|||||1733|,A|non_coding_transcript_exon_variant|MODIFIER||.4457|transcript|uc002ard.3|pseudogene|1/4|n.852C>T||||||,A|non_coding_transcript_exon_variant|MODIFIER||.4457|transcript|uc002are.3|pseudogene|1/3|n.852C>T||||||,A|non_coding_transcript_exon_variant|MODIFIER||.4457|transcript|uc010bhz.3|pseudogene|1/2|n.852C>T||||||;LOF=(F8W6Y4|F8W6Y4|1|1.00),(Q96GE6|Q96GE6|1|1.00);NMD=(F8W6Y4|F8W6Y4|1|1.00),(Q96GE6|Q96GE6|1|1.00);AC=315;AF=0.122;AN=2588	GT:PL:DP	0/1:85,0,255:57
+15	78209436	rs4444305	C	T	184.009	.	DP=146;VDB=0.846454;SGB=-0.693079;RPBZ=1.5694;MQBZ=-6.83228;MQSBZ=0.51182;BQBZ=-1.33701;SCBZ=0;MQ0F=0;AF1=0.5;AC1=1;DP4=49,52,17,12;MQ=58;FQ=187.017;PV4=0.40177,1,2.07434e-13,0.464494;ANN=T|splice_acceptor_variant&intron_variant|HIGH|A6NDK9|A6NDK9.2|transcript|uc010bky.2|protein_coding|12/17|c.730-2G>A||||||,T|upstream_gene_variant|MODIFIER|B4DGZ1|B4DGZ1|transcript|uc010umq.1|protein_coding||c.-1410G>A|||||1293|,T|upstream_gene_variant|MODIFIER||.4537|transcript|uc002bcx.1|pseudogene||n.-506C>T|||||506|,T|downstream_gene_variant|MODIFIER||.4536|transcript|uc002bcw.1|pseudogene||n.*125C>T|||||125|;LOF=(A6NDK9|A6NDK9.2|1|1.00);AC=428;AF=0.863;AN=496	GT:PL:DP	0/1:214,0,255:130
+15	89436295	rs8039131	G	A	135.008	.	DP=89;VDB=0.970359;SGB=-0.686358;RPBZ=-0.795695;MQBZ=0;MQSBZ=0;BQBZ=-2.39626;SCBZ=2.08738;MQ0F=0;AF1=0.5;AC1=1;DP4=15,46,4,10;MQ=60;FQ=138.016;PV4=0.742649,0.125694,1,0.00739617;ANN=A|stop_gained|HIGH|H3BTH8|H3BTH8|transcript|uc002bnd.3|protein_coding|2/6|c.49C>T|p.Gln17*|130/2032|49/1269|17/422||,A|intron_variant|MODIFIER|Q96S86|Q96S86|transcript|uc002bnc.3|protein_coding|1/4|c.-48+2395C>T||||||,A|intron_variant|MODIFIER||.4629|transcript|uc002bne.3|pseudogene|1/5|n.81+2395C>T||||||;LOF=(H3BTH8|H3BTH8|1|1.00);NMD=(H3BTH8|H3BTH8|1|1.00);AC=1171;AF=0.420;AN=2790	GT:PL:DP	0/1:165,0,255:75
+16	720152	rs3752487	T	C	225.009	.	DP=202;VDB=0.52823;SGB=-0.693147;RPBZ=-0.517076;MQBZ=0;MQSBZ=0;BQBZ=-4.92121;SCBZ=-0.85016;MQ0F=0;AF1=0.5;AC1=1;DP4=40,61,24,49;MQ=60;FQ=225.007;PV4=0.426542,0.00287579,1,1;ANN=C|start_lost|HIGH|Q8IXI1|Q8IXI1|transcript|uc002ciq.3|protein_coding|5/18|c.2T>C|p.Met1?|509/2611|2/1536|1/511||,C|synonymous_variant|LOW|Q8IXI1|Q8IXI1|transcript|uc002cip.3|protein_coding|6/19|c.306T>C|p.Asn102Asn|423/2542|306/1857|102/618||,C|upstream_gene_variant|MODIFIER|Q8IXI1|Q8IXI1|transcript|uc010bqy.3|protein_coding||c.-846T>C|||||740|,C|downstream_gene_variant|MODIFIER|Q96KV7|Q96KV7|transcript|uc002cii.1|protein_coding||c.*2563T>C|||||2323|,C|downstream_gene_variant|MODIFIER||.4909|transcript|uc002cil.1|pseudogene||n.*2323T>C|||||2323|,C|downstream_gene_variant|MODIFIER|G3V201|G3V201|transcript|uc002cin.1|protein_coding||c.*2563T>C|||||2323|,C|downstream_gene_variant|MODIFIER|Q96KV7-7|Q96KV7-7|transcript|uc010bqx.1|protein_coding||c.*2563T>C|||||2323|,C|downstream_gene_variant|MODIFIER||.4909|transcript|uc002cij.1|pseudogene||n.*2323T>C|||||2323|,C|downstream_gene_variant|MODIFIER|G3V201|G3V201|transcript|uc002cio.1|protein_coding||c.*2563T>C|||||2323|;LOF=(Q8IXI1|Q8IXI1|3|0.33);AC=560;AF=0.201;AN=2788	GT:PL:DP	0/1:255,0,255:174
+16	2049640	rs2286469	A	G	221.999	.	DP=27;VDB=0.821325;SGB=-0.692976;MQSBZ=0;MQ0F=0;AF1=1;AC1=2;DP4=0,0,15,11;MQ=60;FQ=-104.987;ANN=G|start_lost|HIGH|NP_835461|NP_835461|transcript|uc002coe.2|protein_coding|5/8|c.2T>C|p.Met1?|1206/2591|2/807|1/268||,G|missense_variant|MODERATE|NP_835461|NP_835461|transcript|uc002cof.2|protein_coding|11/14|c.1910T>C|p.Met637Thr|1984/3369|1910/2715|637/904||,G|intron_variant|MODIFIER||.4926|transcript|uc021tak.1|pseudogene|1/1|n.19+123435T>C||||||;LOF=(NP_835461|NP_835461|2|0.50);AC=1725;AF=0.618;AN=2790	GT:PL:DP	1/1:255,78,0:26
+16	56701294	rs2298847	T	A	225.009	.	DP=93;VDB=0.884402;SGB=-0.693147;RPBZ=3.10105;MQBZ=0;MQSBZ=0;BQBZ=1.11668;SCBZ=0;MQ0F=0;AF1=0.5;AC1=1;DP4=5,15,20,42;MQ=60;FQ=145.016;PV4=0.590963,1,1,1;ANN=A|splice_acceptor_variant&intron_variant|HIGH||.5222|transcript|uc002ejv.1|pseudogene|1/2|n.101-2A>T||||||,A|splice_region_variant&intron_variant|LOW|P13640-2|P13640-2|transcript|uc002eju.1|protein_coding|1/2|c.29-5A>T||||||,A|upstream_gene_variant|MODIFIER|P80294|P80294|transcript|uc002ejw.3|protein_coding||c.-2503T>A|||||2432|;AC=18;AF=0.101;AN=178	GT:PL:DP	0/1:255,0,172:82
+16	85317165	rs2930230	C	T	158.274	.	DP=28;VDB=0.20617;SGB=-0.692717;RPBZ=0.924659;MQBZ=0;MQSBZ=0;BQBZ=3.08784;SCBZ=0;MQ0F=0;AF1=0.533586;AC1=1;DP4=2,2,1,22;MQ=60;FQ=-18.0541;PV4=0.048547,1,1,0.217788;ANN=T|splice_donor_variant&intron_variant|HIGH||.5352|transcript|uc021tmc.1|pseudogene|1/2|n.600+2C>T||||||;AC=208;AF=0.301;AN=692	GT:PL:DP	0/1:188,0,9:27
+17	7158203	rs402514	T	G	221.999	.	DP=51;VDB=0.00853438;SGB=-0.693147;RPBZ=-0.0737978;MQBZ=0;MQSBZ=0;BQBZ=1.30449;SCBZ=0.147442;MQ0F=0;AF1=1;AC1=2;DP4=0,1,14,32;MQ=60;FQ=-137.987;PV4=1,1,1,0.263158;ANN=G|stop_lost|HIGH|Q8TE02-3|Q8TE02-3|transcript|uc002gfk.1|protein_coding|4/4|c.538T>G|p.Ter180Gluext*?|615/640|538/540|180/179||,G|upstream_gene_variant|MODIFIER|O95476|O95476|transcript|uc002gfd.2|protein_coding||c.-3588A>C|||||3208|,G|upstream_gene_variant|MODIFIER|O95476|O95476|transcript|uc002gfe.2|protein_coding||c.-3391A>C|||||2944|,G|downstream_gene_variant|MODIFIER||.5478|transcript|uc021toz.1|pseudogene||n.*2311T>G|||||2311|,G|intron_variant|MODIFIER|Q8TE02|Q8TE02|transcript|uc002gfg.1|protein_coding|5/8|c.457+81T>G||||||,G|intron_variant|MODIFIER|Q8TE02-2|Q8TE02-2|transcript|uc002gfj.3|protein_coding|5/6|c.457+81T>G||||||,G|intron_variant|MODIFIER|Q8TE02|Q8TE02|transcript|uc002gfh.1|protein_coding|5/8|c.457+81T>G||||||,G|intron_variant|MODIFIER|Q8TE02|Q8TE02|transcript|uc002gfi.1|protein_coding|4/7|c.457+81T>G||||||,G|intron_variant|MODIFIER|Q8TE02-2|Q8TE02-2|transcript|uc010cmb.3|protein_coding|4/5|c.457+81T>G||||||;AC=2027;AF=0.734;AN=2762	GT:PL:DP	1/1:255,111,0:47
+17	16350239	rs2882581	A	G	225.009	.	DP=43;VDB=0.0182247;SGB=-0.693079;RPBZ=-0.606204;MQBZ=0;MQSBZ=0;BQBZ=0.641535;SCBZ=0.615882;MQ0F=0;AF1=0.5;AC1=1;DP4=4,7,12,17;MQ=60;FQ=135.016;PV4=1,1,1,1;ANN=G|stop_lost|HIGH||.5554|transcript|uc002gqg.2|protein_coding|2/3|c.439T>C|p.Ter147Glnext*?|557/2729|439/441|147/146||,G|downstream_gene_variant|MODIFIER|Q8N1F1|Q8N1F1|transcript|uc021tqz.1|protein_coding||c.*5497A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc002gqa.4|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc002gqb.4|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER|Q8N1F1|Q8N1F1|transcript|uc002gqc.3|protein_coding||c.*5608A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc010cpd.3|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc010vwg.2|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc010vwh.2|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc010vwi.2|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc010vwj.2|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc010vwk.2|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc021tqv.1|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc021tqw.1|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc021tqx.1|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc021tqy.1|pseudogene||n.*4899A>G|||||4899|,G|intron_variant|MODIFIER|Q8NAA5-2|Q8NAA5-2|transcript|uc002gqh.3|protein_coding|2/2|c.376-2794T>C||||||,G|intron_variant|MODIFIER|Q8NAA5|Q8NAA5|transcript|uc010cph.2|protein_coding|3/3|c.491+920T>C||||||,G|intron_variant|MODIFIER||.5554|transcript|uc010cpe.2|pseudogene|3/6|n.231+6672A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc010vwl.1|pseudogene|4/6|n.288+5795A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc010vwm.1|pseudogene|4/6|n.288+5795A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc010vwn.1|pseudogene|4/4|n.288+5795A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc010vwo.1|pseudogene|4/6|n.288+5795A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc010vwp.1|pseudogene|4/6|n.288+5795A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc021tra.1|pseudogene|4/4|n.257+5795A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc021trb.1|pseudogene|3/3|n.200+5795A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc021trc.1|pseudogene|3/3|n.231+6672A>G||||||;AC=239;AF=0.446;AN=536	GT:PL:DP	0/1:255,0,162:40
+17	41246494	54108	C	A	225.009	.	DP=77;VDB=0.977475;SGB=-0.693147;RPBZ=0.636377;MQBZ=0;MQSBZ=0;BQBZ=-3.57354;SCBZ=0.495595;MQ0F=0;AF1=0.5;AC1=1;DP4=11,3,39,18;MQ=60;FQ=67.0155;PV4=0.532806,1,1,0.327276;ANN=A|stop_gained|HIGH|P38398-2|P38398-2|transcript|uc002icp.4|protein_coding|10/23|c.841G>T|p.Glu281*|1190/7111|841/5379|281/1792||,A|stop_gained|HIGH|NP_009228|NP_009228|transcript|uc010cyx.3|protein_coding|9/22|c.913G>T|p.Glu305*|1194/7115|913/5451|305/1816||,A|stop_gained|HIGH|P38398|P38398|transcript|uc002icq.3|protein_coding|10/23|c.1054G>T|p.Glu352*|1286/7207|1054/5592|352/1863||,A|stop_gained|HIGH|J3KQF3|J3KQF3|transcript|uc002ict.3|protein_coding|10/24|c.1054G>T|p.Glu352*|1286/7270|1054/5655|352/1884||,A|stop_gained|HIGH|Q5YLB2|Q5YLB2|transcript|uc002idd.3|protein_coding|9/9|c.1054G>T|p.Glu352*|1073/4450|1054/4200|352/1399||,A|stop_gained|HIGH|P38398|P38398|transcript|uc002ide.1|protein_coding|4/4|c.547G>T|p.Glu183*|716/3758|547/3588|183/1195||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010cyy.1|protein_coding|10/10|c.1054G>T|p.Glu352*|1215/4257|1054/4095|352/1364||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010whs.1|protein_coding|10/10|c.1054G>T|p.Glu352*|1248/4290|1054/4095|352/1364||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010cyz.2|protein_coding|11/11|c.913G>T|p.Glu305*|1402/4444|913/3954|305/1317||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010cza.2|protein_coding|9/9|c.976G>T|p.Glu326*|1208/4250|976/4017|326/1338||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010wht.1|protein_coding|2/2|c.166G>T|p.Glu56*|597/3639|166/3207|56/1068||WARNING_TRANSCRIPT_NO_STOP_CODON,A|intron_variant|MODIFIER|E7ETR2|E7ETR2|transcript|uc010whl.2|protein_coding|9/21|c.787+267G>T||||||,A|intron_variant|MODIFIER|C6YB45|C6YB45|transcript|uc010whm.2|protein_coding|1/7|c.5-30526G>T||||||,A|intron_variant|MODIFIER|P38398-6|P38398-6|transcript|uc002icu.3|protein_coding|10/21|c.787+267G>T||||||,A|intron_variant|MODIFIER|G3XAC3|G3XAC3|transcript|uc010whn.2|protein_coding|1/10|c.-43-19956G>T||||||,A|intron_variant|MODIFIER|C6YB46|C6YB46|transcript|uc010who.3|protein_coding|1/4|c.-99+30794G>T||||||,A|intron_variant|MODIFIER|B4DES0|B4DES0|transcript|uc010whp.2|protein_coding|9/21|c.646+267G>T||||||,A|intron_variant|MODIFIER|E7EUM2|E7EUM2|transcript|uc002idc.1|protein_coding|10/17|c.784+267G>T||||||WARNING_TRANSCRIPT_NO_STOP_CODON,A|intron_variant|MODIFIER|P38398-3|P38398-3|transcript|uc010whr.1|protein_coding|9/16|c.646+267G>T||||||WARNING_TRANSCRIPT_NO_STOP_CODON,A|intron_variant|MODIFIER|P38398-3|P38398-3|transcript|uc010whq.1|protein_coding|4/11|c.283+267G>T||||||WARNING_TRANSCRIPT_NO_STOP_CODON;LOF=(P38398|P38398|7|0.14),(NP_009228|NP_009228|1|1.00),(P38398-2|P38398-2|1|1.00),(J3KQF3|J3KQF3|1|1.00);NMD=(P38398|P38398|7|0.14),(NP_009228|NP_009228|1|1.00),(P38398-2|P38398-2|1|1.00),(J3KQF3|J3KQF3|1|1.00);AF_EXAC=0.00002;ALLELEID=68775;CLNDISDB=MONDO:MONDO:0003582,MeSH:D061325,MedGen:C0677776,OMIM:PS604370,Orphanet:ORPHA145|MONDO:MONDO:0011450,MedGen:C2676676,OMIM:604370|MONDO:MONDO:0015356,MedGen:C0027672,Orphanet:ORPHA140162,SNOMED_CT:699346009|MedGen:CN517202;CLNDN=Hereditary_breast_and_ovarian_cancer_syndrome|Breast-ovarian_cancer,_familial_1|Hereditary_cancer-predisposing_syndrome|not_provided;CLNHGVS=NC_000017.10:g.41246494C>A;CLNREVSTAT=reviewed_by_expert_panel;CLNSIG=Pathogenic;CLNVC=single_nucleotide_variant;CLNVCSO=SO:0001483;GENEINFO=BRCA1:672;MC=SO:0001587|nonsense,SO:0001619|non-coding_transcript_variant,SO:0001627|intron_variant;ORIGIN=1;RS=80357472	GT:PL:DP	0/1:255,0,94:71
+17	42254011	rs7220138	C	G	221.999	.	DP=29;VDB=0.873904;SGB=-0.692831;RPBZ=-1.6657;MQBZ=0;MQSBZ=0;BQBZ=1.26;SCBZ=0;MQ0F=0;AF1=1;AC1=2;DP4=1,0,20,4;MQ=60;FQ=-72.9863;PV4=1,1,1,1;ANN=G|splice_acceptor_variant&intron_variant|HIGH||.5857|transcript|uc031rat.1|pseudogene|2/2|n.252-1G>C||||||,G|intron_variant|MODIFIER|Q96NS5|Q96NS5|transcript|uc002ifl.1|protein_coding|2/4|c.570-95C>G||||||,G|intron_variant|MODIFIER||.5857|transcript|uc002ifm.1|pseudogene|2/4|n.654-95C>G||||||,G|non_coding_transcript_exon_variant|MODIFIER||.5857|transcript|uc002ifn.4|pseudogene|4/4|n.1589G>C||||||,G|non_coding_transcript_exon_variant|MODIFIER||.5857|transcript|uc021tyb.2|pseudogene|1/1|n.994G>C||||||;AC=324;AF=0.616;AN=526	GT:PL:DP	1/1:255,46,0:25
+17	53076986	rs11658717	G	A	221.999	.	DP=32;VDB=0.978429;SGB=-0.693097;RPBZ=0.671498;MQBZ=0;MQSBZ=0;BQBZ=-0.909402;SCBZ=0;MQ0F=0;AF1=1;AC1=2;DP4=1,0,19,11;MQ=60;FQ=-85.9865;PV4=1,0.445634,1,0.164569;ANN=A|splice_acceptor_variant&intron_variant|HIGH|Q6ZWJ1-2|Q6ZWJ1-2|transcript|uc010dcc.1|protein_coding|4/10|c.57-1G>A||||||,A|splice_region_variant&intron_variant|LOW|Q6ZWJ1|Q6ZWJ1|transcript|uc002iuf.1|protein_coding|5/17|c.288-7G>A||||||,A|splice_region_variant&intron_variant|LOW|E7EPP7|E7EPP7|transcript|uc010dcd.1|protein_coding|5/16|c.288-7G>A||||||;LOF=(Q6ZWJ1-2|Q6ZWJ1-2|1|1.00);AC=2203;AF=0.792;AN=2780	GT:PL:DP	1/1:255,59,0:31
+18	8809445	rs632423	G	C	221.009	.	DP=28;VDB=0.896961;SGB=-0.683931;RPBZ=0.492568;MQBZ=0;MQSBZ=0;BQBZ=-0.0591983;SCBZ=0;MQ0F=0;AF1=0.5;AC1=1;DP4=7,4,10,3;MQ=60;FQ=194.013;PV4=0.659134,1,1,0.0967866;ANN=C|splice_acceptor_variant&intron_variant|HIGH|Q9Y4B5-4|Q9Y4B5-4|transcript|uc002kns.2|protein_coding|4/9|c.595-1G>C||||||,C|intron_variant|MODIFIER|Q9Y4B5|Q9Y4B5|transcript|uc002knq.2|protein_coding|9/14|c.2481+2387G>C||||||,C|intron_variant|MODIFIER|Q9Y4B5-3|Q9Y4B5-3|transcript|uc002knr.2|protein_coding|11/16|c.2604+2387G>C||||||;LOF=(Q9Y4B5-4|Q9Y4B5-4|1|1.00);AC=289;AF=0.535;AN=540	GT:PL:DP	0/1:251,0,221:24
+18	12254816	rs7505615	A	G	221.999	.	DP=60;VDB=0.921331;SGB=-0.693147;MQSBZ=0.762001;MQ0F=0;AF1=1;AC1=2;DP4=0,0,31,18;MQ=60;FQ=-174.988;ANN=G|start_lost|HIGH|Q8N5P9|Q8N5P9|transcript|uc002kqu.4|protein_coding|1/5|c.1A>G|p.Met1?|457/1543|1/762|1/253||,G|intron_variant|MODIFIER|O60543|O60543|transcript|uc002kqt.4|protein_coding|1/4|c.38+396A>G||||||,G|non_coding_transcript_exon_variant|MODIFIER||.6220|transcript|uc010dlc.3|pseudogene|1/6|n.457A>G||||||;LOF=(Q8N5P9|Q8N5P9|1|1.00);AC=797;AF=0.286;AN=2790	GT:PL:DP	1/1:255,148,0:49
+##fileformat=VCFv4.2
+##FILTER=<ID=LowQual,Description="Low quality">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths for the ref and alt alleles in the order listed">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth (reads with MQ=255 or with bad mates are filtered)">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+##GATKCommandLine.UnifiedGenotyper=<ID=UnifiedGenotyper,Version=3.8-1-0-gf15c1c3ef,Date="Mon Jun 17 12:41:47 CEST 2024",Epoch=1718620907779,CommandLineOptions="analysis_type=UnifiedGenotyper input_file=[../Tumor.sorted.bam] showFullBamList=false read_buffer_size=null read_filter=[] disable_read_filter=[] intervals=null excludeIntervals=null interval_set_rule=UNION interval_merging=ALL interval_padding=0 reference_sequence=/Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta nonDeterministicRandomSeed=false disableDithering=false maxRuntime=-1 maxRuntimeUnits=MINUTES downsampling_type=BY_SAMPLE downsample_to_fraction=null downsample_to_coverage=250 baq=OFF baqGapOpenPenalty=40.0 refactor_NDN_cigar_string=false fix_misencoded_quality_scores=false allow_potentially_misencoded_quality_scores=false useOriginalQualities=false defaultBaseQualities=-1 performanceLog=null BQSR=null quantize_quals=0 static_quantized_quals=null round_down_quantized=false disable_indel_quals=false emit_original_quals=false preserve_qscores_less_than=6 globalQScorePrior=-1.0 secondsBetweenProgressUpdates=10 validation_strictness=SILENT remove_program_records=false keep_program_records=false sample_rename_mapping_file=null unsafe=null use_jdk_deflater=false use_jdk_inflater=false disable_auto_index_creation_and_locking_when_reading_rods=false no_cmdline_in_header=false sites_only=false never_trim_vcf_format_field=false bcf=false bam_compression=null simplifyBAM=false disable_bam_indexing=false generate_md5=false num_threads=1 num_cpu_threads_per_data_thread=1 num_io_threads=0 monitorThreadEfficiency=false num_bam_file_handles=null read_group_black_list=null pedigree=[] pedigreeString=[] pedigreeValidationType=STRICT allow_intervals_with_unindexed_bam=false generateShadowBCF=false variant_index_type=DYNAMIC_SEEK variant_index_parameter=-1 reference_window_stop=0 phone_home= gatk_key=null tag=NA logging_level=INFO log_to_file=null help=false version=false genotype_likelihoods_model=SNP pcr_error_rate=1.0E-4 computeSLOD=false pair_hmm_implementation=LOGLESS_CACHING min_base_quality_score=17 max_deletion_fraction=0.05 min_indel_count_for_genotyping=5 min_indel_fraction_per_sample=0.25 indelGapContinuationPenalty=10 indelGapOpenPenalty=45 indelHaplotypeSize=80 indelDebug=false ignoreSNPAlleles=false allReadsSP=false ignoreLaneInfo=false reference_sample_calls=(RodBinding name= source=UNBOUND) reference_sample_name=null min_quality_score=1 max_quality_score=40 site_quality_prior=20 min_power_threshold_for_calling=0.95 annotateNDA=false useNewAFCalculator=false heterozygosity=0.001 indel_heterozygosity=1.25E-4 heterozygosity_stdev=0.01 standard_min_confidence_threshold_for_calling=10.0 standard_min_confidence_threshold_for_emitting=30.0 max_alternate_alleles=6 max_genotype_count=1024 max_num_PL_values=100 input_prior=[] sample_ploidy=2 genotyping_mode=DISCOVERY alleles=(RodBinding name= source=UNBOUND) contamination_fraction_to_filter=0.0 contamination_fraction_per_sample_file=null p_nonref_model=null exactcallslog=null output_mode=EMIT_VARIANTS_ONLY allSitePLs=false dbsnp=(RodBinding name= source=UNBOUND) comp=[] out=/Users/albertolupatin/Desktop/HumanGenomics/Project/Tumor/06-VariantCalling/Tumor.GATK.vcf onlyEmitSamples=[] debug_file=null metrics_file=null annotation=[] excludeAnnotation=[] filter_reads_with_N_cigar=false filter_mismatching_base_and_quals=false filter_bases_not_stored=false">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=BaseQRankSum,Number=1,Type=Float,Description="Z-score from Wilcoxon rank sum test of Alt Vs. Ref base qualities">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth; some reads may have been filtered">
+##INFO=<ID=DS,Number=0,Type=Flag,Description="Were any of the samples downsampled?">
+##INFO=<ID=Dels,Number=1,Type=Float,Description="Fraction of Reads Containing Spanning Deletions">
+##INFO=<ID=ExcessHet,Number=1,Type=Float,Description="Phred-scaled p-value for exact test of excess heterozygosity">
+##INFO=<ID=FS,Number=1,Type=Float,Description="Phred-scaled p-value using Fisher's exact test to detect strand bias">
+##INFO=<ID=HaplotypeScore,Number=1,Type=Float,Description="Consistency of the site with at most two segregating haplotypes">
+##INFO=<ID=InbreedingCoeff,Number=1,Type=Float,Description="Inbreeding coefficient as estimated from the genotype likelihoods per-sample when compared against the Hardy-Weinberg expectation">
+##INFO=<ID=MLEAC,Number=A,Type=Integer,Description="Maximum likelihood expectation (MLE) for the allele counts (not necessarily the same as the AC), for each ALT allele, in the same order as listed">
+##INFO=<ID=MLEAF,Number=A,Type=Float,Description="Maximum likelihood expectation (MLE) for the allele frequency (not necessarily the same as the AF), for each ALT allele, in the same order as listed">
+##INFO=<ID=MQ,Number=1,Type=Float,Description="RMS Mapping Quality">
+##INFO=<ID=MQ0,Number=1,Type=Integer,Description="Total Mapping Quality Zero Reads">
+##INFO=<ID=MQRankSum,Number=1,Type=Float,Description="Z-score From Wilcoxon rank sum test of Alt vs. Ref read mapping qualities">
+##INFO=<ID=QD,Number=1,Type=Float,Description="Variant Confidence/Quality by Depth">
+##INFO=<ID=RPA,Number=.,Type=Integer,Description="Number of times tandem repeat unit is repeated, for each allele (including reference)">
+##INFO=<ID=RU,Number=1,Type=String,Description="Tandem repeat unit (bases)">
+##INFO=<ID=ReadPosRankSum,Number=1,Type=Float,Description="Z-score from Wilcoxon rank sum test of Alt vs. Ref read position bias">
+##INFO=<ID=SOR,Number=1,Type=Float,Description="Symmetric Odds Ratio of 2x2 contingency table to detect strand bias">
+##INFO=<ID=STR,Number=0,Type=Flag,Description="Variant is a short tandem repeat">
+##contig=<ID=1,length=249250621,assembly=b37>
+##contig=<ID=2,length=243199373,assembly=b37>
+##contig=<ID=3,length=198022430,assembly=b37>
+##contig=<ID=4,length=191154276,assembly=b37>
+##contig=<ID=5,length=180915260,assembly=b37>
+##contig=<ID=6,length=171115067,assembly=b37>
+##contig=<ID=7,length=159138663,assembly=b37>
+##contig=<ID=8,length=146364022,assembly=b37>
+##contig=<ID=9,length=141213431,assembly=b37>
+##contig=<ID=10,length=135534747,assembly=b37>
+##contig=<ID=11,length=135006516,assembly=b37>
+##contig=<ID=12,length=133851895,assembly=b37>
+##contig=<ID=13,length=115169878,assembly=b37>
+##contig=<ID=14,length=107349540,assembly=b37>
+##contig=<ID=15,length=102531392,assembly=b37>
+##contig=<ID=16,length=90354753,assembly=b37>
+##contig=<ID=17,length=81195210,assembly=b37>
+##contig=<ID=18,length=78077248,assembly=b37>
+##contig=<ID=19,length=59128983,assembly=b37>
+##contig=<ID=20,length=63025520,assembly=b37>
+##contig=<ID=21,length=48129895,assembly=b37>
+##contig=<ID=22,length=51304566,assembly=b37>
+##contig=<ID=X,length=155270560,assembly=b37>
+##contig=<ID=Y,length=59373566,assembly=b37>
+##contig=<ID=MT,length=16569,assembly=b37>
+##contig=<ID=GL000207.1,length=4262,assembly=b37>
+##contig=<ID=GL000226.1,length=15008,assembly=b37>
+##contig=<ID=GL000229.1,length=19913,assembly=b37>
+##contig=<ID=GL000231.1,length=27386,assembly=b37>
+##contig=<ID=GL000210.1,length=27682,assembly=b37>
+##contig=<ID=GL000239.1,length=33824,assembly=b37>
+##contig=<ID=GL000235.1,length=34474,assembly=b37>
+##contig=<ID=GL000201.1,length=36148,assembly=b37>
+##contig=<ID=GL000247.1,length=36422,assembly=b37>
+##contig=<ID=GL000245.1,length=36651,assembly=b37>
+##contig=<ID=GL000197.1,length=37175,assembly=b37>
+##contig=<ID=GL000203.1,length=37498,assembly=b37>
+##contig=<ID=GL000246.1,length=38154,assembly=b37>
+##contig=<ID=GL000249.1,length=38502,assembly=b37>
+##contig=<ID=GL000196.1,length=38914,assembly=b37>
+##contig=<ID=GL000248.1,length=39786,assembly=b37>
+##contig=<ID=GL000244.1,length=39929,assembly=b37>
+##contig=<ID=GL000238.1,length=39939,assembly=b37>
+##contig=<ID=GL000202.1,length=40103,assembly=b37>
+##contig=<ID=GL000234.1,length=40531,assembly=b37>
+##contig=<ID=GL000232.1,length=40652,assembly=b37>
+##contig=<ID=GL000206.1,length=41001,assembly=b37>
+##contig=<ID=GL000240.1,length=41933,assembly=b37>
+##contig=<ID=GL000236.1,length=41934,assembly=b37>
+##contig=<ID=GL000241.1,length=42152,assembly=b37>
+##contig=<ID=GL000243.1,length=43341,assembly=b37>
+##contig=<ID=GL000242.1,length=43523,assembly=b37>
+##contig=<ID=GL000230.1,length=43691,assembly=b37>
+##contig=<ID=GL000237.1,length=45867,assembly=b37>
+##contig=<ID=GL000233.1,length=45941,assembly=b37>
+##contig=<ID=GL000204.1,length=81310,assembly=b37>
+##contig=<ID=GL000198.1,length=90085,assembly=b37>
+##contig=<ID=GL000208.1,length=92689,assembly=b37>
+##contig=<ID=GL000191.1,length=106433,assembly=b37>
+##contig=<ID=GL000227.1,length=128374,assembly=b37>
+##contig=<ID=GL000228.1,length=129120,assembly=b37>
+##contig=<ID=GL000214.1,length=137718,assembly=b37>
+##contig=<ID=GL000221.1,length=155397,assembly=b37>
+##contig=<ID=GL000209.1,length=159169,assembly=b37>
+##contig=<ID=GL000218.1,length=161147,assembly=b37>
+##contig=<ID=GL000220.1,length=161802,assembly=b37>
+##contig=<ID=GL000213.1,length=164239,assembly=b37>
+##contig=<ID=GL000211.1,length=166566,assembly=b37>
+##contig=<ID=GL000199.1,length=169874,assembly=b37>
+##contig=<ID=GL000217.1,length=172149,assembly=b37>
+##contig=<ID=GL000216.1,length=172294,assembly=b37>
+##contig=<ID=GL000215.1,length=172545,assembly=b37>
+##contig=<ID=GL000205.1,length=174588,assembly=b37>
+##contig=<ID=GL000219.1,length=179198,assembly=b37>
+##contig=<ID=GL000224.1,length=179693,assembly=b37>
+##contig=<ID=GL000223.1,length=180455,assembly=b37>
+##contig=<ID=GL000195.1,length=182896,assembly=b37>
+##contig=<ID=GL000212.1,length=186858,assembly=b37>
+##contig=<ID=GL000222.1,length=186861,assembly=b37>
+##contig=<ID=GL000200.1,length=187035,assembly=b37>
+##contig=<ID=GL000193.1,length=189789,assembly=b37>
+##contig=<ID=GL000194.1,length=191469,assembly=b37>
+##contig=<ID=GL000225.1,length=211173,assembly=b37>
+##contig=<ID=GL000192.1,length=547496,assembly=b37>
+##reference=file:///Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta
+##SnpEffVersion="5.2c (build 2024-04-09 12:24), by Pablo Cingolani"
+##SnpEffCmd="SnpEff  hg19kg ../6-VariantCalling/Tumor.GATK.recode.vcf -s Tumor.GATK.recode.ann.html "
+##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: 'Allele | Annotation | Annotation_Impact | Gene_Name | Gene_ID | Feature_Type | Feature_ID | Transcript_BioType | Rank | HGVS.c | HGVS.p | cDNA.pos / cDNA.length | CDS.pos / CDS.length | AA.pos / AA.length | Distance | ERRORS / WARNINGS / INFO' ">
+##INFO=<ID=LOF,Number=.,Type=String,Description="Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##INFO=<ID=NMD,Number=.,Type=String,Description="Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##SnpSiftVersion="SnpSift 5.2c (build 2024-04-09 12:24), by Pablo Cingolani"
+##SnpSiftCmd="SnpSift Annotate /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/hapmap_3.3.b37.vcf Tumor.GATK.recode.ann.vcf"
+##SnpSiftCmd="SnpSift Annotate /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/clinvar_Pathogenic.vcf Tumor.GATK.recode.ann2.vcf"
+##INFO=<ID=DBVARID,Number=.,Type=String,Description="nsv accessions from dbVar for the variant">
+##INFO=<ID=ALLELEID,Number=1,Type=Integer,Description="the ClinVar Allele ID">
+##INFO=<ID=CLNSIG,Number=.,Type=String,Description="Clinical significance for this single variant">
+##INFO=<ID=CLNVCSO,Number=1,Type=String,Description="Sequence Ontology id for variant type">
+##INFO=<ID=CLNREVSTAT,Number=.,Type=String,Description="ClinVar review status for the Variation ID">
+##INFO=<ID=RS,Number=.,Type=String,Description="dbSNP ID (i.e. rs number)">
+##INFO=<ID=CLNDNINCL,Number=.,Type=String,Description="For included Variant : ClinVar's preferred disease name for the concept specified by disease identifiers in CLNDISDB">
+##INFO=<ID=ORIGIN,Number=.,Type=String,Description="Allele origin. One or more of the following values may be added: 0 - unknown; 1 - germline; 2 - somatic; 4 - inherited; 8 - paternal; 16 - maternal; 32 - de-novo; 64 - biparental; 128 - uniparental; 256 - not-tested; 512 - tested-inconclusive; 1073741824 - other">
+##INFO=<ID=MC,Number=.,Type=String,Description="comma separated list of molecular consequence in the form of Sequence Ontology ID|molecular_consequence">
+##INFO=<ID=CLNDN,Number=.,Type=String,Description="ClinVar's preferred disease name for the concept specified by disease identifiers in CLNDISDB">
+##INFO=<ID=CLNVC,Number=1,Type=String,Description="Variant type">
+##INFO=<ID=CLNVI,Number=.,Type=String,Description="the variant's clinical sources reported as tag-value pairs of database and variant identifier">
+##INFO=<ID=AF_EXAC,Number=1,Type=Float,Description="allele frequencies from ExAC">
+##INFO=<ID=AF_ESP,Number=1,Type=Float,Description="allele frequencies from GO-ESP">
+##INFO=<ID=CLNSIGINCL,Number=.,Type=String,Description="Clinical significance for a haplotype or genotype that includes this variant. Reported as pairs of VariationID:clinical significance.">
+##INFO=<ID=CLNDISDB,Number=.,Type=String,Description="Tag-value pairs of disease database name and identifier, e.g. OMIM:NNNNNN">
+##INFO=<ID=GENEINFO,Number=1,Type=String,Description="Gene(s) for the variant reported as gene symbol:gene id. The gene symbol and id are delimited by a colon (:) and each pair is delimited by a vertical bar (|)">
+##INFO=<ID=CLNDISDBINCL,Number=.,Type=String,Description="For included Variant: Tag-value pairs of disease database name and identifier, e.g. OMIM:NNNNNN">
+##INFO=<ID=AF_TGP,Number=1,Type=Float,Description="allele frequencies from TGP">
+##INFO=<ID=CLNSIGCONF,Number=.,Type=String,Description="Conflicting clinical significance for this single variant">
+##INFO=<ID=CLNHGVS,Number=.,Type=String,Description="Top-level (primary assembly, alt, or patch) HGVS expression.">
+##INFO=<ID=SSR,Number=1,Type=Integer,Description="Variant Suspect Reason Codes. One or more of the following values may be added: 0 - unspecified, 1 - Paralog, 2 - byEST, 4 - oldAlign, 8 - Para_EST, 16 - 1kg_failed, 1024 - other">
+##SnpSiftCmd="SnpSift Filter '(ANN[ANY].IMPACT = 'HIGH') & (DP > 20) & (exists ID)'"
+##FILTER=<ID=SnpSift,Description="SnpSift 5.2c (build 2024-04-09 12:24), by Pablo Cingolani, Expression used: (ANN[ANY].IMPACT = 'HIGH') & (DP > 20) & (exists ID)">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	TCGA-A7-A4SE-Tumor
+15	31369123	rs4779816	A	G	1504.77	.	DP=49;Dels=0.00;ExcessHet=3.0103;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=60.00;MQ0=0;QD=30.71;SOR=0.909;ANN=G|start_lost|HIGH|Q7Z4N2|Q7Z4N2|transcript|uc001zfm.3|protein_coding|2/27|c.2T>C|p.Met1?|135/5706|2/4812|1/1603||,G|start_lost|HIGH|H0YN37|H0YN37|transcript|uc001zfn.4|protein_coding|2/3|c.2T>C|p.Met1?|135/987|2/411|1/136||,G|missense_variant|MODERATE|F8W865|F8W865|transcript|uc021shz.1|protein_coding|3/28|c.68T>C|p.Met23Thr|221/5792|68/4878|23/1625||,G|missense_variant|MODERATE|D9IDV3|D9IDV3|transcript|uc021sia.1|protein_coding|2/27|c.119T>C|p.Met40Thr|433/6004|119/4929|40/1642||;LOF=(Q7Z4N2|Q7Z4N2|1|1.00),(H0YN37|H0YN37|1|1.00);AC=2511;AF=0.900;AN=2790	GT:AD:DP:GQ:PL	1/1:0,49:49:99:1533,132,0
+15	40856989	rs3803354	C	T	1836.77	.	DP=59;Dels=0.00;ExcessHet=3.0103;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=60.00;MQ0=0;QD=31.13;SOR=0.796;ANN=T|splice_donor_variant&intron_variant|HIGH|Q9BV29-3|Q9BV29-3|transcript|uc001zly.3|protein_coding|1/3|c.-19+1G>A||||||,T|splice_donor_variant&intron_variant|HIGH|Q9BV29|Q9BV29|transcript|uc001zmb.1|protein_coding|1/3|c.-13+1G>A||||||,T|5_prime_UTR_variant|MODIFIER|Q9BV29-2|Q9BV29-2|transcript|uc001zma.1|protein_coding|1/4|c.-10G>A|||||10|,T|upstream_gene_variant|MODIFIER|B4DDD1|B4DDD1|transcript|uc021sjh.1|protein_coding||c.-4548C>T|||||4542|,T|upstream_gene_variant|MODIFIER|Q8IZ73|Q8IZ73|transcript|uc001zmd.1|protein_coding||c.-4548C>T|||||4548|,T|intron_variant|MODIFIER|Q9BV29|Q9BV29|transcript|uc001zmc.1|protein_coding|1/3|c.-13+186G>A||||||,T|intron_variant|MODIFIER|Q9BV29-3|Q9BV29-3|transcript|uc010bbr.3|protein_coding|1/2|c.-19+186G>A||||||;LOF=(Q9BV29|Q9BV29|2|0.50),(Q9BV29-3|Q9BV29-3|2|0.50);AC=2367;AF=0.847;AN=2794	GT:AD:DP:GQ:P1/1:0,59:59:99:1865,156,0
+15	68497597	rs11071990	G	A	112.77	.	BaseQRankSum=1.147;DP=71;Dels=0.00;ExcessHet=3.0103;FS=1.402;HaplotypeScore=0.5784;MLEAC=1;MLEAF=0.500;MQ=60.00;MQ0=0;MQRankSum=0.000;QD=1.59;ReadPosRankSum=-2.273;SOR=0.746;ANN=A|stop_gained|HIGH|Q96GE6|Q96GE6|transcript|uc002arb.3|protein_coding|1/5|c.118C>T|p.Arg40*|852/4635|118/591|40/196||,A|stop_gained|HIGH|F8W6Y4|F8W6Y4|transcript|uc002arc.3|protein_coding|1/4|c.118C>T|p.Arg40*|852/4494|118/450|40/149||,A|downstream_gene_variant|MODIFIER|Q9NWW5|Q9NWW5|transcript|uc002arf.3|protein_coding||c.*2881C>T|||||1733|,A|downstream_gene_variant|MODIFIER|E7ESV1|E7ESV1|transcript|uc010ujy.2|protein_coding||c.*2881C>T|||||1733|,A|downstream_gene_variant|MODIFIER|B4DDH6|B4DDH6|transcript|uc010ujz.2|protein_coding||c.*2881C>T|||||1733|,A|non_coding_transcript_exon_variant|MODIFIER||.4457|transcript|uc002ard.3|pseudogene|1/4|n.852C>T||||||,A|non_coding_transcript_exon_variant|MODIFIER||.4457|transcript|uc002are.3|pseudogene|1/3|n.852C>T||||||,A|non_coding_transcript_exon_variant|MODIFIER||.4457|transcript|uc010bhz.3|pseudogene|1/2|n.852C>T||||||;LOF=(F8W6Y4|F8W6Y4|1|1.00),(Q96GE6|Q96GE6|1|1.00);NMD=(F8W6Y4|F8W6Y4|1|1.00),(Q96GE6|Q96GE6|1|1.00);AC=315;AF=0.122;AN=2588	GT:AD:DP:GQ:PL	0/1:60,11:71:99:141,0,1519
+15	78209436	rs4444305	C	T	621.77	.	BaseQRankSum=-3.655;DP=146;Dels=0.00;ExcessHet=3.0103;FS=0.724;HaplotypeScore=1.4725;MLEAC=1;MLEAF=0.500;MQ=57.65;MQ0=0;MQRankSum=-7.241;QD=4.26;ReadPosRankSum=0.481;SOR=0.684;ANN=T|splice_acceptor_variant&intron_variant|HIGH|A6NDK9|A6NDK9.2|transcript|uc010bky.2|protein_coding|12/17|c.730-2G>A||||||,T|upstream_gene_variant|MODIFIER|B4DGZ1|B4DGZ1|transcript|uc010umq.1|protein_coding||c.-1410G>A|||||1293|,T|upstream_gene_variant|MODIFIER||.4537|transcript|uc002bcx.1|pseudogene||n.-506C>T|||||506|,T|downstream_gene_variant|MODIFIER||.4536|transcript|uc002bcw.1|pseudogene||n.*125C>T|||||125|;LOF=(A6NDK9|A6NDK9.2|1|1.00);AC=428;AF=0.863;AN=496	GT:AD:DP:GQ:PL	0/1:111,35:146:99:650,0,3382
+15	89436295	rs8039131	G	A	200.77	.	BaseQRankSum=-5.480;DP=89;Dels=0.00;ExcessHet=3.0103;FS=0.000;HaplotypeScore=0.0000;MLEAC=1;MLEAF=0.500;MQ=60.00;MQ0=0;MQRankSum=0.000;QD=2.26;ReadPosRankSum=-1.935;SOR=0.556;ANN=A|stop_gained|HIGH|H3BTH8|H3BTH8|transcript|uc002bnd.3|protein_coding|2/6|c.49C>T|p.Gln17*|130/2032|49/1269|17/422||,A|intron_variant|MODIFIER|Q96S86|Q96S86|transcript|uc002bnc.3|protein_coding|1/4|c.-48+2395C>T||||||,A|intron_variant|MODIFIER||.4629|transcript|uc002bne.3|pseudogene|1/5|n.81+2395C>T||||||;LOF=(H3BTH8|H3BTH8|1|1.00);NMD=(H3BTH8|H3BTH8|1|1.00);AC=1171;AF=0.420;AN=2790	GT:AD:DP:GQ:PL	0/1:71,18:89:99:229,0,2153
+16	2049640	rs2286469	A	G	825.77	.	DP=27;Dels=0.00;ExcessHet=3.0103;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=60.00;MQ0=0;QD=30.58;SOR=0.846;ANN=G|start_lost|HIGH|NP_835461|NP_835461|transcript|uc002coe.2|protein_coding|5/8|c.2T>C|p.Met1?|1206/2591|2/807|1/268||,G|missense_variant|MODERATE|NP_835461|NP_835461|transcript|uc002cof.2|protein_coding|11/14|c.1910T>C|p.Met637Thr|1984/3369|1910/2715|637/904||,G|intron_variant|MODIFIER||.4926|transcript|uc021tak.1|pseudogene|1/1|n.19+123435T>C||||||;LOF=(NP_835461|NP_835461|2|0.50);AC=1725;AF=0.618;AN=2790	GT:AD:DP:GQ:PL	1/1:0,27:27:75:854,75,0
+16	56701294	rs2298847	T	A	1938.77	.	BaseQRankSum=1.442;DP=93;Dels=0.00;ExcessHet=3.0103;FS=0.000;HaplotypeScore=1.8773;MLEAC=1;MLEAF=0.500;MQ=60.00;MQ0=0;MQRankSum=0.000;QD=20.85;ReadPosRankSum=1.266;SOR=0.613;ANN=A|splice_acceptor_variant&intron_variant|HIGH||.5222|transcript|uc002ejv.1|pseudogene|1/2|n.101-2A>T||||||,A|splice_region_variant&intron_variant|LOW|P13640-2|P13640-2|transcript|uc002eju.1|protein_coding|1/2|c.29-5A>T||||||,A|upstream_gene_variant|MODIFIER|P80294|P80294|transcript|uc002ejw.3|protein_coding||c.-2503T>A|||||2432|;AC=18;AF=0.101;AN=178	GT:AD:DP:GQ:PL	0/1:23,70:93:99:1967,0,456
+16	85317165	rs2930230	C	T	738.81	.	BaseQRankSum=2.630;DP=28;Dels=0.00;ExcessHet=3.0103;FS=13.138;HaplotypeScore=0.0000;MLEAC=1;MLEAF=0.500;MQ=60.00;MQ0=0;MQRankSum=0.000;QD=26.39;ReadPosRankSum=-0.658;SOR=4.081;ANN=T|splice_donor_variant&intron_variant|HIGH||.5352|transcript|uc021tmc.1|pseudogene|1/2|n.600+2C>T||||||;AC=208;AF=0.301;AN=692	GT:AD:DP:GQ:PL	0/1:4,24:28:20:767,0,20
+17	7158203	rs402514	T	G	1603.77	.	BaseQRankSum=1.435;DP=51;Dels=0.00;ExcessHet=3.0103;FS=0.000;HaplotypeScore=1.9976;MLEAC=2;MLEAF=1.00;MQ=60.00;MQ0=0;MQRankSum=0.000;QD=31.45;ReadPosRankSum=-0.106;SOR=0.756;ANN=G|stop_lost|HIGH|Q8TE02-3|Q8TE02-3|transcript|uc002gfk.1|protein_coding|4/4|c.538T>G|p.Ter180Gluext*?|615/640|538/540|180/179||,G|upstream_gene_variant|MODIFIER|O95476|O95476|transcript|uc002gfd.2|protein_coding||c.-3588A>C|||||3208|,G|upstream_gene_variant|MODIFIER|O95476|O95476|transcript|uc002gfe.2|protein_coding||c.-3391A>C|||||2944|,G|downstream_gene_variant|MODIFIER||.5478|transcript|uc021toz.1|pseudogene||n.*2311T>G|||||2311|,G|intron_variant|MODIFIER|Q8TE02|Q8TE02|transcript|uc002gfg.1|protein_coding|5/8|c.457+81T>G||||||,G|intron_variant|MODIFIER|Q8TE02-2|Q8TE02-2|transcript|uc002gfj.3|protein_coding|5/6|c.457+81T>G||||||,G|intron_variant|MODIFIER|Q8TE02|Q8TE02|transcript|uc002gfh.1|protein_coding|5/8|c.457+81T>G||||||,G|intron_variant|MODIFIER|Q8TE02|Q8TE02|transcript|uc002gfi.1|protein_coding|4/7|c.457+81T>G||||||,G|intron_variant|MODIFIER|Q8TE02-2|Q8TE02-2|transcript|uc010cmb.3|protein_coding|4/5|c.457+81T>G||||||;AC=2027;AF=0.734;AN=2762	GT:AD:DP:GQ:PL	1/1:1,50:51:99:1632,101,0
+17	16350239	rs2882581	A	G	870.77	.	BaseQRankSum=1.470;DP=43;Dels=0.00;ExcessHet=3.0103;FS=0.000;HaplotypeScore=0.5784;MLEAC=1;MLEAF=0.500;MQ=60.00;MQ0=0;MQRankSum=0.000;QD=20.73;ReadPosRankSum=0.652;SOR=0.683;ANN=G|stop_lost|HIGH||.5554|transcript|uc002gqg.2|protein_coding|2/3|c.439T>C|p.Ter147Glnext*?|557/2729|439/441|147/146||,G|downstream_gene_variant|MODIFIER|Q8N1F1|Q8N1F1|transcript|uc021tqz.1|protein_coding||c.*5497A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc002gqa.4|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc002gqb.4|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER|Q8N1F1|Q8N1F1|transcript|uc002gqc.3|protein_coding||c.*5608A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc010cpd.3|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc010vwg.2|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc010vwh.2|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc010vwi.2|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc010vwj.2|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc010vwk.2|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc021tqv.1|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc021tqw.1|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc021tqx.1|pseudogene||n.*4899A>G|||||4899|,G|downstream_gene_variant|MODIFIER||.5554|transcript|uc021tqy.1|pseudogene||n.*4899A>G|||||4899|,G|intron_variant|MODIFIER|Q8NAA5-2|Q8NAA5-2|transcript|uc002gqh.3|protein_coding|2/2|c.376-2794T>C||||||,G|intron_variant|MODIFIER|Q8NAA5|Q8NAA5|transcript|uc010cph.2|protein_coding|3/3|c.491+920T>C||||||,G|intron_variant|MODIFIER||.5554|transcript|uc010cpe.2|pseudogene|3/6|n.231+6672A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc010vwl.1|pseudogene|4/6|n.288+5795A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc010vwm.1|pseudogene|4/6|n.288+5795A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc010vwn.1|pseudogene|4/4|n.288+5795A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc010vwo.1|pseudogene|4/6|n.288+5795A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc010vwp.1|pseudogene|4/6|n.288+5795A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc021tra.1|pseudogene|4/4|n.257+5795A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc021trb.1|pseudogene|3/3|n.200+5795A>G||||||,G|intron_variant|MODIFIER||.5554|transcript|uc021trc.1|pseudogene|3/3|n.231+6672A>G||||||;AC=239;AF=0.446;AN=536	GT:AD:DP:GQ:PL	0/1:12,30:43:99:899,0,254
+17	41246494	54108	C	A	1775.77	.	AC=1;AF=0.500;AN=2;BaseQRankSum=-4.688;DP=77;Dels=0.00;ExcessHet=3.0103;FS=1.277;HaplotypeScore=0.0000;MLEAC=1;MLEAF=0.500;MQ=60.00;MQ0=0;MQRankSum=0.000;QD=23.06;ReadPosRankSum=0.218;SOR=0.446;ANN=A|stop_gained|HIGH|P38398-2|P38398-2|transcript|uc002icp.4|protein_coding|10/23|c.841G>T|p.Glu281*|1190/7111|841/5379|281/1792||,A|stop_gained|HIGH|NP_009228|NP_009228|transcript|uc010cyx.3|protein_coding|9/22|c.913G>T|p.Glu305*|1194/7115|913/5451|305/1816||,A|stop_gained|HIGH|P38398|P38398|transcript|uc002icq.3|protein_coding|10/23|c.1054G>T|p.Glu352*|1286/7207|1054/5592|352/1863||,A|stop_gained|HIGH|J3KQF3|J3KQF3|transcript|uc002ict.3|protein_coding|10/24|c.1054G>T|p.Glu352*|1286/7270|1054/5655|352/1884||,A|stop_gained|HIGH|Q5YLB2|Q5YLB2|transcript|uc002idd.3|protein_coding|9/9|c.1054G>T|p.Glu352*|1073/4450|1054/4200|352/1399||,A|stop_gained|HIGH|P38398|P38398|transcript|uc002ide.1|protein_coding|4/4|c.547G>T|p.Glu183*|716/3758|547/3588|183/1195||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010cyy.1|protein_coding|10/10|c.1054G>T|p.Glu352*|1215/4257|1054/4095|352/1364||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010whs.1|protein_coding|10/10|c.1054G>T|p.Glu352*|1248/4290|1054/4095|352/1364||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010cyz.2|protein_coding|11/11|c.913G>T|p.Glu305*|1402/4444|913/3954|305/1317||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010cza.2|protein_coding|9/9|c.976G>T|p.Glu326*|1208/4250|976/4017|326/1338||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010wht.1|protein_coding|2/2|c.166G>T|p.Glu56*|597/3639|166/3207|56/1068||WARNING_TRANSCRIPT_NO_STOP_CODON,A|intron_variant|MODIFIER|E7ETR2|E7ETR2|transcript|uc010whl.2|protein_coding|9/21|c.787+267G>T||||||,A|intron_variant|MODIFIER|C6YB45|C6YB45|transcript|uc010whm.2|protein_coding|1/7|c.5-30526G>T||||||,A|intron_variant|MODIFIER|P38398-6|P38398-6|transcript|uc002icu.3|protein_coding|10/21|c.787+267G>T||||||,A|intron_variant|MODIFIER|G3XAC3|G3XAC3|transcript|uc010whn.2|protein_coding|1/10|c.-43-19956G>T||||||,A|intron_variant|MODIFIER|C6YB46|C6YB46|transcript|uc010who.3|protein_coding|1/4|c.-99+30794G>T||||||,A|intron_variant|MODIFIER|B4DES0|B4DES0|transcript|uc010whp.2|protein_coding|9/21|c.646+267G>T||||||,A|intron_variant|MODIFIER|E7EUM2|E7EUM2|transcript|uc002idc.1|protein_coding|10/17|c.784+267G>T||||||WARNING_TRANSCRIPT_NO_STOP_CODON,A|intron_variant|MODIFIER|P38398-3|P38398-3|transcript|uc010whr.1|protein_coding|9/16|c.646+267G>T||||||WARNING_TRANSCRIPT_NO_STOP_CODON,A|intron_variant|MODIFIER|P38398-3|P38398-3|transcript|uc010whq.1|protein_coding|4/11|c.283+267G>T||||||WARNING_TRANSCRIPT_NO_STOP_CODON;LOF=(P38398|P38398|7|0.14),(NP_009228|NP_009228|1|1.00),(P38398-2|P38398-2|1|1.00),(J3KQF3|J3KQF3|1|1.00);NMD=(P38398|P38398|7|0.14),(NP_009228|NP_009228|1|1.00),(P38398-2|P38398-2|1|1.00),(J3KQF3|J3KQF3|1|1.00);AF_EXAC=0.00002;ALLELEID=68775;CLNDISDB=MONDO:MONDO:0003582,MeSH:D061325,MedGen:C0677776,OMIM:PS604370,Orphanet:ORPHA145|MONDO:MONDO:0011450,MedGen:C2676676,OMIM:604370|MONDO:MONDO:0015356,MedGen:C0027672,Orphanet:ORPHA140162,SNOMED_CT:699346009|MedGen:CN517202;CLNDN=Hereditary_breast_and_ovarian_cancer_syndrome|Breast-ovarian_cancer,_familial_1|Hereditary_cancer-predisposing_syndrome|not_provided;CLNHGVS=NC_000017.10:g.41246494C>A;CLNREVSTAT=reviewed_by_expert_panel;CLNSIG=Pathogenic;CLNVC=single_nucleotide_variant;CLNVCSO=SO:0001483;GENEINFO=BRCA1:672;MC=SO:0001587|nonsense,SO:0001619|non-coding_transcript_variant,SO:0001627|intron_variant;ORIGIN=1;RS=80357472	GT:AD:DP:GQ:PL	0/1:14,63:77:99:1804,0,296
+17	42254011	rs7220138	C	G	808.77	.	BaseQRankSum=1.451;DP=29;Dels=0.00;ExcessHet=3.0103;FS=0.000;HaplotypeScore=0.9983;MLEAC=2;MLEAF=1.00;MQ=60.00;MQ0=0;MQRankSum=0.000;QD=27.89;ReadPosRankSum=1.735;SOR=1.244;ANN=G|splice_acceptor_variant&intron_variant|HIGH||.5857|transcript|uc031rat.1|pseudogene|2/2|n.252-1G>C||||||,G|intron_variant|MODIFIER|Q96NS5|Q96NS5|transcript|uc002ifl.1|protein_coding|2/4|c.570-95C>G||||||,G|intron_variant|MODIFIER||.5857|transcript|uc002ifm.1|pseudogene|2/4|n.654-95C>G||||||,G|non_coding_transcript_exon_variant|MODIFIER||.5857|transcript|uc002ifn.4|pseudogene|4/4|n.1589G>C||||||,G|non_coding_transcript_exon_variant|MODIFIER||.5857|transcript|uc021tyb.2|pseudogene|1/1|n.994G>C||||||;AC=324;AF=0.616;AN=526	GT:AD:DP:GQ:PL	1/1:1,28:29:39:837,39,0
+17	53076986	rs11658717	G	A	1032.77	.	BaseQRankSum=-0.881;DP=32;Dels=0.00;ExcessHet=3.0103;FS=0.000;HaplotypeScore=0.8667;MLEAC=2;MLEAF=1.00;MQ=60.00;MQ0=0;MQRankSum=0.000;QD=32.27;ReadPosRankSum=-0.434;SOR=0.569;ANN=A|splice_acceptor_variant&intron_variant|HIGH|Q6ZWJ1-2|Q6ZWJ1-2|transcript|uc010dcc.1|protein_coding|4/10|c.57-1G>A||||||,A|splice_region_variant&intron_variant|LOW|Q6ZWJ1|Q6ZWJ1|transcript|uc002iuf.1|protein_coding|5/17|c.288-7G>A||||||,A|splice_region_variant&intron_variant|LOW|E7EPP7|E7EPP7|transcript|uc010dcd.1|protein_coding|5/16|c.288-7G>A||||||;LOF=(Q6ZWJ1-2|Q6ZWJ1-2|1|1.00);AC=2203;AF=0.792;AN=2780	GT:AD:DP:GQ:PL	1/1:1,31:32:55:1061,55,0
+18	8809445	rs632423	G	C	405.77	.	BaseQRankSum=0.024;DP=28;Dels=0.00;ExcessHet=3.0103;FS=0.000;HaplotypeScore=2.3883;MLEAC=1;MLEAF=0.500;MQ=60.00;MQ0=0;MQRankSum=0.000;QD=14.49;ReadPosRankSum=-1.138;SOR=0.567;ANN=C|splice_acceptor_variant&intron_variant|HIGH|Q9Y4B5-4|Q9Y4B5-4|transcript|uc002kns.2|protein_coding|4/9|c.595-1G>C||||||,C|intron_variant|MODIFIER|Q9Y4B5|Q9Y4B5|transcript|uc002knq.2|protein_coding|9/14|c.2481+2387G>C||||||,C|intron_variant|MODIFIER|Q9Y4B5-3|Q9Y4B5-3|transcript|uc002knr.2|protein_coding|11/16|c.2604+2387G>C||||||;LOF=(Q9Y4B5-4|Q9Y4B5-4|1|1.00);AC=289;AF=0.535;AN=540	GT:AD:DP:GQ:PL	0/1:12,16:28:99:434,0,347
+18	12254816	rs7505615	A	G	1625.77	.	DP=60;Dels=0.00;ExcessHet=3.0103;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=59.90;MQ0=0;QD=27.10;SOR=0.846;ANN=G|start_lost|HIGH|Q8N5P9|Q8N5P9|transcript|uc002kqu.4|protein_coding|1/5|c.1A>G|p.Met1?|457/1543|1/762|1/253||,G|intron_variant|MODIFIER|O60543|O60543|transcript|uc002kqt.4|protein_coding|1/4|c.38+396A>G||||||,G|non_coding_transcript_exon_variant|MODIFIER||.6220|transcript|uc010dlc.3|pseudogene|1/6|n.457A>G||||||;LOF=(Q8N5P9|Q8N5P9|1|1.00);AC=797;AF=0.286;AN=2790	GT:AD:DP:GQ:PL	1/1:0,60:60:99:1654,129,0
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##bcftoolsVersion=1.20+htslib-1.20
+##bcftoolsCommand=mpileup -Ou -a DP -f /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta ../Tumor.sorted.bam
+##reference=file:///Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta
+##contig=<ID=1,length=249250621>
+##contig=<ID=2,length=243199373>
+##contig=<ID=3,length=198022430>
+##contig=<ID=4,length=191154276>
+##contig=<ID=5,length=180915260>
+##contig=<ID=6,length=171115067>
+##contig=<ID=7,length=159138663>
+##contig=<ID=8,length=146364022>
+##contig=<ID=9,length=141213431>
+##contig=<ID=10,length=135534747>
+##contig=<ID=11,length=135006516>
+##contig=<ID=12,length=133851895>
+##contig=<ID=13,length=115169878>
+##contig=<ID=14,length=107349540>
+##contig=<ID=15,length=102531392>
+##contig=<ID=16,length=90354753>
+##contig=<ID=17,length=81195210>
+##contig=<ID=18,length=78077248>
+##contig=<ID=19,length=59128983>
+##contig=<ID=20,length=63025520>
+##contig=<ID=21,length=48129895>
+##contig=<ID=22,length=51304566>
+##contig=<ID=X,length=155270560>
+##contig=<ID=Y,length=59373566>
+##contig=<ID=MT,length=16569>
+##contig=<ID=GL000207.1,length=4262>
+##contig=<ID=GL000226.1,length=15008>
+##contig=<ID=GL000229.1,length=19913>
+##contig=<ID=GL000231.1,length=27386>
+##contig=<ID=GL000210.1,length=27682>
+##contig=<ID=GL000239.1,length=33824>
+##contig=<ID=GL000235.1,length=34474>
+##contig=<ID=GL000201.1,length=36148>
+##contig=<ID=GL000247.1,length=36422>
+##contig=<ID=GL000245.1,length=36651>
+##contig=<ID=GL000197.1,length=37175>
+##contig=<ID=GL000203.1,length=37498>
+##contig=<ID=GL000246.1,length=38154>
+##contig=<ID=GL000249.1,length=38502>
+##contig=<ID=GL000196.1,length=38914>
+##contig=<ID=GL000248.1,length=39786>
+##contig=<ID=GL000244.1,length=39929>
+##contig=<ID=GL000238.1,length=39939>
+##contig=<ID=GL000202.1,length=40103>
+##contig=<ID=GL000234.1,length=40531>
+##contig=<ID=GL000232.1,length=40652>
+##contig=<ID=GL000206.1,length=41001>
+##contig=<ID=GL000240.1,length=41933>
+##contig=<ID=GL000236.1,length=41934>
+##contig=<ID=GL000241.1,length=42152>
+##contig=<ID=GL000243.1,length=43341>
+##contig=<ID=GL000242.1,length=43523>
+##contig=<ID=GL000230.1,length=43691>
+##contig=<ID=GL000237.1,length=45867>
+##contig=<ID=GL000233.1,length=45941>
+##contig=<ID=GL000204.1,length=81310>
+##contig=<ID=GL000198.1,length=90085>
+##contig=<ID=GL000208.1,length=92689>
+##contig=<ID=GL000191.1,length=106433>
+##contig=<ID=GL000227.1,length=128374>
+##contig=<ID=GL000228.1,length=129120>
+##contig=<ID=GL000214.1,length=137718>
+##contig=<ID=GL000221.1,length=155397>
+##contig=<ID=GL000209.1,length=159169>
+##contig=<ID=GL000218.1,length=161147>
+##contig=<ID=GL000220.1,length=161802>
+##contig=<ID=GL000213.1,length=164239>
+##contig=<ID=GL000211.1,length=166566>
+##contig=<ID=GL000199.1,length=169874>
+##contig=<ID=GL000217.1,length=172149>
+##contig=<ID=GL000216.1,length=172294>
+##contig=<ID=GL000215.1,length=172545>
+##contig=<ID=GL000205.1,length=174588>
+##contig=<ID=GL000219.1,length=179198>
+##contig=<ID=GL000224.1,length=179693>
+##contig=<ID=GL000223.1,length=180455>
+##contig=<ID=GL000195.1,length=182896>
+##contig=<ID=GL000212.1,length=186858>
+##contig=<ID=GL000222.1,length=186861>
+##contig=<ID=GL000200.1,length=187035>
+##contig=<ID=GL000193.1,length=189789>
+##contig=<ID=GL000194.1,length=191469>
+##contig=<ID=GL000225.1,length=211173>
+##contig=<ID=GL000192.1,length=547496>
+##ALT=<ID=*,Description="Represents allele(s) other than observed.">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of raw reads supporting an indel">
+##INFO=<ID=IMF,Number=1,Type=Float,Description="Maximum fraction of raw reads supporting an indel">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw read depth">
+##INFO=<ID=VDB,Number=1,Type=Float,Description="Variant Distance Bias for filtering splice-site artefacts in RNA-seq data (bigger is better)",Version="3">
+##INFO=<ID=RPBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Read Position Bias (closer to 0 is better)">
+##INFO=<ID=MQBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Mapping Quality Bias (closer to 0 is better)">
+##INFO=<ID=BQBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Base Quality Bias (closer to 0 is better)">
+##INFO=<ID=MQSBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Mapping Quality vs Strand Bias (closer to 0 is better)">
+##INFO=<ID=SCBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Soft-Clip Length Bias (closer to 0 is better)">
+##INFO=<ID=SGB,Number=1,Type=Float,Description="Segregation based metric, http://samtools.github.io/bcftools/rd-SegBias.pdf">
+##INFO=<ID=MQ0F,Number=1,Type=Float,Description="Fraction of MQ0 reads (smaller is better)">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="List of Phred-scaled genotype likelihoods">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Number of high-quality bases">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=AF1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele frequency (assuming HWE)">
+##INFO=<ID=AF2,Number=1,Type=Float,Description="Max-likelihood estimate of the first and second group ALT allele frequency (assuming HWE)">
+##INFO=<ID=AC1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele count (no HWE assumption)">
+##INFO=<ID=MQ,Number=1,Type=Integer,Description="Root-mean-square mapping quality of covering reads">
+##INFO=<ID=FQ,Number=1,Type=Float,Description="Phred probability of all samples being the same">
+##INFO=<ID=PV4,Number=4,Type=Float,Description="P-values for strand bias, baseQ bias, mapQ bias and tail distance bias">
+##INFO=<ID=G3,Number=3,Type=Float,Description="ML estimate of genotype frequencies">
+##INFO=<ID=HWE,Number=1,Type=Float,Description="Chi^2 based HWE test P-value based on G3">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+##bcftools_callVersion=1.20+htslib-1.20
+##bcftools_callCommand=call -Ov -c -v; Date=Mon Jun 17 12:37:43 2024
+##SnpEffVersion="5.2c (build 2024-04-09 12:24), by Pablo Cingolani"
+##SnpEffCmd="SnpEff  hg19kg ../6-VariantCalling/Tumor.BCF.recode.vcf -s Tumor.BCF.recode.ann.html "
+##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: 'Allele | Annotation | Annotation_Impact | Gene_Name | Gene_ID | Feature_Type | Feature_ID | Transcript_BioType | Rank | HGVS.c | HGVS.p | cDNA.pos / cDNA.length | CDS.pos / CDS.length | AA.pos / AA.length | Distance | ERRORS / WARNINGS / INFO' ">
+##INFO=<ID=LOF,Number=.,Type=String,Description="Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##INFO=<ID=NMD,Number=.,Type=String,Description="Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##SnpSiftVersion="SnpSift 5.2c (build 2024-04-09 12:24), by Pablo Cingolani"
+##SnpSiftCmd="SnpSift Annotate /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/hapmap_3.3.b37.vcf Tumor.BCF.recode.ann.vcf"
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##SnpSiftCmd="SnpSift Annotate /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/clinvar_Pathogenic.vcf Tumor.BCF.recode.ann2.vcf"
+##INFO=<ID=DBVARID,Number=.,Type=String,Description="nsv accessions from dbVar for the variant">
+##INFO=<ID=ALLELEID,Number=1,Type=Integer,Description="the ClinVar Allele ID">
+##INFO=<ID=CLNSIG,Number=.,Type=String,Description="Clinical significance for this single variant">
+##INFO=<ID=CLNVCSO,Number=1,Type=String,Description="Sequence Ontology id for variant type">
+##INFO=<ID=CLNREVSTAT,Number=.,Type=String,Description="ClinVar review status for the Variation ID">
+##INFO=<ID=RS,Number=.,Type=String,Description="dbSNP ID (i.e. rs number)">
+##INFO=<ID=CLNDNINCL,Number=.,Type=String,Description="For included Variant : ClinVar's preferred disease name for the concept specified by disease identifiers in CLNDISDB">
+##INFO=<ID=ORIGIN,Number=.,Type=String,Description="Allele origin. One or more of the following values may be added: 0 - unknown; 1 - germline; 2 - somatic; 4 - inherited; 8 - paternal; 16 - maternal; 32 - de-novo; 64 - biparental; 128 - uniparental; 256 - not-tested; 512 - tested-inconclusive; 1073741824 - other">
+##INFO=<ID=MC,Number=.,Type=String,Description="comma separated list of molecular consequence in the form of Sequence Ontology ID|molecular_consequence">
+##INFO=<ID=CLNDN,Number=.,Type=String,Description="ClinVar's preferred disease name for the concept specified by disease identifiers in CLNDISDB">
+##INFO=<ID=CLNVC,Number=1,Type=String,Description="Variant type">
+##INFO=<ID=CLNVI,Number=.,Type=String,Description="the variant's clinical sources reported as tag-value pairs of database and variant identifier">
+##INFO=<ID=AF_EXAC,Number=1,Type=Float,Description="allele frequencies from ExAC">
+##INFO=<ID=AF_ESP,Number=1,Type=Float,Description="allele frequencies from GO-ESP">
+##INFO=<ID=CLNSIGINCL,Number=.,Type=String,Description="Clinical significance for a haplotype or genotype that includes this variant. Reported as pairs of VariationID:clinical significance.">
+##INFO=<ID=CLNDISDB,Number=.,Type=String,Description="Tag-value pairs of disease database name and identifier, e.g. OMIM:NNNNNN">
+##INFO=<ID=GENEINFO,Number=1,Type=String,Description="Gene(s) for the variant reported as gene symbol:gene id. The gene symbol and id are delimited by a colon (:) and each pair is delimited by a vertical bar (|)">
+##INFO=<ID=CLNDISDBINCL,Number=.,Type=String,Description="For included Variant: Tag-value pairs of disease database name and identifier, e.g. OMIM:NNNNNN">
+##INFO=<ID=AF_TGP,Number=1,Type=Float,Description="allele frequencies from TGP">
+##INFO=<ID=CLNSIGCONF,Number=.,Type=String,Description="Conflicting clinical significance for this single variant">
+##INFO=<ID=CLNHGVS,Number=.,Type=String,Description="Top-level (primary assembly, alt, or patch) HGVS expression.">
+##INFO=<ID=SSR,Number=1,Type=Integer,Description="Variant Suspect Reason Codes. One or more of the following values may be added: 0 - unspecified, 1 - Paralog, 2 - byEST, 4 - oldAlign, 8 - Para_EST, 16 - 1kg_failed, 1024 - other">
+##SnpSiftCmd="SnpSift Filter '(exists CLNSIG)'"
+##FILTER=<ID=SnpSift,Description="SnpSift 5.2c (build 2024-04-09 12:24), by Pablo Cingolani, Expression used: (exists CLNSIG)">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	TCGA-A7-A4SE-Tumor
+17	41246494	54108	C	A	225.009	.	DP=77;VDB=0.977475;SGB=-0.693147;RPBZ=0.636377;MQBZ=0;MQSBZ=0;BQBZ=-3.57354;SCBZ=0.495595;MQ0F=0;AF1=0.5;AC1=1;DP4=11,3,39,18;MQ=60;FQ=67.0155;PV4=0.532806,1,1,0.327276;ANN=A|stop_gained|HIGH|P38398-2|P38398-2|transcript|uc002icp.4|protein_coding|10/23|c.841G>T|p.Glu281*|1190/7111|841/5379|281/1792||,A|stop_gained|HIGH|NP_009228|NP_009228|transcript|uc010cyx.3|protein_coding|9/22|c.913G>T|p.Glu305*|1194/7115|913/5451|305/1816||,A|stop_gained|HIGH|P38398|P38398|transcript|uc002icq.3|protein_coding|10/23|c.1054G>T|p.Glu352*|1286/7207|1054/5592|352/1863||,A|stop_gained|HIGH|J3KQF3|J3KQF3|transcript|uc002ict.3|protein_coding|10/24|c.1054G>T|p.Glu352*|1286/7270|1054/5655|352/1884||,A|stop_gained|HIGH|Q5YLB2|Q5YLB2|transcript|uc002idd.3|protein_coding|9/9|c.1054G>T|p.Glu352*|1073/4450|1054/4200|352/1399||,A|stop_gained|HIGH|P38398|P38398|transcript|uc002ide.1|protein_coding|4/4|c.547G>T|p.Glu183*|716/3758|547/3588|183/1195||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010cyy.1|protein_coding|10/10|c.1054G>T|p.Glu352*|1215/4257|1054/4095|352/1364||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010whs.1|protein_coding|10/10|c.1054G>T|p.Glu352*|1248/4290|1054/4095|352/1364||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010cyz.2|protein_coding|11/11|c.913G>T|p.Glu305*|1402/4444|913/3954|305/1317||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010cza.2|protein_coding|9/9|c.976G>T|p.Glu326*|1208/4250|976/4017|326/1338||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010wht.1|protein_coding|2/2|c.166G>T|p.Glu56*|597/3639|166/3207|56/1068||WARNING_TRANSCRIPT_NO_STOP_CODON,A|intron_variant|MODIFIER|E7ETR2|E7ETR2|transcript|uc010whl.2|protein_coding|9/21|c.787+267G>T||||||,A|intron_variant|MODIFIER|C6YB45|C6YB45|transcript|uc010whm.2|protein_coding|1/7|c.5-30526G>T||||||,A|intron_variant|MODIFIER|P38398-6|P38398-6|transcript|uc002icu.3|protein_coding|10/21|c.787+267G>T||||||,A|intron_variant|MODIFIER|G3XAC3|G3XAC3|transcript|uc010whn.2|protein_coding|1/10|c.-43-19956G>T||||||,A|intron_variant|MODIFIER|C6YB46|C6YB46|transcript|uc010who.3|protein_coding|1/4|c.-99+30794G>T||||||,A|intron_variant|MODIFIER|B4DES0|B4DES0|transcript|uc010whp.2|protein_coding|9/21|c.646+267G>T||||||,A|intron_variant|MODIFIER|E7EUM2|E7EUM2|transcript|uc002idc.1|protein_coding|10/17|c.784+267G>T||||||WARNING_TRANSCRIPT_NO_STOP_CODON,A|intron_variant|MODIFIER|P38398-3|P38398-3|transcript|uc010whr.1|protein_coding|9/16|c.646+267G>T||||||WARNING_TRANSCRIPT_NO_STOP_CODON,A|intron_variant|MODIFIER|P38398-3|P38398-3|transcript|uc010whq.1|protein_coding|4/11|c.283+267G>T||||||WARNING_TRANSCRIPT_NO_STOP_CODON;LOF=(P38398|P38398|7|0.14),(NP_009228|NP_009228|1|1.00),(P38398-2|P38398-2|1|1.00),(J3KQF3|J3KQF3|1|1.00);NMD=(P38398|P38398|7|0.14),(NP_009228|NP_009228|1|1.00),(P38398-2|P38398-2|1|1.00),(J3KQF3|J3KQF3|1|1.00);AF_EXAC=0.00002;ALLELEID=68775;CLNDISDB=MONDO:MONDO:0003582,MeSH:D061325,MedGen:C0677776,OMIM:PS604370,Orphanet:ORPHA145|MONDO:MONDO:0011450,MedGen:C2676676,OMIM:604370|MONDO:MONDO:0015356,MedGen:C0027672,Orphanet:ORPHA140162,SNOMED_CT:699346009|MedGen:CN517202;CLNDN=Hereditary_breast_and_ovarian_cancer_syndrome|Breast-ovarian_cancer,_familial_1|Hereditary_cancer-predisposing_syndrome|not_provided;CLNHGVS=NC_000017.10:g.41246494C>A;CLNREVSTAT=reviewed_by_expert_panel;CLNSIG=Pathogenic;CLNVC=single_nucleotide_variant;CLNVCSO=SO:0001483;GENEINFO=BRCA1:672;MC=SO:0001587|nonsense,SO:0001619|non-coding_transcript_variant,SO:0001627|intron_variant;ORIGIN=1;RS=80357472	GT:PL:DP	0/1:255,0,94:71
+##fileformat=VCFv4.2
+##FILTER=<ID=LowQual,Description="Low quality">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths for the ref and alt alleles in the order listed">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth (reads with MQ=255 or with bad mates are filtered)">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+##GATKCommandLine.UnifiedGenotyper=<ID=UnifiedGenotyper,Version=3.8-1-0-gf15c1c3ef,Date="Mon Jun 17 12:41:47 CEST 2024",Epoch=1718620907779,CommandLineOptions="analysis_type=UnifiedGenotyper input_file=[../Tumor.sorted.bam] showFullBamList=false read_buffer_size=null read_filter=[] disable_read_filter=[] intervals=null excludeIntervals=null interval_set_rule=UNION interval_merging=ALL interval_padding=0 reference_sequence=/Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta nonDeterministicRandomSeed=false disableDithering=false maxRuntime=-1 maxRuntimeUnits=MINUTES downsampling_type=BY_SAMPLE downsample_to_fraction=null downsample_to_coverage=250 baq=OFF baqGapOpenPenalty=40.0 refactor_NDN_cigar_string=false fix_misencoded_quality_scores=false allow_potentially_misencoded_quality_scores=false useOriginalQualities=false defaultBaseQualities=-1 performanceLog=null BQSR=null quantize_quals=0 static_quantized_quals=null round_down_quantized=false disable_indel_quals=false emit_original_quals=false preserve_qscores_less_than=6 globalQScorePrior=-1.0 secondsBetweenProgressUpdates=10 validation_strictness=SILENT remove_program_records=false keep_program_records=false sample_rename_mapping_file=null unsafe=null use_jdk_deflater=false use_jdk_inflater=false disable_auto_index_creation_and_locking_when_reading_rods=false no_cmdline_in_header=false sites_only=false never_trim_vcf_format_field=false bcf=false bam_compression=null simplifyBAM=false disable_bam_indexing=false generate_md5=false num_threads=1 num_cpu_threads_per_data_thread=1 num_io_threads=0 monitorThreadEfficiency=false num_bam_file_handles=null read_group_black_list=null pedigree=[] pedigreeString=[] pedigreeValidationType=STRICT allow_intervals_with_unindexed_bam=false generateShadowBCF=false variant_index_type=DYNAMIC_SEEK variant_index_parameter=-1 reference_window_stop=0 phone_home= gatk_key=null tag=NA logging_level=INFO log_to_file=null help=false version=false genotype_likelihoods_model=SNP pcr_error_rate=1.0E-4 computeSLOD=false pair_hmm_implementation=LOGLESS_CACHING min_base_quality_score=17 max_deletion_fraction=0.05 min_indel_count_for_genotyping=5 min_indel_fraction_per_sample=0.25 indelGapContinuationPenalty=10 indelGapOpenPenalty=45 indelHaplotypeSize=80 indelDebug=false ignoreSNPAlleles=false allReadsSP=false ignoreLaneInfo=false reference_sample_calls=(RodBinding name= source=UNBOUND) reference_sample_name=null min_quality_score=1 max_quality_score=40 site_quality_prior=20 min_power_threshold_for_calling=0.95 annotateNDA=false useNewAFCalculator=false heterozygosity=0.001 indel_heterozygosity=1.25E-4 heterozygosity_stdev=0.01 standard_min_confidence_threshold_for_calling=10.0 standard_min_confidence_threshold_for_emitting=30.0 max_alternate_alleles=6 max_genotype_count=1024 max_num_PL_values=100 input_prior=[] sample_ploidy=2 genotyping_mode=DISCOVERY alleles=(RodBinding name= source=UNBOUND) contamination_fraction_to_filter=0.0 contamination_fraction_per_sample_file=null p_nonref_model=null exactcallslog=null output_mode=EMIT_VARIANTS_ONLY allSitePLs=false dbsnp=(RodBinding name= source=UNBOUND) comp=[] out=/Users/albertolupatin/Desktop/HumanGenomics/Project/Tumor/06-VariantCalling/Tumor.GATK.vcf onlyEmitSamples=[] debug_file=null metrics_file=null annotation=[] excludeAnnotation=[] filter_reads_with_N_cigar=false filter_mismatching_base_and_quals=false filter_bases_not_stored=false">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=BaseQRankSum,Number=1,Type=Float,Description="Z-score from Wilcoxon rank sum test of Alt Vs. Ref base qualities">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth; some reads may have been filtered">
+##INFO=<ID=DS,Number=0,Type=Flag,Description="Were any of the samples downsampled?">
+##INFO=<ID=Dels,Number=1,Type=Float,Description="Fraction of Reads Containing Spanning Deletions">
+##INFO=<ID=ExcessHet,Number=1,Type=Float,Description="Phred-scaled p-value for exact test of excess heterozygosity">
+##INFO=<ID=FS,Number=1,Type=Float,Description="Phred-scaled p-value using Fisher's exact test to detect strand bias">
+##INFO=<ID=HaplotypeScore,Number=1,Type=Float,Description="Consistency of the site with at most two segregating haplotypes">
+##INFO=<ID=InbreedingCoeff,Number=1,Type=Float,Description="Inbreeding coefficient as estimated from the genotype likelihoods per-sample when compared against the Hardy-Weinberg expectation">
+##INFO=<ID=MLEAC,Number=A,Type=Integer,Description="Maximum likelihood expectation (MLE) for the allele counts (not necessarily the same as the AC), for each ALT allele, in the same order as listed">
+##INFO=<ID=MLEAF,Number=A,Type=Float,Description="Maximum likelihood expectation (MLE) for the allele frequency (not necessarily the same as the AF), for each ALT allele, in the same order as listed">
+##INFO=<ID=MQ,Number=1,Type=Float,Description="RMS Mapping Quality">
+##INFO=<ID=MQ0,Number=1,Type=Integer,Description="Total Mapping Quality Zero Reads">
+##INFO=<ID=MQRankSum,Number=1,Type=Float,Description="Z-score From Wilcoxon rank sum test of Alt vs. Ref read mapping qualities">
+##INFO=<ID=QD,Number=1,Type=Float,Description="Variant Confidence/Quality by Depth">
+##INFO=<ID=RPA,Number=.,Type=Integer,Description="Number of times tandem repeat unit is repeated, for each allele (including reference)">
+##INFO=<ID=RU,Number=1,Type=String,Description="Tandem repeat unit (bases)">
+##INFO=<ID=ReadPosRankSum,Number=1,Type=Float,Description="Z-score from Wilcoxon rank sum test of Alt vs. Ref read position bias">
+##INFO=<ID=SOR,Number=1,Type=Float,Description="Symmetric Odds Ratio of 2x2 contingency table to detect strand bias">
+##INFO=<ID=STR,Number=0,Type=Flag,Description="Variant is a short tandem repeat">
+##contig=<ID=1,length=249250621,assembly=b37>
+##contig=<ID=2,length=243199373,assembly=b37>
+##contig=<ID=3,length=198022430,assembly=b37>
+##contig=<ID=4,length=191154276,assembly=b37>
+##contig=<ID=5,length=180915260,assembly=b37>
+##contig=<ID=6,length=171115067,assembly=b37>
+##contig=<ID=7,length=159138663,assembly=b37>
+##contig=<ID=8,length=146364022,assembly=b37>
+##contig=<ID=9,length=141213431,assembly=b37>
+##contig=<ID=10,length=135534747,assembly=b37>
+##contig=<ID=11,length=135006516,assembly=b37>
+##contig=<ID=12,length=133851895,assembly=b37>
+##contig=<ID=13,length=115169878,assembly=b37>
+##contig=<ID=14,length=107349540,assembly=b37>
+##contig=<ID=15,length=102531392,assembly=b37>
+##contig=<ID=16,length=90354753,assembly=b37>
+##contig=<ID=17,length=81195210,assembly=b37>
+##contig=<ID=18,length=78077248,assembly=b37>
+##contig=<ID=19,length=59128983,assembly=b37>
+##contig=<ID=20,length=63025520,assembly=b37>
+##contig=<ID=21,length=48129895,assembly=b37>
+##contig=<ID=22,length=51304566,assembly=b37>
+##contig=<ID=X,length=155270560,assembly=b37>
+##contig=<ID=Y,length=59373566,assembly=b37>
+##contig=<ID=MT,length=16569,assembly=b37>
+##contig=<ID=GL000207.1,length=4262,assembly=b37>
+##contig=<ID=GL000226.1,length=15008,assembly=b37>
+##contig=<ID=GL000229.1,length=19913,assembly=b37>
+##contig=<ID=GL000231.1,length=27386,assembly=b37>
+##contig=<ID=GL000210.1,length=27682,assembly=b37>
+##contig=<ID=GL000239.1,length=33824,assembly=b37>
+##contig=<ID=GL000235.1,length=34474,assembly=b37>
+##contig=<ID=GL000201.1,length=36148,assembly=b37>
+##contig=<ID=GL000247.1,length=36422,assembly=b37>
+##contig=<ID=GL000245.1,length=36651,assembly=b37>
+##contig=<ID=GL000197.1,length=37175,assembly=b37>
+##contig=<ID=GL000203.1,length=37498,assembly=b37>
+##contig=<ID=GL000246.1,length=38154,assembly=b37>
+##contig=<ID=GL000249.1,length=38502,assembly=b37>
+##contig=<ID=GL000196.1,length=38914,assembly=b37>
+##contig=<ID=GL000248.1,length=39786,assembly=b37>
+##contig=<ID=GL000244.1,length=39929,assembly=b37>
+##contig=<ID=GL000238.1,length=39939,assembly=b37>
+##contig=<ID=GL000202.1,length=40103,assembly=b37>
+##contig=<ID=GL000234.1,length=40531,assembly=b37>
+##contig=<ID=GL000232.1,length=40652,assembly=b37>
+##contig=<ID=GL000206.1,length=41001,assembly=b37>
+##contig=<ID=GL000240.1,length=41933,assembly=b37>
+##contig=<ID=GL000236.1,length=41934,assembly=b37>
+##contig=<ID=GL000241.1,length=42152,assembly=b37>
+##contig=<ID=GL000243.1,length=43341,assembly=b37>
+##contig=<ID=GL000242.1,length=43523,assembly=b37>
+##contig=<ID=GL000230.1,length=43691,assembly=b37>
+##contig=<ID=GL000237.1,length=45867,assembly=b37>
+##contig=<ID=GL000233.1,length=45941,assembly=b37>
+##contig=<ID=GL000204.1,length=81310,assembly=b37>
+##contig=<ID=GL000198.1,length=90085,assembly=b37>
+##contig=<ID=GL000208.1,length=92689,assembly=b37>
+##contig=<ID=GL000191.1,length=106433,assembly=b37>
+##contig=<ID=GL000227.1,length=128374,assembly=b37>
+##contig=<ID=GL000228.1,length=129120,assembly=b37>
+##contig=<ID=GL000214.1,length=137718,assembly=b37>
+##contig=<ID=GL000221.1,length=155397,assembly=b37>
+##contig=<ID=GL000209.1,length=159169,assembly=b37>
+##contig=<ID=GL000218.1,length=161147,assembly=b37>
+##contig=<ID=GL000220.1,length=161802,assembly=b37>
+##contig=<ID=GL000213.1,length=164239,assembly=b37>
+##contig=<ID=GL000211.1,length=166566,assembly=b37>
+##contig=<ID=GL000199.1,length=169874,assembly=b37>
+##contig=<ID=GL000217.1,length=172149,assembly=b37>
+##contig=<ID=GL000216.1,length=172294,assembly=b37>
+##contig=<ID=GL000215.1,length=172545,assembly=b37>
+##contig=<ID=GL000205.1,length=174588,assembly=b37>
+##contig=<ID=GL000219.1,length=179198,assembly=b37>
+##contig=<ID=GL000224.1,length=179693,assembly=b37>
+##contig=<ID=GL000223.1,length=180455,assembly=b37>
+##contig=<ID=GL000195.1,length=182896,assembly=b37>
+##contig=<ID=GL000212.1,length=186858,assembly=b37>
+##contig=<ID=GL000222.1,length=186861,assembly=b37>
+##contig=<ID=GL000200.1,length=187035,assembly=b37>
+##contig=<ID=GL000193.1,length=189789,assembly=b37>
+##contig=<ID=GL000194.1,length=191469,assembly=b37>
+##contig=<ID=GL000225.1,length=211173,assembly=b37>
+##contig=<ID=GL000192.1,length=547496,assembly=b37>
+##reference=file:///Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/human_g1k_v37.fasta
+##SnpEffVersion="5.2c (build 2024-04-09 12:24), by Pablo Cingolani"
+##SnpEffCmd="SnpEff  hg19kg ../6-VariantCalling/Tumor.GATK.recode.vcf -s Tumor.GATK.recode.ann.html "
+##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: 'Allele | Annotation | Annotation_Impact | Gene_Name | Gene_ID | Feature_Type | Feature_ID | Transcript_BioType | Rank | HGVS.c | HGVS.p | cDNA.pos / cDNA.length | CDS.pos / CDS.length | AA.pos / AA.length | Distance | ERRORS / WARNINGS / INFO' ">
+##INFO=<ID=LOF,Number=.,Type=String,Description="Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##INFO=<ID=NMD,Number=.,Type=String,Description="Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##SnpSiftVersion="SnpSift 5.2c (build 2024-04-09 12:24), by Pablo Cingolani"
+##SnpSiftCmd="SnpSift Annotate /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/hapmap_3.3.b37.vcf Tumor.GATK.recode.ann.vcf"
+##SnpSiftCmd="SnpSift Annotate /Users/albertolupatin/Desktop/HumanGenomics/Labs/annotations/clinvar_Pathogenic.vcf Tumor.GATK.recode.ann2.vcf"
+##INFO=<ID=DBVARID,Number=.,Type=String,Description="nsv accessions from dbVar for the variant">
+##INFO=<ID=ALLELEID,Number=1,Type=Integer,Description="the ClinVar Allele ID">
+##INFO=<ID=CLNSIG,Number=.,Type=String,Description="Clinical significance for this single variant">
+##INFO=<ID=CLNVCSO,Number=1,Type=String,Description="Sequence Ontology id for variant type">
+##INFO=<ID=CLNREVSTAT,Number=.,Type=String,Description="ClinVar review status for the Variation ID">
+##INFO=<ID=RS,Number=.,Type=String,Description="dbSNP ID (i.e. rs number)">
+##INFO=<ID=CLNDNINCL,Number=.,Type=String,Description="For included Variant : ClinVar's preferred disease name for the concept specified by disease identifiers in CLNDISDB">
+##INFO=<ID=ORIGIN,Number=.,Type=String,Description="Allele origin. One or more of the following values may be added: 0 - unknown; 1 - germline; 2 - somatic; 4 - inherited; 8 - paternal; 16 - maternal; 32 - de-novo; 64 - biparental; 128 - uniparental; 256 - not-tested; 512 - tested-inconclusive; 1073741824 - other">
+##INFO=<ID=MC,Number=.,Type=String,Description="comma separated list of molecular consequence in the form of Sequence Ontology ID|molecular_consequence">
+##INFO=<ID=CLNDN,Number=.,Type=String,Description="ClinVar's preferred disease name for the concept specified by disease identifiers in CLNDISDB">
+##INFO=<ID=CLNVC,Number=1,Type=String,Description="Variant type">
+##INFO=<ID=CLNVI,Number=.,Type=String,Description="the variant's clinical sources reported as tag-value pairs of database and variant identifier">
+##INFO=<ID=AF_EXAC,Number=1,Type=Float,Description="allele frequencies from ExAC">
+##INFO=<ID=AF_ESP,Number=1,Type=Float,Description="allele frequencies from GO-ESP">
+##INFO=<ID=CLNSIGINCL,Number=.,Type=String,Description="Clinical significance for a haplotype or genotype that includes this variant. Reported as pairs of VariationID:clinical significance.">
+##INFO=<ID=CLNDISDB,Number=.,Type=String,Description="Tag-value pairs of disease database name and identifier, e.g. OMIM:NNNNNN">
+##INFO=<ID=GENEINFO,Number=1,Type=String,Description="Gene(s) for the variant reported as gene symbol:gene id. The gene symbol and id are delimited by a colon (:) and each pair is delimited by a vertical bar (|)">
+##INFO=<ID=CLNDISDBINCL,Number=.,Type=String,Description="For included Variant: Tag-value pairs of disease database name and identifier, e.g. OMIM:NNNNNN">
+##INFO=<ID=AF_TGP,Number=1,Type=Float,Description="allele frequencies from TGP">
+##INFO=<ID=CLNSIGCONF,Number=.,Type=String,Description="Conflicting clinical significance for this single variant">
+##INFO=<ID=CLNHGVS,Number=.,Type=String,Description="Top-level (primary assembly, alt, or patch) HGVS expression.">
+##INFO=<ID=SSR,Number=1,Type=Integer,Description="Variant Suspect Reason Codes. One or more of the following values may be added: 0 - unspecified, 1 - Paralog, 2 - byEST, 4 - oldAlign, 8 - Para_EST, 16 - 1kg_failed, 1024 - other">
+##SnpSiftCmd="SnpSift Filter '(exists CLNSIG)'"
+##FILTER=<ID=SnpSift,Description="SnpSift 5.2c (build 2024-04-09 12:24), by Pablo Cingolani, Expression used: (exists CLNSIG)">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	TCGA-A7-A4SE-Tumor
+17	41246494	54108	C	A	1775.77	.	AC=1;AF=0.500;AN=2;BaseQRankSum=-4.688;DP=77;Dels=0.00;ExcessHet=3.0103;FS=1.277;HaplotypeScore=0.0000;MLEAC=1;MLEAF=0.500;MQ=60.00;MQ0=0;MQRankSum=0.000;QD=23.06;ReadPosRankSum=0.218;SOR=0.446;ANN=A|stop_gained|HIGH|P38398-2|P38398-2|transcript|uc002icp.4|protein_coding|10/23|c.841G>T|p.Glu281*|1190/7111|841/5379|281/1792||,A|stop_gained|HIGH|NP_009228|NP_009228|transcript|uc010cyx.3|protein_coding|9/22|c.913G>T|p.Glu305*|1194/7115|913/5451|305/1816||,A|stop_gained|HIGH|P38398|P38398|transcript|uc002icq.3|protein_coding|10/23|c.1054G>T|p.Glu352*|1286/7207|1054/5592|352/1863||,A|stop_gained|HIGH|J3KQF3|J3KQF3|transcript|uc002ict.3|protein_coding|10/24|c.1054G>T|p.Glu352*|1286/7270|1054/5655|352/1884||,A|stop_gained|HIGH|Q5YLB2|Q5YLB2|transcript|uc002idd.3|protein_coding|9/9|c.1054G>T|p.Glu352*|1073/4450|1054/4200|352/1399||,A|stop_gained|HIGH|P38398|P38398|transcript|uc002ide.1|protein_coding|4/4|c.547G>T|p.Glu183*|716/3758|547/3588|183/1195||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010cyy.1|protein_coding|10/10|c.1054G>T|p.Glu352*|1215/4257|1054/4095|352/1364||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010whs.1|protein_coding|10/10|c.1054G>T|p.Glu352*|1248/4290|1054/4095|352/1364||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010cyz.2|protein_coding|11/11|c.913G>T|p.Glu305*|1402/4444|913/3954|305/1317||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010cza.2|protein_coding|9/9|c.976G>T|p.Glu326*|1208/4250|976/4017|326/1338||WARNING_TRANSCRIPT_NO_STOP_CODON,A|stop_gained|HIGH|P38398|P38398|transcript|uc010wht.1|protein_coding|2/2|c.166G>T|p.Glu56*|597/3639|166/3207|56/1068||WARNING_TRANSCRIPT_NO_STOP_CODON,A|intron_variant|MODIFIER|E7ETR2|E7ETR2|transcript|uc010whl.2|protein_coding|9/21|c.787+267G>T||||||,A|intron_variant|MODIFIER|C6YB45|C6YB45|transcript|uc010whm.2|protein_coding|1/7|c.5-30526G>T||||||,A|intron_variant|MODIFIER|P38398-6|P38398-6|transcript|uc002icu.3|protein_coding|10/21|c.787+267G>T||||||,A|intron_variant|MODIFIER|G3XAC3|G3XAC3|transcript|uc010whn.2|protein_coding|1/10|c.-43-19956G>T||||||,A|intron_variant|MODIFIER|C6YB46|C6YB46|transcript|uc010who.3|protein_coding|1/4|c.-99+30794G>T||||||,A|intron_variant|MODIFIER|B4DES0|B4DES0|transcript|uc010whp.2|protein_coding|9/21|c.646+267G>T||||||,A|intron_variant|MODIFIER|E7EUM2|E7EUM2|transcript|uc002idc.1|protein_coding|10/17|c.784+267G>T||||||WARNING_TRANSCRIPT_NO_STOP_CODON,A|intron_variant|MODIFIER|P38398-3|P38398-3|transcript|uc010whr.1|protein_coding|9/16|c.646+267G>T||||||WARNING_TRANSCRIPT_NO_STOP_CODON,A|intron_variant|MODIFIER|P38398-3|P38398-3|transcript|uc010whq.1|protein_coding|4/11|c.283+267G>T||||||WARNING_TRANSCRIPT_NO_STOP_CODON;LOF=(P38398|P38398|7|0.14),(NP_009228|NP_009228|1|1.00),(P38398-2|P38398-2|1|1.00),(J3KQF3|J3KQF3|1|1.00);NMD=(P38398|P38398|7|0.14),(NP_009228|NP_009228|1|1.00),(P38398-2|P38398-2|1|1.00),(J3KQF3|J3KQF3|1|1.00);AF_EXAC=0.00002;ALLELEID=68775;CLNDISDB=MONDO:MONDO:0003582,MeSH:D061325,MedGen:C0677776,OMIM:PS604370,Orphanet:ORPHA145|MONDO:MONDO:0011450,MedGen:C2676676,OMIM:604370|MONDO:MONDO:0015356,MedGen:C0027672,Orphanet:ORPHA140162,SNOMED_CT:699346009|MedGen:CN517202;CLNDN=Hereditary_breast_and_ovarian_cancer_syndrome|Breast-ovarian_cancer,_familial_1|Hereditary_cancer-predisposing_syndrome|not_provided;CLNHGVS=NC_000017.10:g.41246494C>A;CLNREVSTAT=reviewed_by_expert_panel;CLNSIG=Pathogenic;CLNVC=single_nucleotide_variant;CLNVCSO=SO:0001483;GENEINFO=BRCA1:672;MC=SO:0001587|nonsense,SO:0001619|non-coding_transcript_variant,SO:0001627|intron_variant;ORIGIN=1;RS=80357472	GT:AD:DP:GQ:PL	0/1:14,63:77:99:1804,0,296
+(HumanGenomics) AirdiAlberto3:7-VariantAnnotation albertolupatin$ 
